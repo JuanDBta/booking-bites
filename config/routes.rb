@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   resources :reservations
-  get '/api/reservations', to: 'reservations#api_index'
 
 end

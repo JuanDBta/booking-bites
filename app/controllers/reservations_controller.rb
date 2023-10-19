@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
   def index
     @reservations = Reservation.all
+    render json: @reservations
   end
 
   def show
@@ -18,11 +19,6 @@ class ReservationsController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def api_index
-    @reservations = Reservation.all
-    render json: @reservations
   end
 
   private
