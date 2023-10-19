@@ -16,6 +16,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+    - [Kanban Board](#kanban-board)
   - [🚀 Live Demo](#live-demo)
   - [📽️ Video Intro](#video)
 - [💻 Getting Started](#getting-started)
@@ -103,6 +104,10 @@
 - **[Added unit and integrations tests]**
 - **[Deployed the project]**
 - **[Recorded a video describing project]**
+
+### Kanban Board <a name="kanban-board"></a>
+
+Check our [kanban Board](https://github.com/users/JuanDBta/projects/2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
