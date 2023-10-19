@@ -107,7 +107,7 @@
 
 ### Kanban Board <a name="kanban-board"></a>
 
-Check our [kanban Board](https://github.com/users/JuanDBta/projects/2)
+Check our [Kanban Board](https://github.com/users/JuanDBta/projects/2)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
