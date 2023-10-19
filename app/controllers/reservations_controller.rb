@@ -20,6 +20,11 @@ class ReservationsController < ApplicationController
       end
     end
   
+    def api_index
+        @reservations = Reservation.all
+        render json: @reservations
+    end
+
     private
   
     def reservation_params
