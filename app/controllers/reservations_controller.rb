@@ -6,6 +6,7 @@ class ReservationsController < ApplicationController
 
   def show
     @reservation = Reservation.find(params[:id])
+    render json: @reservation
   end
 
   def new
@@ -15,6 +16,7 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
+      render json: { reservation: @reservation, success: true }
       redirect_to @reservation
     else
       render 'new'

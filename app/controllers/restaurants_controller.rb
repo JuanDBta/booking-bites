@@ -5,7 +5,7 @@ class RestaurantsController < ApplicationController
     def create
         @restaurant = Restaurant.new(restaurant_params)
         if @restaurant.save
-          render json: { user: @restaurant, success: true }
+          render json: { restaurant: @restaurant, success: true }
           redirect_to @restaurant
         else
           render json: @restaurant.errors
