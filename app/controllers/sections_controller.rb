@@ -19,7 +19,7 @@ class SectionsController < ApplicationController
         @section = Section.new(section_params)
         @section.restaurant= @restaurant
         if @section.save
-            render json: @section
+            render json: { section: @section, success: true }
             redirect_to @section
         else
             render json: @section.errors
