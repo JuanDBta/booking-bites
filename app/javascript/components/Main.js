@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
+import '../../assets/stylesheets/main.css';
 
 function Main() {
   const dispatch = useDispatch();
@@ -9,10 +10,9 @@ function Main() {
   useEffect(() => {
     dispatch(fetchSections());
   }, [dispatch]);
-
   return (
-    <div>
-      <h1>Sections</h1>
+    <div className='main'>
+      <h1 className='title'>Sections</h1>
       <ul>
         {sections.map((section) => (
           <li key={section.id}>{section.name}</li>
@@ -21,5 +21,6 @@ function Main() {
     </div>
   );
 }
+
 
 export default Main;
