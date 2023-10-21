@@ -3,7 +3,12 @@ h1 {
 }
 
 .main {
-    width: 83vw;
-    height: 40vw;
-    background-color: blueviolet;
+    width: 83.5vw;
+    height: 42.5vw;
+    background-color: #fff;
+    margin-left: 16.5vw;
+    margin-top: -42vw;
+    padding-top: 1vw;
+    padding-bottom: 1.5vw;
+    margin-bottom: 0;
 }

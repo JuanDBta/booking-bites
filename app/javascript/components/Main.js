@@ -12,14 +12,21 @@ function Main() {
   }, [dispatch]);
   return (
     <div className='main'>
-      <h1 className='title'>Sections</h1>
-      <ul>
+      <h1 className='title'>LATEST SECTIONS</h1>
+      <h3 className='title-description'>Please select a section</h3>
+      <ul className='sections-list'>
         {sections.map((section) => (
-          <li key={section.id}>{section.name}</li>
+          <li key={section.id}>
+            <img src={section.image} className="image" alt="image" />
+            <div className='name'>{section.name}</div>
+            <div className='description'>{section.description}</div>
+            <div className='media-links'>Icons</div>
+          </li>
         ))}
       </ul>
     </div>
   );
+  
 }
 
 

@@ -15,7 +15,7 @@ function App() {
       <>
         <header className="app-header">
           <div className="logo-title">
-            <img src="/reservations.png" className="App-logo" alt="logo" />
+            <img src="/reservations.png" className="app-logo" alt="logo" />
             <h1 className="title-header">BookingBites</h1>
           </div>
         </header>

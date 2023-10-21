@@ -16,3 +16,32 @@
  body {
     font-family: 'Acumin Pro', sans-serif;
   }
+
+  .app-header {
+    width: 16.5vw;
+    height: 42.5vw;
+    background-color: #e43f7e;
+  }
+  
+  .logo-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 42.5vw;
+    padding-top: 2vw;
+  }
+  
+  .title-header {
+    font-size: 2vw;
+    color: rgb(233, 210, 210);
+    width: 16.5vw;
+    height: 2vw;
+    text-align: center;
+    padding-bottom: 2vw;
+  }
+  
+  img {
+    width: 7vw;
+    height: auto;
+  }
