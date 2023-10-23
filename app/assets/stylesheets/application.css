@@ -45,3 +45,7 @@
     width: 7vw;
     height: auto;
   }
+
+  ul {
+    text-decoration: none;
+  }

@@ -17,7 +17,7 @@ function Main() {
       <ul className='sections-list'>
         {sections.map((section) => (
           <li key={section.id}>
-            <img src={section.image} className="image" alt="image" />
+            <img src={section.image} className="image" alt="image" style={{ width: '20vw', height: 'auto' }} />
             <div className='name'>{section.name}</div>
             <div className='description'>{section.description}</div>
             <div className='media-links'>Icons</div>

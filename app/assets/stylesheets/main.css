@@ -1,14 +1,48 @@
-h1 {
-    color: red;
-}
-
 .main {
     width: 83.5vw;
-    height: 42.5vw;
+    height: 25vw;
     background-color: #fff;
     margin-left: 16.5vw;
-    margin-top: -42vw;
+    margin-top: -35vw;
     padding-top: 1vw;
     padding-bottom: 1.5vw;
     margin-bottom: 0;
+}
+
+.title {
+    font-size: 2vw;
+    text-align: center;
+    margin: 0;
+}
+
+.title-description {
+    font-size: 1vw;
+    text-align: center;
+    margin: 0;
+    color: rgb(214, 197, 197);
+}
+
+ul {
+    list-style: none;
+}
+
+.sections-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+}
+
+.name {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1vw;
+}
+
+.description {
+    font-size: 1vw;
+    text-align: center;
+    color: rgb(214, 197, 197);
+    font-weight: 200;
 }
