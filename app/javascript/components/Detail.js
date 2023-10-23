@@ -1,6 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import '../../assets/stylesheets/section_detail.css';
+ 
 function SectionDetail() {
     const sections = useSelector((state) => state.sections);
     const { id } = useParams();
