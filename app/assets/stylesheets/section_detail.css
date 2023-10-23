@@ -59,3 +59,21 @@
     color: #ffffff; /* Replace with your desired text color */
     margin: 0;
   }
+  @media only screen and (max-width: 767px) {
+    .detail_container{
+      flex-direction: column;
+    }
+    .detail_list{
+      width: 100%;
+      padding: 0;
+      font-size: small;
+    }
+    .detail_img{
+      width: 100%;
+      
+  }
+  .detail_list h2{
+    font-size: large;
+      font-weight: 600;
+  }
+  }
