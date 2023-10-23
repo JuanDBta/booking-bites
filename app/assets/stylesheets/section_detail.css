@@ -48,3 +48,14 @@
     border-radius: 9999px;
     gap: 1em;
   }
+  .circle-right {
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid white;
+    padding: 0.1em 0.35em;
+  }
+  
+  .circle-right p {
+    color: #ffffff; /* Replace with your desired text color */
+    margin: 0;
+  }
