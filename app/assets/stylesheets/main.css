@@ -92,10 +92,39 @@ ul {
     background-color: rgb(20, 221, 20);
 }
 
+.prev-button {
+    border: 0;
+    background-color: rgb(20, 221, 20);
+    margin-top: 1vw;
+    height: 2vw;
+    margin-left: 0.2vw;
+}
+
+.previous-icon {
+    color: #fff;
+    width: 2vw;
+    height: 2vw;
+    margin-left: 0.0vw;
+}
+
 .next-button-container {
     margin-top: -12vw;
     width: 6vw;
     height: 4vw;
     border-radius: 50% 0 0 50%;
     background-color: rgb(20, 221, 20);
+}
+
+.next-button {
+    border: 0;
+    background-color: rgb(20, 221, 20);
+    margin-top: 1vw;
+    height: 2vw;
+    margin-left: 0.3vw;
+}
+
+.next-icon {
+    color: #fff;
+    width: 2vw;
+    height: 2vw;
 }
