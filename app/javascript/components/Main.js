@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/main.css';
 import { TiMediaPlayOutline } from "react-icons/ti";
@@ -42,6 +43,7 @@ function Main() {
         </div>
         {visibleSections.map((section, index) => (
           <div key={section.id} className={`section ${index === 0 ? 'first-section' : index === 2 ? 'third-section' : ''}`}>
+            <Link to={`/sections/${section.id}`} key={section.id}>
             <img src={section.image} className="image" alt="image" />
             <div className="name">{section.name}</div>
             <div className="dotted-line-desc"></div>
@@ -57,6 +59,7 @@ function Main() {
                 <img src="/instagram.svg" className="icon" alt="Instagram" />
               </a>
             </div>
+            </Link>
           </div>
         ))}
         <div className={`next-button-container ${currentIndex === sections.length - sectionsPerPage ? 'disabled' : ''}`}>
