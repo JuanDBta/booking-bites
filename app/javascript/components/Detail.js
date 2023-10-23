@@ -10,18 +10,27 @@ function SectionDetail() {
       }
       return (
         <div className='detail_container flex'>
-          <img src={detailsection.image} alt="Section Image" />
-          
-          
-              <h2 className='discover flex'>{detailsection.name}</h2>
-              
-              <p>{detailsection.description}</p>
-            
-              <p> {detailsection.capacity}</p>
-            
-              <p>{detailsection.cover ? 'Yes' : 'No'}</p>
-            
-              <p> {detailsection.live_music ? 'Yes' : 'No'}</p>
+          <div className='detail_img'><img src={detailsection.image} alt="Section Image" /></div>
+          <ul className='detail_list'>
+            <h2 className='discover flex'>{detailsection.name}</h2>
+            <p className='discover flex'></p>
+            <li>
+                <p>Description :</p>
+                <p>{detailsection.description}</p>
+            </li>
+            <li>
+                <p>Capacity:</p>
+                <p> {detailsection.capacity}</p>
+            </li>
+            <li>
+                 <p>Cover: </p>
+                 <p>{detailsection.cover ? 'Yes' : 'No'}</p>
+            </li>
+            <li>
+                <p>Live Music:</p>
+                <p> {detailsection.live_music ? 'Yes' : 'No'}</p>
+            </li>
+        </ul>
             
         </div>
       );
