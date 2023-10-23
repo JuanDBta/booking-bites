@@ -20,7 +20,8 @@
   .app-header {
     width: 16.5vw;
     height: 42.5vw;
-    background-color: #e43f7e;
+    background-color: #fff;
+    border-right: 2px rgb(238, 217, 217) solid;
   }
   
   .logo-title {
