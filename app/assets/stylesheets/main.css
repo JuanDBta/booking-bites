@@ -3,7 +3,7 @@
     height: 25vw;
     background-color: #fff;
     margin-left: 16.5vw;
-    margin-top: -35vw;
+    margin-top: -36vw;
     padding-top: 1vw;
     padding-bottom: 1.5vw;
     margin-bottom: 0;
@@ -29,9 +29,10 @@ ul {
 .sections-list {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 5vw;
+    padding-left: 7vw;
 }
 
 .name {
