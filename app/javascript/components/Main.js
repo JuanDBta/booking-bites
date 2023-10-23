@@ -35,8 +35,8 @@ function Main() {
       <h3 className="title-description">Please select a section</h3>
       <div className="dotted-line"></div>
       <div className="sections-list">
-        <div className="prev-button-container">
-          <button className="prev-button" onClick={handlePrevClick} disabled={currentIndex === 0}>
+        <div className={`prev-button-container ${currentIndex === 0 ? 'disabled' : ''}`}>
+          <button className={`prev-button ${currentIndex === 0 ? 'disabled' : ''}`} onClick={handlePrevClick} disabled={currentIndex === 0}>
             <TiMediaPlayReverseOutline className="previous-icon" />
           </button>
         </div>
@@ -59,8 +59,8 @@ function Main() {
             </div>
           </div>
         ))}
-        <div className="next-button-container">
-          <button className="next-button" onClick={handleNextClick} disabled={currentIndex === sections.length - sectionsPerPage}>
+        <div className={`next-button-container ${currentIndex === sections.length - sectionsPerPage ? 'disabled' : ''}`}>
+          <button  className={`next-button ${currentIndex === sections.length - sectionsPerPage ? 'disabled' : ''}`} onClick={handleNextClick} disabled={currentIndex === sections.length - sectionsPerPage}>
             <TiMediaPlayOutline className="next-icon" />
           </button>
         </div>

@@ -105,6 +105,7 @@ ul {
     width: 2vw;
     height: 2vw;
     margin-left: 0.0vw;
+    cursor: pointer;
 }
 
 .next-button-container {
@@ -127,4 +128,17 @@ ul {
     color: #fff;
     width: 2vw;
     height: 2vw;
+    cursor: pointer;
+}
+
+.prev-button-container.disabled,
+.next-button-container.disabled {
+  background-color: rgb(242, 222, 222);
+  cursor: not-allowed;
+}
+
+.prev-button.disabled,
+.next-button.disabled {
+  background-color: rgb(242, 222, 222);
+  cursor: not-allowed;
 }
