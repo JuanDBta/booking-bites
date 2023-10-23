@@ -30,6 +30,15 @@ function SectionDetail() {
                 <p>Live Music:</p>
                 <p> {detailsection.live_music ? 'Yes' : 'No'}</p>
             </li>
+            <p className='discover flex'>
+                 Discover more Section
+                 <img src="/detail_right_arrow.png" alt="Discover Icon" className="discover-icon" style={{ width: '1em', height: 'auto' }} />
+            </p>
+            <p className='flex discover '> <button className='detail_reserve flex'>
+                 Book a table
+                 <div className="circle-right"><p>&gt;</p></div>
+                 </button>
+            </p>
         </ul>
             
         </div>
