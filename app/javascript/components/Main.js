@@ -20,7 +20,18 @@ function Main() {
             <img src={section.image} className="image" alt="image" style={{ width: '20vw', height: 'auto' }} />
             <div className='name'>{section.name}</div>
             <div className='description'>{section.description}</div>
-            <div className='media-links'>Icons</div>
+            <div className='media-links'>
+  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+    <img src="/facebook.svg" className="icon" alt="Facebook" style={{ width: '3vw', height: 'auto' }} />
+  </a>
+  <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+    <img src="/twitter.svg" className="icon" alt="Twitter" style={{ width: '3vw', height: 'auto' }} />
+  </a>
+  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+    <img src="/instagram.svg" className="icon" alt="Instagram" style={{ width: '3vw', height: 'auto' }} />
+  </a>
+</div>
+
           </li>
         ))}
       </ul>
