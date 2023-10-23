@@ -31,8 +31,7 @@ ul {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 5vw;
-    padding-left: 7vw;
+    gap: 4vw;
 }
 
 .name {
@@ -60,4 +59,27 @@ ul {
 
 .icon {
     cursor: pointer;
+    width: 3vw;
+    height: auto;
+}
+
+.image {
+    text-align: center;
+    width: 20vw;
+    height: auto;
+    cursor: pointer;
+}
+
+.dotted-line {
+    width: 10%;
+    border-top: 1px dotted rgb(242, 222, 222);
+    margin-top: 1vw;
+    margin-left: 37.5vw;
+  }
+
+.dotted-line-desc {
+  width: 30%;
+  border-top: 1px dotted rgb(242, 222, 222);
+  margin-top: 1vw;
+  margin-left: 7vw;
 }

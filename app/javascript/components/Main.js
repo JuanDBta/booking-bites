@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/main.css';
@@ -6,39 +6,65 @@ import '../../assets/stylesheets/main.css';
 function Main() {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.sections);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const sectionsPerPage = 3;
 
   useEffect(() => {
     dispatch(fetchSections());
   }, [dispatch]);
-  return (
-    <div className='main'>
-      <h1 className='title'>LATEST SECTIONS</h1>
-      <h3 className='title-description'>Please select a section</h3>
-      <ul className='sections-list'>
-        {sections.map((section) => (
-          <li key={section.id}>
-            <img src={section.image} className="image" alt="image" style={{ width: '20vw', height: 'auto' }} />
-            <div className='name'>{section.name}</div>
-            <div className='description'>{section.description}</div>
-            <div className='media-links'>
-  <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-    <img src="/facebook.svg" className="icon" alt="Facebook" style={{ width: '3vw', height: 'auto' }} />
-  </a>
-  <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
-    <img src="/twitter.svg" className="icon" alt="Twitter" style={{ width: '3vw', height: 'auto' }} />
-  </a>
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-    <img src="/instagram.svg" className="icon" alt="Instagram" style={{ width: '3vw', height: 'auto' }} />
-  </a>
-</div>
 
-          </li>
+  const handlePrevClick = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
+  const handleNextClick = () => {
+    if (currentIndex < sections.length - sectionsPerPage) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const visibleSections = sections.slice(currentIndex, currentIndex + sectionsPerPage);
+
+  return (
+    <div className="main">
+      <h1 className="title">LATEST SECTIONS</h1>
+      <h3 className="title-description">Please select a section</h3>
+      <div class="dotted-line"></div>
+      <div className="sections-list">
+        <div className="prev-button-container">
+          <button className="prev-button" onClick={handlePrevClick} disabled={currentIndex === 0}>
+            Previous
+          </button>
+        </div>
+        {visibleSections.map((section, index) => (
+          <div key={section.id} className={`section ${index === 0 ? 'first-section' : index === 2 ? 'third-section' : ''}`}>
+            <img src={section.image} className="image" alt="image" />
+            <div className="name">{section.name}</div>
+            <div class="dotted-line-desc"></div>
+            <div className="description">{section.description}</div>
+            <div className="media-links">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/facebook.svg" className="icon" alt="Facebook" />
+              </a>
+              <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/twitter.svg" className="icon" alt="Twitter" />
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="/instagram.svg" className="icon" alt="Instagram" />
+              </a>
+            </div>
+          </div>
         ))}
-      </ul>
+        <div className="next-button-container">
+          <button className="next-button" onClick={handleNextClick} disabled={currentIndex === sections.length - sectionsPerPage}>
+            Next
+          </button>
+        </div>
+      </div>
     </div>
   );
-  
 }
-
 
 export default Main;
