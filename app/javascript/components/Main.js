@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/main.css';
+import { TiMediaPlayOutline } from "react-icons/ti";
+import { TiMediaPlayReverseOutline } from "react-icons/ti";
 
 function Main() {
   const dispatch = useDispatch();
@@ -31,18 +33,18 @@ function Main() {
     <div className="main">
       <h1 className="title">LATEST SECTIONS</h1>
       <h3 className="title-description">Please select a section</h3>
-      <div class="dotted-line"></div>
+      <div className="dotted-line"></div>
       <div className="sections-list">
         <div className="prev-button-container">
           <button className="prev-button" onClick={handlePrevClick} disabled={currentIndex === 0}>
-            Previous
+            <TiMediaPlayReverseOutline className="previous-icon" />
           </button>
         </div>
         {visibleSections.map((section, index) => (
           <div key={section.id} className={`section ${index === 0 ? 'first-section' : index === 2 ? 'third-section' : ''}`}>
             <img src={section.image} className="image" alt="image" />
             <div className="name">{section.name}</div>
-            <div class="dotted-line-desc"></div>
+            <div className="dotted-line-desc"></div>
             <div className="description">{section.description}</div>
             <div className="media-links">
               <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
@@ -59,7 +61,7 @@ function Main() {
         ))}
         <div className="next-button-container">
           <button className="next-button" onClick={handleNextClick} disabled={currentIndex === sections.length - sectionsPerPage}>
-            Next
+            <TiMediaPlayOutline className="next-icon" />
           </button>
         </div>
       </div>
