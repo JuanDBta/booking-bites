@@ -37,3 +37,14 @@
   .discover{
     justify-content: flex-end;
 }
+.detail_reserve{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255/var(--tw-text-opacity));
+    border: 1px solid #fff;
+    --tw-bg-opacity: 1;
+    background-color: rgb(123 205 0/var(--tw-bg-opacity));
+    align-items: center;
+    padding: 3% 6%;
+    border-radius: 9999px;
+    gap: 1em;
+  }
