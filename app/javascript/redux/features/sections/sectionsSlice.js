@@ -3,7 +3,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchSections = createAsyncThunk('data/fetchSections', async () => {
     try {
-      const response = await fetch('http://localhost:3000/sections');
+      const response = await fetch('http://localhost:3000/api/sections');
       if (!response.ok) {
         throw new Error('Error fetching data from the API');
       }

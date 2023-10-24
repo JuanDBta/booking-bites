@@ -1,4 +1,4 @@
-class SectionsController < ApplicationController
+class Api::SectionsController < ApplicationController
   def index
     @sections = Section.all
     render json: @sections

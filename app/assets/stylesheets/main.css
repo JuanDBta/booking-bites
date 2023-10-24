@@ -1,25 +1,24 @@
 .main {
-  width: 83.5vw;
-  height: 25vw;
+  width: 83.5%;
   background-color: #fff;
-  margin-left: 16.7vw;
-  margin-top: -36vw;
-  padding-top: 1vw;
-  padding-bottom: 1.5vw;
-  margin-bottom: 0;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  gap: 1em;
+  margin-top: 2em;
 }
 
 .title {
-  font-size: 2vw;
   text-align: center;
   margin: 0;
+  font-size: large;
 }
 
 .title-description {
-  font-size: 1vw;
   text-align: center;
   margin: 0;
   color: rgb(214, 197, 197);
+  padding: 2%;
 }
 
 ul {
@@ -29,24 +28,21 @@ ul {
 .sections-list {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 4vw;
-  margin-top: 2vw;
+  gap: 1em;
+  width: 100%;
+  justify-content: center;
 }
 
 .name {
   font-weight: bold;
   text-align: center;
-  font-size: 1.5vw;
+  font-size: medium;
 }
 
 .description {
-  font-size: 1vw;
   text-align: center;
   color: rgb(214, 197, 197);
   font-weight: 200;
-  margin-top: 2vw;
 }
 
 .media-links {
@@ -54,65 +50,63 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 1vw;
-  margin-top: 1vw;
+  gap: 1em;
 }
 
 .icon {
   cursor: pointer;
-  width: 3vw;
   height: auto;
+  width: 3em;
 }
 
 .image {
   text-align: center;
-  width: 20vw;
-  height: auto;
   cursor: pointer;
+  width: 100%;
+  height: 16rem;
+  border-radius: 0.5rem;
 }
 
 .dotted-line {
   width: 10%;
   border-top: 1px dotted rgb(242, 222, 222);
-  margin-top: 1vw;
-  margin-left: 37.5vw;
+  align-self: center;
+  align-items: center;
+  display: flex;
 }
 
 .dotted-line-desc {
   width: 30%;
   border-top: 1px dotted rgb(242, 222, 222);
-  margin-top: 1vw;
-  margin-left: 7vw;
+  align-self: center;
 }
 
 .prev-button-container {
-  margin-top: -12vw;
-  width: 6vw;
-  height: 4vw;
   border-radius: 0 50% 50% 0;
   background-color: rgb(20, 221, 20);
+  align-self: center;
 }
 
 .prev-button {
   border: 0;
   background-color: rgb(20, 221, 20);
-  margin-top: 1vw;
-  height: 2vw;
-  margin-left: 0.2vw;
+  position: absolute;
+  top: 37%;
+  left: 17%;
+  height: 3.5rem;
+  width: 3rem;
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
 }
 
 .previous-icon {
   color: #fff;
-  width: 2vw;
-  height: 2vw;
-  margin-left: 0;
   cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .next-button-container {
-  margin-top: -12vw;
-  width: 6vw;
-  height: 4vw;
   border-radius: 50% 0 0 50%;
   background-color: rgb(20, 221, 20);
 }
@@ -120,16 +114,20 @@ ul {
 .next-button {
   border: 0;
   background-color: rgb(20, 221, 20);
-  margin-top: 1vw;
-  height: 2vw;
-  margin-left: 0.3vw;
+  position: absolute;
+  top: 37%;
+  right: 0;
+  height: 3.5rem;
+  width: 3rem;
+  border-bottom-left-radius: 9999px;
+  border-top-left-radius: 9999px;
 }
 
 .next-icon {
   color: #fff;
-  width: 2vw;
-  height: 2vw;
   cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .prev-button-container.disabled,
@@ -142,4 +140,40 @@ ul {
 .next-button.disabled {
   background-color: rgb(242, 222, 222);
   cursor: not-allowed;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 27%;
+}
+
+.link_to_section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .sections-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+  }
+
+  .section {
+    width: 80%;
+  }
+
+  .image {
+    width: 100%;
+    height: 16rem;
+  }
 }

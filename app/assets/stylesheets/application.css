@@ -15,14 +15,19 @@
  */
 body {
   font-family: 'Acumin Pro', sans-serif;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
 }
 
 .app-header {
-  width: 16.5vw;
-  height: 42.5vw;
+  width: 16.5%;
   background-color: #fff;
   border-right: 2px rgb(238, 217, 217) solid;
+  height: 100vw;
 }
 
 .logo-title {
@@ -30,24 +35,32 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 42.5vw;
-  padding-top: 2vw;
 }
 
 .title-header {
-  font-size: 2vw;
   color: rgb(233, 210, 210);
-  width: 16.5vw;
-  height: 2vw;
+  width: 16.5%;
   text-align: center;
-  padding-bottom: 2vw;
-}
-
-img {
-  width: 7vw;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  font-size: small;
 }
 
 ul {
   text-decoration: none;
+}
+
+.app-logo {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .app-header {
+    height: auto;
+  }
 }
