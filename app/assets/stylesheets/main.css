@@ -3,9 +3,9 @@
   background-color: #fff;
   height: 100%;
   flex-direction: column;
-    display: flex;
-    gap: 1em;
-    margin-top: 2em;
+  display: flex;
+  gap: 1em;
+  margin-top: 2em;
 }
 
 .title {
@@ -57,23 +57,22 @@ ul {
   cursor: pointer;
   height: auto;
   width: 3em;
-  
 }
 
 .image {
   text-align: center;
-  height: auto;
   cursor: pointer;
-  width: 2em;
+  width: 100%;
+  height: 16rem;
+  border-radius: 0.5rem;
 }
 
 .dotted-line {
   width: 10%;
   border-top: 1px dotted rgb(242, 222, 222);
   align-self: center;
-    align-items: center;
-    display: flex;
-
+  align-items: center;
+  display: flex;
 }
 
 .dotted-line-desc {
@@ -92,13 +91,12 @@ ul {
   border: 0;
   background-color: rgb(20, 221, 20);
   position: absolute;
-    top: 37%;
-    left: 17%;
-    height: 3.5rem;
-    width: 3rem;
-    border-bottom-right-radius: 9999px;
-    border-top-right-radius: 9999px;
-
+  top: 37%;
+  left: 17%;
+  height: 3.5rem;
+  width: 3rem;
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
 }
 
 .previous-icon {
@@ -117,12 +115,12 @@ ul {
   border: 0;
   background-color: rgb(20, 221, 20);
   position: absolute;
-    top: 37%;
-    right: 0;
-    height: 3.5rem;
-    width: 3rem;
-    border-bottom-left-radius: 9999px;
-    border-top-left-radius: 9999px;
+  top: 37%;
+  right: 0;
+  height: 3.5rem;
+  width: 3rem;
+  border-bottom-left-radius: 9999px;
+  border-top-left-radius: 9999px;
 }
 
 .next-icon {
@@ -143,43 +141,39 @@ ul {
   background-color: rgb(242, 222, 222);
   cursor: not-allowed;
 }
-.section{
+
+.section {
   display: flex;
   flex-direction: column;
   gap: 1em;
-  
-}
-.section{
   width: 27%;
 }
 
-.image{
-  width: 100%;
-  height: 16rem;
-  border-radius: 0.5rem;
-}
-.link_to_section{
+.link_to_section {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
 }
+
 @media only screen and (max-width: 767px) {
-  .sections-list{
+  .sections-list {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 30%;
   }
+
   .section {
     width: 80%;
-}
-.image{
-  width: 100%;
-  height: 16rem
-}
+  }
+
+  .image {
+    width: 100%;
+    height: 16rem;
+  }
 }

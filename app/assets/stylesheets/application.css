@@ -18,14 +18,16 @@ body {
   margin: 0;
   padding: 0;
 }
-#root{
+
+#root {
   display: flex;
 }
+
 .app-header {
   width: 16.5%;
   background-color: #fff;
   border-right: 2px rgb(238, 217, 217) solid;
-  height: 100vw
+  height: 100vw;
 }
 
 .logo-title {
@@ -39,22 +41,24 @@ body {
   color: rgb(233, 210, 210);
   width: 16.5%;
   text-align: center;
-  font-size: medium;
   display: flex;
   justify-content: center;
   font-size: small;
 }
+
 ul {
   text-decoration: none;
 }
 
-.app-logo{
+.app-logo {
   width: 100%;
   height: auto;
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 @media only screen and (max-width: 767px) {
   .app-header {
     height: auto;
