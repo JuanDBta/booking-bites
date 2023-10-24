@@ -15,7 +15,8 @@ function SectionDetail() {
           <div className='detail_img'><img src={detailsection.image} alt="Section Image" /></div>
           <ul className='detail_list'>
             <h2 className='discover flex'>{detailsection.name}</h2>
-            <p className='discover flex'></p>
+
+            <p className='flex discover  text_gap'> {detailsection.cover ?'Advance payment required!': 'Advance payment not required!'}</p>
             <li>
                 <p>Description :</p>
                 <p>{detailsection.description}</p>
@@ -32,7 +33,8 @@ function SectionDetail() {
                 <p>Live Music:</p>
                 <p> {detailsection.live_music ? 'Yes' : 'No'}</p>
             </li>
-            <p className='discover flex'>
+            <p className='flex flex_start text_gap' id="flex_gap"><strong>15% gratuity </strong> before taxes will be added to the bill.</p>
+            <p className='discover flex  text_gap'>
                  Discover more Section
                  <img src="/detail_right_arrow.png" alt="Discover Icon" className="discover-icon" style={{ width: '1em', height: 'auto' }} />
             </p>
