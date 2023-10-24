@@ -1,11 +1,12 @@
 .detail_container {
-  padding: 8% 4%;
+  padding: 1% 4%;
   width: 76%;
+  height: 50%;
 }
 
 .detail_img img {
   width: 100%;
-  height: 45%;
+  height: 100%;
   box-shadow: #333 1px 3px 4px;
   -webkit-box-shadow: #333 1px 3px 4px;
   -moz-box-shadow: #333 1px 3px 4px;
@@ -14,6 +15,8 @@
 
 .detail_img {
   width: 60%;
+  height: 100%;
+  margin-top: 7em;
 }
 
 .detail_list li {
@@ -37,7 +40,7 @@
   width: 38%;
   font-size: medium;
   font-weight: 100;
-  margin-top: -2em;
+  margin-top: 3em;
   padding-top: 0;
 }
 
