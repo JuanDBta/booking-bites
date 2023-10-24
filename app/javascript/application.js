@@ -21,6 +21,7 @@ function App() {
         </div>
       </header>
       <Routes>
+
         <Route path="/" element={<Main />} />
         <Route path="/sections/:id" element={<SectionDetail />} />
       </Routes>

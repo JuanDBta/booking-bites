@@ -49,6 +49,23 @@
  margin-bottom: 2em;
 
 }
+.go-back-button{
+  border: 0;
+    background-color: rgb(20, 221, 20);
+    position: absolute;
+    top: 95%;
+    left: 17%;
+    height: 3.5rem;
+    width: 3rem;
+    border-bottom-right-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+.previous-icon {
+  color: #fff;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
 #flex_gap{
   gap: 1em;
 }

@@ -1,16 +1,20 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import { NavLink } from 'react-router-dom';
+import { TiMediaPlayReverseOutline } from "react-icons/ti";
 import '../../assets/stylesheets/section_detail.css';
  
 function SectionDetail() {
     const sections = useSelector((state) => state.sections);
     const { id } = useParams();
+    
     const detailsection = sections.find((section) => section.id === Number(id));
     if (!detailsection) {
         return <div>Loading...</div>; 
       }
       return (
+        <>
         <div className='detail_container flex'>
           <div className='detail_img'><img src={detailsection.image} alt="Section Image" /></div>
           <ul className='detail_list'>
@@ -44,8 +48,13 @@ function SectionDetail() {
                  </button>
             </p>
         </ul>
-            
         </div>
+        <NavLink to="/">
+          <button className='go-back-button'>
+           <TiMediaPlayReverseOutline className="previous-icon" />
+           </button>
+        </NavLink>
+        </>
       );
     }
     

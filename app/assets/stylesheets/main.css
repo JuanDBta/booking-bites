@@ -1,12 +1,6 @@
 .main {
   width: 83.5%;
-  /* height: 25vw; */
   background-color: #fff;
-  /* margin-left: 16.7vw;
-  margin-top: -36vw;
-  padding-top: 1vw;
-  padding-bottom: 1.5vw;
-  margin-bottom: 0; */
   height: 100%;
   flex-direction: column;
     display: flex;
@@ -15,14 +9,12 @@
 }
 
 .title {
-  /* font-size: 2vw; */
   text-align: center;
   margin: 0;
   font-size: large;
 }
 
 .title-description {
-  /* font-size: 1vw; */
   text-align: center;
   margin: 0;
   color: rgb(214, 197, 197);
@@ -36,10 +28,6 @@ ul {
 .sections-list {
   display: flex;
   flex-direction: row;
-  /* justify-content: flex-start;
-  align-items: center; */
-  /* gap: 4vw;
-  margin-top: 2vw; */
   gap: 1em;
   width: 100%;
   justify-content: center;
@@ -48,16 +36,13 @@ ul {
 .name {
   font-weight: bold;
   text-align: center;
-  /* font-size: 1.5vw; */
   font-size: medium;
 }
 
 .description {
-  /* font-size: 1vw; */
   text-align: center;
   color: rgb(214, 197, 197);
   font-weight: 200;
-  /* margin-top: 2vw; */
 }
 
 .media-links {
@@ -65,14 +50,11 @@ ul {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* gap: 1vw;
-  margin-top: 1vw; */
   gap: 1em;
 }
 
 .icon {
   cursor: pointer;
-  /* width: 3vw; */
   height: auto;
   width: 3em;
   
@@ -80,7 +62,6 @@ ul {
 
 .image {
   text-align: center;
-  /* width: 20vw; */
   height: auto;
   cursor: pointer;
   width: 2em;
@@ -89,8 +70,6 @@ ul {
 .dotted-line {
   width: 10%;
   border-top: 1px dotted rgb(242, 222, 222);
-  /* margin-top: 1vw;
-  margin-left: 37.5vw; */
   align-self: center;
     align-items: center;
     display: flex;
@@ -100,15 +79,10 @@ ul {
 .dotted-line-desc {
   width: 30%;
   border-top: 1px dotted rgb(242, 222, 222);
-  /* margin-top: 1vw;
-  margin-left: 7vw; */
   align-self: center;
 }
 
 .prev-button-container {
-  /* margin-top: -12vw; */
-  /* width: 6vw; */
-  /* height: 4vw; */
   border-radius: 0 50% 50% 0;
   background-color: rgb(20, 221, 20);
   align-self: center;
@@ -117,9 +91,6 @@ ul {
 .prev-button {
   border: 0;
   background-color: rgb(20, 221, 20);
-  /* margin-top: 1vw; */
-  /* height: 2vw;
-  margin-left: 0.2vw; */
   position: absolute;
     top: 37%;
     left: 17%;
@@ -132,18 +103,12 @@ ul {
 
 .previous-icon {
   color: #fff;
-  /* width: 2vw;
-  height: 2vw;
-  margin-left: 0; */
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;
 }
 
 .next-button-container {
-  /* margin-top: -12vw;
-  width: 6vw;
-  height: 4vw; */
   border-radius: 50% 0 0 50%;
   background-color: rgb(20, 221, 20);
 }
@@ -151,9 +116,6 @@ ul {
 .next-button {
   border: 0;
   background-color: rgb(20, 221, 20);
-  /* margin-top: 1vw;
-  height: 2vw;
-  margin-left: 0.3vw; */
   position: absolute;
     top: 37%;
     right: 0;
@@ -165,8 +127,6 @@ ul {
 
 .next-icon {
   color: #fff;
-  /* width: 2vw;
-  height: 2vw; */
   cursor: pointer;
   width: 1.5rem;
   height: 1.5rem;

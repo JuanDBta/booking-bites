@@ -4,15 +4,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-
-  resources :restaurants, only: [:new, :create] do
-    resources :sections, only: [:new, :create]
+  # get '*path', to: 'root#index', constraints: -> (req) { !req.xhr? && req.format.html? }
+  namespace :api do
+    resources :restaurants, only: [:new, :create] do
+      resources :sections, only: [:new, :create]
+    end
+    resources :sections, only: [:index, :show] do
+      resources :reservations, only: [:new, :create]
+    end
+    resources :reservations, only: [:index, :show]
+    resources :users 
   end
-
-  resources :sections, only: [:index, :show] do
-    resources :reservations, only: [:new, :create]
-  end
-
-  resources :reservations, only: [:index, :show]
-  resources :users 
 end

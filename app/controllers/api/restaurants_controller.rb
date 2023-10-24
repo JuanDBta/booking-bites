@@ -1,4 +1,4 @@
-class RestaurantsController < ApplicationController
+class Api::RestaurantsController < ApplicationController
   def new
     @restaurant = Restaurant.new
   end
