@@ -3,7 +3,7 @@ import '../../assets/stylesheets/reservations.css';
 
 function Reservations() {
   return (
-    <h1>Reservations</h1>
+    <h1 className="title">Reservations</h1>
   );
 }
 

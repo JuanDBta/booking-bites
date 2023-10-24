@@ -1,26 +1,26 @@
 nav {
-    list-style: none;
+  list-style: none;
 }
 
 .nav-bar-link {
-    font-size: 1em;
-    font-weight: 600;
-    margin-bottom: 0.5vw;
-    padding: 1vw;
-    padding-top: 1.3vw;
-    width: 100%;
-    display: flex;
-    align-items: center;
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 0.5vw;
+  padding: 1vw;
+  padding-top: 1.3vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .nav-bar-link a {
-    color: rgb(85, 78, 78);
+  color: rgb(85, 78, 78);
 }
 
 .active {
-    background-color: rgb(20, 221, 20);
-  }
+  background-color: rgb(20, 221, 20);
+}
 
 .active a {
-    color: #fff;
+  color: #fff;
 }

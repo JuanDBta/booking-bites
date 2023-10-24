@@ -3,7 +3,7 @@ import '../../assets/stylesheets/sectionnew.css';
 
 function SectionNew() {
   return (
-    <h1>New Section</h1>
+    <h1 className="title">New Section</h1>
   );
 }
 
