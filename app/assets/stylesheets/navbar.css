@@ -6,11 +6,15 @@ nav {
     color: rgb(85, 78, 78);
     font-size: 1em;
     font-weight: 600;
-    margin-bottom: 2vw;
+    margin-bottom: 1vw;
     padding: 1vw;
     padding-top: 1.3vw;
     width: 100%;
-    background-color: rgb(20, 221, 20);
     display: flex;
     align-items: center;
 }
+
+.active {
+    color: #fff;
+    background-color: rgb(20, 221, 20);
+  }
