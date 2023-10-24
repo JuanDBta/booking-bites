@@ -13,11 +13,11 @@ function NavBar() {
       <li className={`nav-bar-link ${location.pathname === '/sections/new' ? 'active' : ''}`}>
         <NavLink to="/sections/new">ADD SECTION</NavLink>
       </li>
-      <li className={`nav-bar-link ${location.pathname === '/reservations/new' ? 'active' : ''}`}>
+      <li className={`nav-bar-link ${location.pathname === '/reservations/new'  ? 'active' : ''}`}>
         <NavLink to="/reservations/new">ADD RESERVATION</NavLink>
       </li>
-      <li className={`nav-bar-link ${location.pathname === '/reservations' ? 'active' : ''}`}>
-        <NavLink to="/reservations">MY RESERVATIONS</NavLink>
+      <li className={`nav-bar-link ${location.pathname === '/my'  ? 'active' : ''}`}>
+        <NavLink to="/my">MY RESERVATIONS</NavLink>
       </li>
     </nav>
   );

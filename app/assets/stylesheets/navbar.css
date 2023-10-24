@@ -3,10 +3,9 @@ nav {
 }
 
 .nav-bar-link {
-    color: rgb(85, 78, 78);
     font-size: 1em;
     font-weight: 600;
-    margin-bottom: 1vw;
+    margin-bottom: 0.5vw;
     padding: 1vw;
     padding-top: 1.3vw;
     width: 100%;
@@ -14,7 +13,14 @@ nav {
     align-items: center;
 }
 
+.nav-bar-link a {
+    color: rgb(85, 78, 78);
+}
+
 .active {
-    color: #fff;
     background-color: rgb(20, 221, 20);
   }
+
+.active a {
+    color: #fff;
+}

@@ -53,7 +53,7 @@ function App() {
         <Route path="/sections/:id" element={<SectionDetail />} />
         <Route path="/sections/new" element={<SectionNew />} />
         <Route path="/reservations/new" element={<ReservationNew />} />
-        <Route path="/reservations" element={<Reservations />} />
+        <Route path="/my" element={<Reservations />} />
       </Routes>
     </>
   );
