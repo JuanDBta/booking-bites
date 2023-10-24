@@ -24,18 +24,29 @@ function App() {
   return (
     <>
       <header className="app-header">
-        <div className="logo-title flex">
+        <div className="logo-title">
           <h1 className="title-header">BookingBites</h1>
           <NavBar className="bar" />
         </div>
         
         <div className="social-icons">
-          <FaTwitter className="twitter-icon" />
-          <ImFacebook className="facebook-icon" />
-          <TiSocialGooglePlus className="google-icon" />
-          <BsVimeo className="v-icon" />
-          <FaPinterestP className="pinterest-icon" />
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+            <FaTwitter className="twitter-icon" />
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+            <ImFacebook className="facebook-icon" />
+          </a>
+          <a href="https://plus.google.com" target="_blank" rel="noopener noreferrer">
+            <TiSocialGooglePlus className="google-icon" />
+          </a>
+          <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer">
+            <BsVimeo className="v-icon" />
+          </a>
+          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
+            <FaPinterestP className="pinterest-icon" />
+          </a>
         </div>
+
       </header>
       <Routes>
         <Route path="/" element={<Main />} />
