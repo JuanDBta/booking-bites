@@ -13,6 +13,7 @@ import SectionDetail from './components/Detail';
 import SectionNew from './components/SectionNew';
 import ReservationNew from './components/ReservationNew';
 import Reservations from './components/Reservations';
+import Delete from './components/Delete';
 import { FaTwitter } from 'react-icons/fa';
 import { ImFacebook } from 'react-icons/im';
 import { TiSocialGooglePlus } from 'react-icons/ti';
@@ -54,6 +55,7 @@ function App() {
         <Route path="/sections/new" element={<SectionNew />} />
         <Route path="/reservations/new" element={<ReservationNew />} />
         <Route path="/my" element={<Reservations />} />
+        <Route path="/delete" element={<Delete />} />
       </Routes>
     </>
   );
