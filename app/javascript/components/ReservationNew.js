@@ -11,7 +11,7 @@ function ReservationNew() {
   const [reservationData, setReservationData] = useState({
     city: '',
     date: '',
-    user:'',
+    user_id:'',
     number_of_person: '',
     section_id: '',
   })
@@ -32,13 +32,13 @@ function ReservationNew() {
       date: reservationData.date,
       number_of_person: reservationData.number_of_person,
       section_id: reservationData.section_id,
-      user: reservationData.user
+      user_id: reservationData.user_id
     };
-    dispatch(addReservation(newReservation));
+    dispatch(addReservation(newReservation)).unwrap();
     setReservationData({
       city: '',
       date: '',
-      user: '',
+      user_id: '',
       number_of_person: '',
       section_id: '',
     });
@@ -61,8 +61,8 @@ function ReservationNew() {
     />
     <input
       type="number"
-      name="user"
-      value={reservationData.user}
+      name="user_id"
+      value={reservationData.user_id}
       onChange={handleChange}
       placeholder="Username"
     />
@@ -71,6 +71,7 @@ function ReservationNew() {
       name="number_of_person"
       value={reservationData.number_of_person}
       onChange={handleChange}
+      min={2}
       placeholder="number_of_person"
     />
     <select
