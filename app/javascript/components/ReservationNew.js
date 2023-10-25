@@ -1,11 +1,13 @@
 import React from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useEffect,useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { addReservation } from '../redux/features/reservations/reservaionSlicer'
+import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
 
 function ReservationNew() {
   const dispatch = useDispatch();
+  const sections = useSelector((state) => state.sections);
   const [reservationData, setReservationData] = useState({
     city: '',
     date: '',
@@ -19,6 +21,10 @@ function ReservationNew() {
       [e.target.name]: e.target.value,
     });
   };
+  useEffect(() => {
+    dispatch(fetchSections());
+  }, [dispatch]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
       dispatch(addReservation({
@@ -26,7 +32,7 @@ function ReservationNew() {
         date: '',
         user_id: user.id,
         number_of_person: '',
-        section_id: section.id,
+        section_id: '',
       }));
       setReservationData('');
   };
@@ -60,13 +66,18 @@ function ReservationNew() {
       onChange={handleChange}
       placeholder="number_of_person"
     />
-    <input
-      type="text"
-      name="section"
-      value={reservationData.section}
-      onChange={handleChange}
-      placeholder="Section"
-    />
+     <select
+       name="Section"
+       value={reservationData.section}
+       onChange={handleChange}
+     >
+     <option value="">Select a section</option>
+          {sections.map((section) => (
+          <option key={section.id} value={section.id}>
+            {section.name}
+          </option>
+          ))}
+    </select>
     <button type="submit">Reserve</button>
   </form>
   );
