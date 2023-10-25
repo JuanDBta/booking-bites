@@ -26,12 +26,10 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
- 
   .nav-bar-link {
     font-size: 0.7em;
     font-weight: 300;
     padding: 4%;
     width: 95%;
   }
-  
 }
