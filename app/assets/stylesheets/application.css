@@ -17,6 +17,7 @@ body {
   font-family: 'Acumin Pro', sans-serif;
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 
 #root {
@@ -27,7 +28,11 @@ body {
   width: 16.5%;
   background-color: #fff;
   border-right: 2px rgb(238, 217, 217) solid;
-  height: 100vw;
+  height: 60em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo-title {
@@ -35,15 +40,19 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  height: 14vw;
+  gap: 5vw;
 }
 
 .title-header {
-  color: rgb(233, 210, 210);
+  color: rgb(85, 78, 78);
   width: 16.5%;
   text-align: center;
   display: flex;
   justify-content: center;
-  font-size: small;
+  font-size: 2em;
+  padding-top: 1.5em;
+  margin: 0;
 }
 
 ul {
@@ -59,8 +68,40 @@ a {
   text-decoration: none;
 }
 
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1em;
+  position: absolute;
+  bottom: 8%;
+}
+
+.twitter-icon,
+.facebook-icon,
+.v-icon,
+.pinterest-icon {
+  font-size: 1vw;
+  color: rgb(85, 78, 78);
+}
+
+.google-icon {
+  font-size: 1.5vw;
+  color: rgb(85, 78, 78);
+  font-weight: 800;
+}
+
 @media only screen and (max-width: 767px) {
+  body {
+    overflow: auto;
+  }
+
   .app-header {
     height: auto;
+  }
+
+  .title-header {
+    font-size: 0.8em;
   }
 }
