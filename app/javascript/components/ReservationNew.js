@@ -11,9 +11,9 @@ function ReservationNew() {
   const [reservationData, setReservationData] = useState({
     city: '',
     date: '',
-    user: '',
+    user:'',
     number_of_person: '',
-    section: '',
+    section_id: '',
   })
   const handleChange = (e) => {
     setReservationData({
@@ -27,14 +27,21 @@ function ReservationNew() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-      dispatch(addReservation({
-        city: '',
-        date: '',
-        user_id: user.id,
-        number_of_person: '',
-        section_id: '',
-      }));
-      setReservationData('');
+    const newReservation = {
+      city: reservationData.city,
+      date: reservationData.date,
+      number_of_person: reservationData.number_of_person,
+      section_id: reservationData.section_id,
+      user: reservationData.user
+    };
+    dispatch(addReservation(newReservation));
+    setReservationData({
+      city: '',
+      date: '',
+      user: '',
+      number_of_person: '',
+      section_id: '',
+    });
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -53,7 +60,7 @@ function ReservationNew() {
       placeholder="Date"
     />
     <input
-      type="text"
+      type="number"
       name="user"
       value={reservationData.user}
       onChange={handleChange}
@@ -66,10 +73,10 @@ function ReservationNew() {
       onChange={handleChange}
       placeholder="number_of_person"
     />
-     <select
-       name="Section"
-       value={reservationData.section}
-       onChange={handleChange}
+    <select
+    name="section_id"
+    value={reservationData.section_id}
+     onChange={handleChange}
      >
      <option value="">Select a section</option>
           {sections.map((section) => (
