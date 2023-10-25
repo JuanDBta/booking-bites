@@ -19,7 +19,17 @@ function ReservationNew() {
       [e.target.name]: e.target.value,
     });
   };
-  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+      dispatch(addReservation({
+        city: '',
+        date: '',
+        user_id: user.id,
+        number_of_person: '',
+        section_id: section.id,
+      }));
+      setReservationData('');
+  };
   return (
     <form onSubmit={handleSubmit}>
     <input
