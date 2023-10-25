@@ -17,7 +17,6 @@ class Api::ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
     if @reservation.save
       render json: { reservation: @reservation, success: true }
-      redirect_to @reservation
     else
       render 'new'
     end
