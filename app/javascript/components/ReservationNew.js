@@ -19,9 +19,46 @@ function ReservationNew() {
       [e.target.name]: e.target.value,
     });
   };
-
-  return (
   
+  return (
+    <form onSubmit={handleSubmit}>
+    <input
+      type="text"
+      name="city"
+      value={reservationData.city}
+      onChange={handleChange}
+      placeholder="City"
+    />
+    <input
+      type="date"
+      name="date"
+      value={reservationData.date}
+      onChange={handleChange}
+      placeholder="Date"
+    />
+    <input
+      type="text"
+      name="user"
+      value={reservationData.user}
+      onChange={handleChange}
+      placeholder="Username"
+    />
+    <input
+      type="number"
+      name="number_of_person"
+      value={reservationData.number_of_person}
+      onChange={handleChange}
+      placeholder="number_of_person"
+    />
+    <input
+      type="text"
+      name="section"
+      value={reservationData.section}
+      onChange={handleChange}
+      placeholder="Section"
+    />
+    <button type="submit">Reserve</button>
+  </form>
   );
 }
 
