@@ -20,7 +20,6 @@ class Api::SectionsController < ApplicationController
     @section.restaurant = @restaurant
     if @section.save
       render json: { section: @section, success: true }
-      redirect_to @section
     else
       render json: @section.errors
     end
