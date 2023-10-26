@@ -44,13 +44,16 @@ function ReservationNew() {
     });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='form_container flex'>
+    <form onSubmit={handleSubmit} className='flex'>
+    <div class="form_row">
     <input
       type="text"
       name="city"
       value={reservationData.city}
       onChange={handleChange}
       placeholder="City"
+      className='input'
     />
     <input
       type="date"
@@ -58,26 +61,16 @@ function ReservationNew() {
       value={reservationData.date}
       onChange={handleChange}
       placeholder="Date"
+      className='input'
     />
-    <input
-      type="number"
-      name="user_id"
-      value={reservationData.user_id}
-      onChange={handleChange}
-      placeholder="Username id"
-    />
-    <input
-      type="number"
-      name="number_of_person"
-      value={reservationData.number_of_person}
-      onChange={handleChange}
-      min={1}
-      placeholder="number_of_person"
-    />
+    </div>
+    <div class="form_row">
     <select
     name="section_id"
     value={reservationData.section_id}
      onChange={handleChange}
+     className='input'
+     id="select"
      >
      <option value="">Select a section</option>
           {sections.map((section) => (
@@ -86,8 +79,30 @@ function ReservationNew() {
           </option>
           ))}
     </select>
+     
+    <input
+      type="number"
+      name="number_of_person"
+      value={reservationData.number_of_person}
+      onChange={handleChange}
+      min={1}
+      placeholder="number_of_person"
+      className='input'
+    />
+     <input
+      type="number"
+      name="user_id"
+      value={reservationData.user_id}
+      onChange={handleChange}
+      placeholder="Username id"
+      className='input'
+    />
+    </div>
+    
+    
     <button type="submit">Reserve</button>
   </form>
+  </div>
   );
 }
 

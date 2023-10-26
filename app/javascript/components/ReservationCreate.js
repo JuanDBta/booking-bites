@@ -46,13 +46,16 @@ function ReservationCreate() {
     });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <div className='form_container flex'>
+    <form onSubmit={handleSubmit} className='flex'>
+    <div class="form_row">
     <input
       type="text"
       name="city"
       value={reservationData.city}
       onChange={handleChange}
       placeholder="City"
+      className='input'
     />
     <input
       type="date"
@@ -60,13 +63,17 @@ function ReservationCreate() {
       value={reservationData.date}
       onChange={handleChange}
       placeholder="Date"
+      className='input'
     />
+    </div>
+    <div class="form_row">
     <input
       type="number"
       name="user_id"
       value={reservationData.user_id}
       onChange={handleChange}
       placeholder="Username id"
+      className='input'
     />
     <input
       type="number"
@@ -75,9 +82,14 @@ function ReservationCreate() {
       onChange={handleChange}
       min={1}
       placeholder="number_of_person"
+      className='input'
     />
+
+    </div>
+    
     <button type="submit">Reserve</button>
   </form>
+  </div>
   );
 }
 
