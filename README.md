@@ -24,7 +24,6 @@
   - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -101,7 +100,6 @@
 - **[Created registration and login page]**
 - **[Created the page to add a reservation]**
 - **[Created the reservations page]**
-- **[Added unit and integrations tests]**
 - **[Deployed the project]**
 - **[Recorded a video describing project]**
 
@@ -150,17 +148,13 @@ Go to your /booking-bites folder:
 ```sh
   cd booking-bites
   bundle install
+  npm install
 ```
 ### Usage
 
 ```sh
+  npm run build
   rails server
-```
-
-### Run Tests
-
-```sh
-  rspec spec
 ```
 
 ### Deployment

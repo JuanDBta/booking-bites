@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import sectionsReducer from './features/sections/sectionsSlice';
-import reservationSlice from'./features/reservations/reservaionSlicer'; 
+import reservationSlice from'./features/reservations/reservationSlice'; 
+import reservationsApiReducer from './features/reservations/reservationsApiSlice';
 const store = configureStore({
   reducer: {
     sections: sectionsReducer,
-    reservations: reservationSlice
+    reservations: reservationSlice,
+    reservationsApi: reservationsApiReducer
   },
 });
 

@@ -3,7 +3,9 @@ import '../../assets/stylesheets/delete.css';
 
 function Delete() {
   return (
-    <h1 className="title">Delete</h1>
+    <div className="delete-container">
+      <h1 className="title-del">UNDER CONSTRUCTION ...</h1>
+    </div>
   );
 }
 

@@ -24,8 +24,6 @@ export const addReservation = createAsyncThunk('reservations/addReservation', as
   }
 });
 
-
-
 const reservationSlice = createSlice({
   name: 'reservations',
   initialState,
