@@ -14,6 +14,7 @@
   margin-bottom: 0;
   font-size: 3em;
   font-weight: 800;
+  color: #161616;
 }
 
 .title-description {
@@ -92,8 +93,8 @@ ul {
   border: 0;
   background-color: rgb(20, 221, 20);
   position: absolute;
-  top: 37%;
-  left: 17%;
+  top: 44%;
+  left: 16%;
   height: 3.5rem;
   width: 3rem;
   border-bottom-right-radius: 9999px;
@@ -116,7 +117,7 @@ ul {
   border: 0;
   background-color: rgb(20, 221, 20);
   position: absolute;
-  top: 37%;
+  top: 44%;
   right: 0;
   height: 3.5rem;
   width: 3rem;

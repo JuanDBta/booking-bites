@@ -25,9 +25,9 @@ body {
 }
 
 .app-header {
-  width: 16.5%;
+  width: 16%;
   background-color: #fff;
-  border-right: 2px rgb(238, 217, 217) solid;
+  border-right: 5px rgb(252, 237, 237) solid;
   height: 60em;
   display: flex;
   flex-direction: column;
@@ -50,7 +50,7 @@ body {
   text-align: center;
   display: flex;
   justify-content: center;
-  font-size: 2em;
+  font-size: 1.7em;
   padding-top: 1.5em;
   margin: 0;
 }
