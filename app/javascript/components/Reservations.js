@@ -27,12 +27,12 @@ function Reservations() {
       <ul className="reservations-list">
         {reservationsApi.map((reservation, index) => (
         <li key={index} className="info">
-            <p className="text">Reservation #{index + 1}:</p>
+            <p className="text">RESERVATION #{index + 1}:</p>
             <p className="text desc">ID {reservation.id}</p>
             <p className="text desc">{reservation.date}</p>
             <p className="text desc">{reservation.city}</p>
             <p className="text desc">{getSectionName(reservation.section_id)}</p>            
-            <p className="text desc"># People: {reservation.number_of_person}</p>
+            <p className="text desc"># PEOPLE: {reservation.number_of_person}</p>
         </li>
         ))}
       </ul>
