@@ -16,12 +16,12 @@ function Reservations() {
 
   const getSectionName = (sectionId) => {
     const section = sections.find(section => section.id === sectionId);
-    return section ? section.name : 'Unknown Section'; // Maneja el caso en el que la sección no se encuentra
+    return section ? section.name : 'Unknown Section';
   };
 
   return (
     <div className="reservations-container">
-      <h1 className="title">MY RESERVATIONS</h1>
+      <h1 className="title-res">MY RESERVATIONS</h1>
       <h3 className="title-description">List of your reservations</h3>
       <div className="dotted-line"></div>
       <ul className="reservations-list">
