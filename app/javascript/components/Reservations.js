@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchReservations } from '../redux/features/reservations/reservationSlice';
+import { fetchReservationsApi } from '../redux/features/reservations/reservationsApiSlice';
 import '../../assets/stylesheets/reservations.css';
 
 function Reservations() {
   const dispatch = useDispatch();
-  const reservations = useSelector((state) => state.reservations.reservations);
+  const reservationsApi = useSelector((state) => state.reservationsApi);
 
   useEffect(() => {
-    dispatch(fetchReservations());
+    dispatch(fetchReservationsApi());
   }, [dispatch]);
+
 
   return (
     <div className="reservations-container">
@@ -17,7 +18,7 @@ function Reservations() {
       <h3 className="title-description">List of your reservations</h3>
       <div className="dotted-line"></div>
       <ul className="reservations-list">
-        {reservations.map((reservation) => (
+        {reservationsApi.map((reservation) => (
         <li key={reservation.id} className="info">
             <p>Reservation #{reservation.id}</p>
             <p>City: {reservation.city}</p>
