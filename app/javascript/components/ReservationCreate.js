@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect,useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { FaBars, FaSearch } from 'react-icons/fa';
 import { addReservation } from '../redux/features/reservations/reservaionSlicer'
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
@@ -47,6 +48,10 @@ function ReservationCreate() {
   };
   return (
     <div className='form_container flex'>
+      <div className='top_icons flex'>
+        <FaBars className='menu_icon' />
+        <div className='search_icon search_div'><FaSearch  id='search' /></div>
+      </div>
     <div className='booking_headline'>
         <h3 className='flex'>RESERVE TABLE BOOKING-BITES</h3>
         <p className='first_p flex'>There are different section of restuarant. Today one of them is waiting for you! Our web application offers a seamless dining reservation.</p>

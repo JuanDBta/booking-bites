@@ -27,8 +27,28 @@ form{
   color: white;
   border: 1px white solid;
 }
-
-
+.top_icons{
+  position: absolute;
+  top: 4%;
+  justify-content: space-between;
+  width: 79%;
+}
+.menu_icon {
+  align-self: flex-start;
+}
+.search_div{
+  background-color: white;
+  border-radius: 9999px;
+ padding: 1.5%;
+ display: flex;
+ justify-content: center;
+}
+.search_icon {
+  align-self: flex-end; 
+}
+#search{
+ color:  rgb(20, 221, 20);
+} 
 input[type="text"]::placeholder,
 input[type="number"]::placeholder,
 input[type="date"]::placeholder,
@@ -91,5 +111,8 @@ input[type="text"]:hover,input:hover::placeholder{
   }
   #select{
     padding: 2%;
+  }
+  .top_icons{
+    top: 0;
   }
 }
