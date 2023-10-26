@@ -1,7 +1,6 @@
 .reservations-container {
-  width: 83.5%;
+  width: 84.5%;
   background-color: #fff;
-  height: 100%;
   flex-direction: column;
   display: flex;
   gap: 1em;
@@ -14,7 +13,7 @@
 
 .title {
   text-align: center;
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 0;
   font-size: 3em;
   font-weight: 800;
