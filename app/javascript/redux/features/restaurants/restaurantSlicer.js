@@ -39,7 +39,7 @@ export const fetchrestaurants = createAsyncThunk('data/fetchrestaurants', async 
         return action.payload;
       });
       builder.addCase(addrestaurant.fulfilled, (state, action) => {
-        state.restaurants.push(action.payload);
+        state.push(action.payload);
       });
     },
   });

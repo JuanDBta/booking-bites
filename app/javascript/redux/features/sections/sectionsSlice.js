@@ -39,7 +39,7 @@ export const fetchSections = createAsyncThunk('data/fetchSections', async () => 
         return action.payload;
       });
       builder.addCase(addSection.fulfilled, (state, action) => {
-        state.sections.push(action.payload);
+        state.push(action.payload);
       });
     },
   });

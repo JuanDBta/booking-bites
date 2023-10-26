@@ -11,8 +11,6 @@ const initialState = {
 
 
 export const addReservation = createAsyncThunk('reservations/addReservation', async (newtable) => {
-  console.log("id",newtable.section_id)
-  console.log('DATA',newtable)
   const headers = {
     'Content-Type': 'application/json',
   };

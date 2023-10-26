@@ -5,11 +5,13 @@ import { fetchrestaurants} from '../redux/features/restaurants/restaurantSlicer'
 import '../../assets/stylesheets/sectionnew.css';
 import { Link } from 'react-router-dom';
 const sections = [
-  { name: 'Cozy bar', image: '/' },
+  { name: 'Cozy bar', image: '/cozy-bar.jpg' },
   { name: 'The chic lounge', image: '/lounge.jpg' },
-  { name: 'Scenic rooftop', image: '/rooftop.jpg' },
+  { name: 'Scenic rooftop', image: '/rooftop1.jpg' },
   { name: 'Tranquil garden', image: '/garden.jpg' },
-  { name: 'The vibrant live music area', image: '/hall.jpg' },
+  { name: 'The vibrant live music area', image: '/live_music.jpg' },
+  { name: 'Private dining room', image: '/private.jpg' },
+  { name: 'Cosy fireplace area', image: '/fire.jpg' }
 ];
 
 function SectionNew() {
@@ -26,19 +28,25 @@ function SectionNew() {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    if (name === 'name') {
+    const { name, value, type, checked } = e.target;
+  
+    if (type === 'checkbox') {
+      setSectionData((prevData) => ({
+        ...prevData,
+        [name]: checked,
+      }));
+    } else if (name === 'name') {
       const selectedSection = sections.find((section) => section.name === value);
-      setSectionData({
-        ...sectionData,
+      setSectionData((prevData) => ({
+        ...prevData,
         [name]: value,
         image: selectedSection ? selectedSection.image : '',
-      });
+      }));
     } else {
-      setSectionData({
-        ...sectionData,
+      setSectionData((prevData) => ({
+        ...prevData,
         [name]: value,
-      });
+      }));
     }
   };
 
@@ -53,8 +61,8 @@ function SectionNew() {
       image: sectionData.image,
       description: sectionData.description,
       capacity: sectionData.capacity,
-      cover: sectionData.cover,
-      live_music: sectionData.live_music,
+      cover: sectionData.cover || false,
+      live_music: sectionData.live_music || false,
       restaurant_id: sectionData.restaurant_id,
     };
     dispatch(addSection(newSection)).unwrap();
@@ -70,6 +78,7 @@ function SectionNew() {
   };
 
   return (
+    <div className='form_containers flex'>
     <form onSubmit={handleSubmit} className="flex" id="selection_form">
       {restaurants.length > 0 ? (
         <>
@@ -77,8 +86,8 @@ function SectionNew() {
             name="name"
             value={sectionData.name}
             onChange={handleChange}
-            className="input"
-            id="select"
+            className="inputs"
+            id="selects"
           >
             <option value="">Select a section</option>
             {sections.map((section) => (
@@ -93,24 +102,9 @@ function SectionNew() {
             value={sectionData.description}
             onChange={handleChange}
             placeholder="Description"
-            className="input"
+            className="inputs"
           />
-          <input
-            type="checkbox"
-            name="cover"
-            checked={sectionData.cover}
-            onChange={handleChange}
-            className="input"
-          />
-          <label htmlFor="cover">Cover</label>
-          <input
-            type="checkbox"
-            name="live_music"
-            checked={sectionData.live_music}
-            onChange={handleChange}
-            className="input"
-          />
-          <label htmlFor="live_music">Live music</label>
+          
           <input
             type="number"
             name="capacity"
@@ -118,15 +112,15 @@ function SectionNew() {
             onChange={handleChange}
             min={1}
             placeholder="Capacity"
-            className="input"
+            className="inputs"
           />
 
           <select
             name="restaurant_id"
             value={sectionData.restaurant_id}
             onChange={handleChange}
-            className="input"
-            id="select"
+            className="inputs"
+            id="selects"
           >
             <option value="">Select a restaurant</option>
             {restaurants.map((restaurant) => (
@@ -135,16 +129,35 @@ function SectionNew() {
               </option>
             ))}
           </select>
+          <div className='flex check'>
+           <input
+            type="checkbox"
+            name="cover"
+            checked={sectionData.cover}
+            onChange={handleChange}
+            className="inputs"
+          />
+          <label htmlFor="cover">Cover</label>
+          <input
+            type="checkbox"
+            name="live_music"
+            checked={sectionData.live_music}
+            onChange={handleChange}
+            className="inputs"
+          />
+          <label htmlFor="live_music">Live music</label>
+          </div>
+          
       <button type="submit" className="flex">
-        Create
+        Create Section
       </button>
         </>
       ) : (
         <>
-          <p className="notice">Please create a restaurant first!</p>
+          <h3 className="notice flex">Please create a restaurant first!</h3>
           <Link to="/restaurant/new">
             <p className="flex discover">
-              <button className="detail_reserve flex">
+              <button className="detail_reserve flex"  id="back">
                 Create restaurant
                 <div className="circle-right">
                   <p>&gt;</p>
@@ -155,6 +168,7 @@ function SectionNew() {
         </>
       )}
     </form>
+    </div>
   );
 }
 
