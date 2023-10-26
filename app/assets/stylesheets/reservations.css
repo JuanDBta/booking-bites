@@ -53,3 +53,12 @@
   align-items: center;
   justify-content: center;
 }
+
+.text {
+  padding-right: 1em;
+  color: #161616;
+}
+
+.desc {
+  color: #fff; 
+}
