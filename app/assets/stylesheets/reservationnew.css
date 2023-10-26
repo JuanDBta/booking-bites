@@ -10,16 +10,19 @@
   align-items: center;
   flex-direction: column;
 }
-.flex{
+
+.flex {
   display: flex;
 }
-form{
+
+form {
   z-index: 9999;
   flex-direction: column;
   gap: 1em;
   justify-content: center;
 }
-.input{
+
+.input {
   background-color: rgb(20, 221, 20);
   padding: 1em;
   width: 41%;
@@ -27,28 +30,36 @@ form{
   color: white;
   border: 1px white solid;
 }
-.top_icons{
+
+.top_icons {
   position: absolute;
   top: 4%;
   justify-content: space-between;
   width: 79%;
 }
+
 .menu_icon {
   align-self: flex-start;
+  font-weight: bold;
+  font-size: 2em;
 }
-.search_div{
+
+.search_div {
   background-color: white;
   border-radius: 9999px;
- padding: 1.5%;
- display: flex;
- justify-content: center;
+  padding: 1.5%;
+  display: flex;
+  justify-content: center;
 }
+
 .search_icon {
-  align-self: flex-end; 
+  align-self: flex-end;
 }
-#search{
- color:  rgb(20, 221, 20);
-} 
+
+#search {
+  color: rgb(20, 221, 20);
+}
+
 input[type="text"]::placeholder,
 input[type="number"]::placeholder,
 input[type="date"]::placeholder,
@@ -56,16 +67,19 @@ select::placeholder {
   color: white;
   align-self: center;
 }
-#select{
+
+#select {
   width: 47%;
 }
+
 input[type="date"]::placeholder,
 select::placeholder {
   color: white;
   align-self: center;
 }
+
 button[type="submit"] {
-  background-color:rgb(20, 221, 20);
+  background-color: rgb(20, 221, 20);
   color: white;
   padding: 1em;
   width: 41%;
@@ -74,19 +88,22 @@ button[type="submit"] {
   align-self: center;
   text-align: center;
 }
-.booking_headline{
+
+.booking_headline {
   color: white;
 }
-.booking_headline h3{
+
+.booking_headline h3 {
   font-size: x-large;
   font-weight: 700;
 }
+
 .booking_headline h3,
 .first_p,
 .second_p,
 .thir_p,
-.fourth_p{
- justify-content: center;
+.fourth_p {
+  justify-content: center;
 }
 
 input:hover,
@@ -96,23 +113,34 @@ input[type="date"]:hover {
   background-color: white;
   color: rgb(20, 221, 20);
 }
-input[type="text"]:hover,input:hover::placeholder{
+
+input[type="text"]:hover,
+input:hover::placeholder {
   color: rgb(20, 221, 20);
   background-color: white;
 }
-.form_row{
+
+.form_row {
   display: flex;
   gap: 1em;
 }
 
 @media only screen and (max-width: 767px) {
-  .input,button[type="submit"]{
+  .input,
+  button[type="submit"] {
     padding: 2%;
   }
-  #select{
+
+  #select {
     padding: 2%;
   }
-  .top_icons{
+
+  .top_icons {
     top: 0;
+  }
+
+  .menu_icon {
+    font-weight: bold;
+    font-size: 1em;
   }
 }
