@@ -10,9 +10,6 @@ function SectionDetail() {
     const sections = useSelector((state) => state.sections);
     const { id } = useParams();
     const navigate = useNavigate ();
-    // const handleBookTable = () => {
-    //   navigate(`/reservation/create`);
-    // };
     const detailsection = sections.find((section) => section.id === Number(id));
     if (!detailsection) {
         return <div>Loading...</div>; 

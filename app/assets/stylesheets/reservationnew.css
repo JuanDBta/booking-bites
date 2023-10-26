@@ -79,14 +79,18 @@ select::placeholder {
 }
 
 button[type="submit"] {
-  background-color: rgb(20, 221, 20);
-  color: white;
+  background-color: white;
+  color: rgb(20, 221, 20);
   padding: 1em;
   width: 41%;
   border-radius: 9999px;
   border: 1px white solid;
   align-self: center;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .booking_headline {
@@ -110,10 +114,14 @@ button[type="submit"] {
 
 input:hover,
 select:hover,
-button[type="submit"]:hover,
 input[type="date"]:hover {
   background-color: white;
   color: rgb(20, 221, 20);
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(49, 63, 47);
+  color: rgb(238, 244, 238);
 }
 
 input[type="text"]:hover,

@@ -4,5 +4,5 @@ class Section < ApplicationRecord
   validates :name, presence: true
   validates :image, presence: true
   validates :description, presence: true
-  validates :capacity, numericality: { only_integer: true, greater_than: 1 }
+  validates :capacity, numericality: { only_integer: true, greater_than: 0 }
 end

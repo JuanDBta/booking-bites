@@ -1,3 +1,163 @@
-.title-new {
+#selection_form,
+#restaurant_form {
+  flex-direction: column;
+}
+
+.notice {
   color: red;
+  font-size: large;
+  font-weight: bold;
+  justify-content: center;
+}
+
+#back {
+  width: 100%;
+}
+
+#selection_form {
+  z-index: 9999;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.form_containers {
+  color: rgb(39, 37, 37);
+  width: 86%;
+  background-image: linear-gradient(to bottom, rgba(212, 222, 212, 0.7) 0%, rgb(188, 242, 188, 0.7) 100%), url(https://img.traveltriangle.com/blog/wp-content/uploads/2018/10/Panoramic-34.jpg);
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputs {
+  background-color: rgb(20, 221, 20);
+  padding: 1em;
+  width: 41%;
+  border-radius: 9999px;
+  color: white;
+  border: 1px white solid;
+}
+
+.top_icons {
+  position: absolute;
+  top: 4%;
+  justify-content: space-between;
+  width: 79%;
+}
+
+.menu_icon {
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.search_div {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 1.5%;
+  display: flex;
+  justify-content: center;
+}
+
+.search_icon {
+  align-self: flex-end;
+}
+
+#search {
+  color: rgb(20, 221, 20);
+}
+
+.inputs[type="text"]::placeholder,
+.input[type="number"]::placeholder,
+.inputs[type="textarea"]::placeholder,
+#selects::placeholder {
+  color: white;
+  align-self: center;
+}
+
+#selects {
+  width: 43%;
+}
+
+.inputs[type="date"]::placeholder,
+#selects::placeholder {
+  color: white;
+  align-self: center;
+}
+
+button[type="submit"] {
+  background-color: white;
+  color: rgb(20, 221, 20);
+  padding: 1em;
+  width: 41%;
+  border-radius: 9999px;
+  border: 1px white solid;
+  align-self: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.inputs:hover,
+#select:hover {
+  background-color: white;
+  color: rgb(20, 221, 20);
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(49, 63, 47);
+  color: rgb(238, 244, 238);
+}
+
+.inputs[type="text"]:hover,
+.inputs:hover::placeholder {
+  color: rgb(20, 221, 20);
+  background-color: white;
+}
+
+.form_row {
+  display: flex;
+  gap: 1em;
+}
+
+.check {
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width: 767px) {
+  .inputs,
+  button[type="submit"] {
+    padding: 2%;
+  }
+
+  #selects {
+    padding: 2%;
+  }
+
+  .top_icons {
+    top: 0;
+  }
+
+  .booking_headline h3,
+  .form_container {
+    font-size: small;
+  }
+
+  .menu_icon {
+    font-weight: bold;
+    font-size: 1em;
+  }
+}
+
+.underline {
+  width: 70%;
 }
