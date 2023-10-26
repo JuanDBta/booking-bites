@@ -7,7 +7,6 @@ class Api::RestaurantsController < ApplicationController
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
       render json: { restaurant: @restaurant, success: true }
-      redirect_to @restaurant
     else
       render json: @restaurant.errors
     end

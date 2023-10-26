@@ -1,3 +1,8 @@
-.title {
+#selection_form,#restaurant_form{
+  flex-direction: column;
+}
+.notice{
   color: red;
+  font-size: medium;
+  font-weight: bold;
 }

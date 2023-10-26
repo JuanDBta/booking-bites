@@ -14,6 +14,7 @@ import SectionNew from './components/SectionNew';
 import ReservationNew from './components/ReservationNew';
 import ReservationCreate from './components/ReservationCreate';
 import Reservations from './components/Reservations';
+import CreateRestaurantForm from './components/CreateRestaurantForm';
 import Delete from './components/Delete';
 import { FaTwitter } from 'react-icons/fa';
 import { ImFacebook } from 'react-icons/im';
@@ -58,6 +59,7 @@ function App() {
         <Route path="/my" element={<Reservations />} />
         <Route path="/delete" element={<Delete />} />
         <Route path="/section/reserve/:section_id"element={<ReservationCreate />} />
+        <Route path="/restaurant/new" element={<CreateRestaurantForm/>}/>
       </Routes>
     </>
   );
