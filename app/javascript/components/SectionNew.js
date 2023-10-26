@@ -4,6 +4,13 @@ import { addSection } from '../redux/features/sections/sectionsSlice';
 import { fetchrestaurants} from '../redux/features/restaurants/restaurantSlicer';
 import '../../assets/stylesheets/sectionnew.css';
 import { Link } from 'react-router-dom';
+const sections = [
+  { name: 'Cozy bar', image: '/' },
+  { name: 'The chic lounge', image: '/lounge.jpg' },
+  { name: 'Scenic rooftop', image: '/rooftop.jpg' },
+  { name: 'Tranquil garden', image: '/garden.jpg' },
+  { name: 'The vibrant live music area', image: '/hall.jpg' },
+];
 
 function SectionNew() {
   const dispatch = useDispatch();
@@ -19,10 +26,20 @@ function SectionNew() {
   });
 
   const handleChange = (e) => {
-    setSectionData({
-      ...sectionData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    if (name === 'name') {
+      const selectedSection = sections.find((section) => section.name === value);
+      setSectionData({
+        ...sectionData,
+        [name]: value,
+        image: selectedSection ? selectedSection.image : '',
+      });
+    } else {
+      setSectionData({
+        ...sectionData,
+        [name]: value,
+      });
+    }
   };
 
   useEffect(() => {
@@ -56,14 +73,20 @@ function SectionNew() {
     <form onSubmit={handleSubmit} className="flex" id="selection_form">
       {restaurants.length > 0 ? (
         <>
-          <input
-            type="text"
+           <select
             name="name"
             value={sectionData.name}
             onChange={handleChange}
-            placeholder="Name"
             className="input"
-          />
+            id="select"
+          >
+            <option value="">Select a section</option>
+            {sections.map((section) => (
+              <option key={section.name} value={section.name}>
+                {section.name}
+              </option>
+            ))}
+          </select>
           <input
             type="textarea"
             name="description"

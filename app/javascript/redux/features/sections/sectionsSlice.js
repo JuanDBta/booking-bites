@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'http://localhost:3000/api/restaurant';
+const url = 'http://localhost:3000/api/restaurants';
 const sections= 'sections'
 
 export const fetchSections = createAsyncThunk('data/fetchSections', async () => {
