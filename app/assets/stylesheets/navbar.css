@@ -1,5 +1,6 @@
 nav {
   list-style: none;
+  width: 16em;
 }
 
 .nav-bar-link {
@@ -18,7 +19,7 @@ nav {
 }
 
 .active {
-  background-color: rgb(20, 221, 20);
+  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
 }
 
 .active a {
