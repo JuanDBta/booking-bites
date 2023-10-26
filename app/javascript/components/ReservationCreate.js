@@ -3,7 +3,7 @@ import { useEffect,useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaBars, FaSearch } from 'react-icons/fa';
-import { addReservation } from '../redux/features/reservations/reservaionSlicer'
+import { addReservation } from '../redux/features/reservations/reservationSlice'
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
 
