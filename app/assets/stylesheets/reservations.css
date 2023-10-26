@@ -65,3 +65,14 @@
 .desc {
   color: #fff;
 }
+
+.people {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.people-icon {
+  font-size: larger;
+  margin-top: -0.3em;
+}
+

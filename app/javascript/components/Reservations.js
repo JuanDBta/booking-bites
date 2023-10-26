@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservationsApi } from '../redux/features/reservations/reservationsApiSlice';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservations.css';
+import { CiUser } from "react-icons/ci";
 
 function Reservations() {
   const dispatch = useDispatch();
@@ -32,7 +33,8 @@ function Reservations() {
             <p className="text desc">{reservation.date}</p>
             <p className="text desc">{reservation.city}</p>
             <p className="text desc">{getSectionName(reservation.section_id)}</p>            
-            <p className="text desc"># PEOPLE: {reservation.number_of_person}</p>
+            <div className="people">
+            <CiUser className="people-icon" /><span className="number">{reservation.number_of_person}</span></div>
         </li>
         ))}
       </ul>
