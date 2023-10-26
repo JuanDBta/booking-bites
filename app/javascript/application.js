@@ -12,6 +12,7 @@ import NavBar from './components/NavBar';
 import SectionDetail from './components/Detail';
 import SectionNew from './components/SectionNew';
 import ReservationNew from './components/ReservationNew';
+import ReservationCreate from './components/ReservationCreate';
 import Reservations from './components/Reservations';
 import Delete from './components/Delete';
 import { FaTwitter } from 'react-icons/fa';
@@ -56,6 +57,7 @@ function App() {
         <Route path="/reservations/new" element={<ReservationNew />} />
         <Route path="/my" element={<Reservations />} />
         <Route path="/delete" element={<Delete />} />
+        <Route path="/section/reserve/:section_id"element={<ReservationCreate />} />
       </Routes>
     </>
   );

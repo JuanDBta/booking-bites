@@ -1,5 +1,6 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { TiMediaPlayReverseOutline } from "react-icons/ti";
@@ -8,7 +9,10 @@ import '../../assets/stylesheets/section_detail.css';
 function SectionDetail() {
     const sections = useSelector((state) => state.sections);
     const { id } = useParams();
-    
+    const navigate = useNavigate ();
+    // const handleBookTable = () => {
+    //   navigate(`/reservation/create`);
+    // };
     const detailsection = sections.find((section) => section.id === Number(id));
     if (!detailsection) {
         return <div>Loading...</div>; 
@@ -42,11 +46,15 @@ function SectionDetail() {
                  Discover more Section
                  <img src="/detail_right_arrow.png" alt="Discover Icon" className="discover-icon" style={{ width: '1em', height: 'auto' }} />
             </p>
-            <p className='flex discover '> <button className='detail_reserve flex'>
-                 Book a table
-                 <div className="circle-right"><p>&gt;</p></div>
-                 </button>
-            </p>
+            <Link
+                to={`/section/reserve/${detailsection.id}`}>
+                   <p className='flex discover '>
+                    <button className='detail_reserve flex' >
+                      Book a table
+                      <div className="circle-right"><p>&gt;</p></div>
+                      </button>
+                    </p>
+                </Link>
         </ul>
         </div>
         <NavLink to="/">

@@ -1,3 +1,157 @@
-.title {
-  color: red;
+
+.form_container {
+  color: white;
+  width: 86%;
+  background-image: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+form {
+  z-index: 9999;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+}
+
+.input {
+  background-color: rgb(20, 221, 20);
+  padding: 1em;
+  width: 41%;
+  border-radius: 9999px;
+  color: white;
+  border: 1px white solid;
+}
+
+.top_icons {
+  position: absolute;
+  top: 4%;
+  justify-content: space-between;
+  width: 79%;
+}
+
+.menu_icon {
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.search_div {
+  background-color: white;
+  border-radius: 9999px;
+  padding: 1.5%;
+  display: flex;
+  justify-content: center;
+}
+
+.search_icon {
+  align-self: flex-end;
+}
+
+#search {
+  color: rgb(20, 221, 20);
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder,
+input[type="date"]::placeholder,
+select::placeholder {
+  color: white;
+  align-self: center;
+}
+
+#select {
+  width: 47%;
+}
+
+input[type="date"]::placeholder,
+select::placeholder {
+  color: white;
+  align-self: center;
+}
+
+button[type="submit"] {
+  background-color: rgb(20, 221, 20);
+  color: white;
+  padding: 1em;
+  width: 41%;
+  border-radius: 9999px;
+  border: 1px white solid;
+  align-self: center;
+  text-align: center;
+}
+
+.booking_headline {
+  color: white;
+}
+
+.booking_headline h3 {
+  font-size: x-large;
+  font-weight: 700;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking_headline h3,
+.first_p,
+.second_p,
+.thir_p,
+.fourth_p {
+  justify-content: center;
+}
+
+input:hover,
+select:hover,
+button[type="submit"]:hover,
+input[type="date"]:hover {
+  background-color: white;
+  color: rgb(20, 221, 20);
+}
+
+input[type="text"]:hover,
+input:hover::placeholder {
+  color: rgb(20, 221, 20);
+  background-color: white;
+}
+
+.form_row {
+  display: flex;
+  gap: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+  .input,
+  button[type="submit"] {
+    padding: 2%;
+  }
+
+  #select {
+    padding: 2%;
+  }
+
+  .top_icons {
+    top: 0;
+  }
+
+  .booking_headline h3,
+  .form_container {
+    font-size: small;
+  }
+
+  .menu_icon {
+    font-weight: bold;
+    font-size: 1em;
+  }
+}
+
+.underline {
+  width: 70%;
 }
