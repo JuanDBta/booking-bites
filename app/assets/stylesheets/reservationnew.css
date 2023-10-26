@@ -2,7 +2,7 @@
 .form_container {
   color: white;
   width: 86%;
-  background-image: linear-gradient(to bottom, rgba(101, 163, 13, 0.5) 0%, rgba(101, 163, 13, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
+  background-image: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
@@ -25,6 +25,7 @@ form{
   width: 41%;
   border-radius: 9999px;
   color: white;
+  border: 1px white solid;
 }
 
 
@@ -33,6 +34,7 @@ input[type="number"]::placeholder,
 input[type="date"]::placeholder,
 select::placeholder {
   color: white;
+  align-self: center;
 }
 #select{
   width: 47%;
@@ -40,6 +42,7 @@ select::placeholder {
 input[type="date"]::placeholder,
 select::placeholder {
   color: white;
+  align-self: center;
 }
 button[type="submit"] {
   background-color:rgb(20, 221, 20);
@@ -47,6 +50,23 @@ button[type="submit"] {
   padding: 1em;
   width: 41%;
   border-radius: 9999px;
+  border: 1px white solid;
+  align-self: center;
+  text-align: center;
+}
+.booking_headline{
+  color: white;
+}
+.booking_headline h3{
+  font-size: x-large;
+  font-weight: 700;
+}
+.booking_headline h3,
+.first_p,
+.second_p,
+.thir_p,
+.fourth_p{
+ justify-content: center;
 }
 
 input:hover,
@@ -59,6 +79,10 @@ input[type="date"]:hover {
 input[type="text"]:hover,input:hover::placeholder{
   color: rgb(20, 221, 20);
   background-color: white;
+}
+.form_row{
+  display: flex;
+  gap: 1em;
 }
 
 @media only screen and (max-width: 767px) {

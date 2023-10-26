@@ -47,6 +47,13 @@ function ReservationCreate() {
   };
   return (
     <div className='form_container flex'>
+    <div className='booking_headline'>
+        <h3 className='flex'>RESERVE TABLE BOOKING-BITES</h3>
+        <p className='first_p flex'>There are different section of restuarant. Today one of them is waiting for you! Our web application offers a seamless dining reservation.</p>
+        <p className='second_p flex'>You can conveniently choose your preferred dining ambience, whether it's the cozy bar, the chic lounge</p>
+        <p className='thir_p flex'>the scenic rooftop, the tranquil garden, or the vibrant live music area.</p>
+        <p className='fourth_p flex'>If you wish to book this section just use the form below.</p>
+      </div>
     <form onSubmit={handleSubmit} className='flex'>
     <div class="form_row">
     <input
@@ -87,7 +94,7 @@ function ReservationCreate() {
 
     </div>
     
-    <button type="submit">Reserve</button>
+    <button type="submit" className='flex'>Reserve</button>
   </form>
   </div>
   );
