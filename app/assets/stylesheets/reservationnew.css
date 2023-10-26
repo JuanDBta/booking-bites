@@ -87,6 +87,10 @@ button[type="submit"] {
   border: 1px white solid;
   align-self: center;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .booking_headline {
@@ -114,15 +118,10 @@ input[type="date"]:hover {
   background-color: white;
   color: rgb(20, 221, 20);
 }
-button[type="submit"]:hover{
+
+button[type="submit"]:hover {
   background-color: rgb(49, 63, 47);
   color: rgb(238, 244, 238);
-}
-button[type="submit"]{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
 
 input[type="text"]:hover,

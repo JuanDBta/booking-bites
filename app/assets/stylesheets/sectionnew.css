@@ -1,17 +1,20 @@
-#selection_form,#restaurant_form{
+#selection_form,
+#restaurant_form {
   flex-direction: column;
- 
 }
-.notice{
+
+.notice {
   color: red;
   font-size: large;
   font-weight: bold;
   justify-content: center;
 }
-#back{
+
+#back {
   width: 100%;
 }
-#selection_form{
+
+#selection_form {
   z-index: 9999;
   flex-direction: column;
   gap: 1em;
@@ -19,10 +22,11 @@
   width: 100%;
   align-items: center;
 }
+
 .form_containers {
   color: rgb(39, 37, 37);
   width: 86%;
-  background-image:  linear-gradient(to bottom, rgba(212, 222, 212, 0.7) 0%, rgb(188, 242, 188, 0.7) 100%), url(https://img.traveltriangle.com/blog/wp-content/uploads/2018/10/Panoramic-34.jpg);
+  background-image: linear-gradient(to bottom, rgba(212, 222, 212, 0.7) 0%, rgb(188, 242, 188, 0.7) 100%), url(https://img.traveltriangle.com/blog/wp-content/uploads/2018/10/Panoramic-34.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
@@ -30,6 +34,7 @@
   align-items: center;
   flex-direction: column;
 }
+
 .inputs {
   background-color: rgb(20, 221, 20);
   padding: 1em;
@@ -37,7 +42,6 @@
   border-radius: 9999px;
   color: white;
   border: 1px white solid;
-  opacity: 0.8px;
 }
 
 .top_icons {
@@ -96,24 +100,23 @@ button[type="submit"] {
   border: 1px white solid;
   align-self: center;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-
 
 .inputs:hover,
 #select:hover {
   background-color: white;
   color: rgb(20, 221, 20);
 }
-button[type="submit"]:hover{
+
+button[type="submit"]:hover {
   background-color: rgb(49, 63, 47);
   color: rgb(238, 244, 238);
 }
-button[type="submit"]{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
+
 .inputs[type="text"]:hover,
 .inputs:hover::placeholder {
   color: rgb(20, 221, 20);
@@ -124,10 +127,12 @@ button[type="submit"]{
   display: flex;
   gap: 1em;
 }
-.check{
+
+.check {
   align-items: center;
-  justify-content: space-between ;
+  justify-content: space-between;
 }
+
 @media only screen and (max-width: 767px) {
   .inputs,
   button[type="submit"] {
