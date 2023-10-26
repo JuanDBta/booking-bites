@@ -53,7 +53,10 @@ function ReservationCreate() {
         <div className='search_icon search_div'><FaSearch  id='search' /></div>
       </div>
     <div className='booking_headline'>
-        <h3 className='flex'>RESERVE TABLE BOOKING-BITES</h3>
+      <h3 className='flex'>
+           <span >RESERVE TABLE FROM BOOKING-BITES</span>
+           <hr className='underline'></hr>
+      </h3>
         <p className='first_p flex'>There are different section of restuarant. Today one of them is waiting for you! Our web application offers a seamless dining reservation.</p>
         <p className='second_p flex'>You can conveniently choose your preferred dining ambience, whether it's the cozy bar, the chic lounge</p>
         <p className='thir_p flex'>the scenic rooftop, the tranquil garden, or the vibrant live music area.</p>

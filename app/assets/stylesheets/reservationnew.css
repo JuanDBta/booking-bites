@@ -96,6 +96,8 @@ button[type="submit"] {
 .booking_headline h3 {
   font-size: x-large;
   font-weight: 700;
+  flex-direction: column;
+  align-items: center;
 }
 
 .booking_headline h3,
@@ -139,8 +141,17 @@ input:hover::placeholder {
     top: 0;
   }
 
+  .booking_headline h3,
+  .form_container {
+    font-size: small;
+  }
+
   .menu_icon {
     font-weight: bold;
     font-size: 1em;
   }
+}
+
+.underline {
+  width: 70%;
 }
