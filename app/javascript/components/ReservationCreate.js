@@ -13,7 +13,7 @@ function ReservationCreate() {
   const [reservationData, setReservationData] = useState({
     city: '',
     date: '',
-    user:'',
+    user_id:'',
     number_of_person: '',
     section_id: section_id,
   })
@@ -34,13 +34,13 @@ function ReservationCreate() {
       date: reservationData.date,
       number_of_person: reservationData.number_of_person,
       section_id: reservationData.section_id,
-      user: reservationData.user
+      user_id: reservationData.user_id
     };
     dispatch(addReservation(newReservation));
     setReservationData({
       city: '',
       date: '',
-      user: '',
+      user_id: '',
       number_of_person: '',
       section_id: '',
     });
@@ -63,8 +63,8 @@ function ReservationCreate() {
     />
     <input
       type="number"
-      name="user"
-      value={reservationData.user}
+      name="user_id"
+      value={reservationData.user_id}
       onChange={handleChange}
       placeholder="Username"
     />
