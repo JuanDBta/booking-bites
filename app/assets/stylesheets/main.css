@@ -86,13 +86,13 @@ ul {
 
 .prev-button-container {
   border-radius: 0 50% 50% 0;
-  background-color: rgb(20, 221, 20);
+  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
   align-self: center;
 }
 
 .prev-button {
   border: 0;
-  background-color: rgb(20, 221, 20);
+  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
   position: absolute;
   top: 44%;
   left: 16%;
@@ -111,12 +111,12 @@ ul {
 
 .next-button-container {
   border-radius: 50% 0 0 50%;
-  background-color: rgb(20, 221, 20);
+  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
 }
 
 .next-button {
   border: 0;
-  background-color: rgb(20, 221, 20);
+  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
   position: absolute;
   top: 44%;
   right: 0;
