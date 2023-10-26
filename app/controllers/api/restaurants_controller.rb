@@ -12,6 +12,10 @@ class Api::RestaurantsController < ApplicationController
       render json: @restaurant.errors
     end
   end
+  def index
+    @restaurants = Restaurant.all
+    render json: @restaurants
+  end
 
   private
 

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   # get '*path', to: 'root#index', constraints: -> (req) { !req.xhr? && req.format.html? }
   namespace :api do
-    resources :restaurants, only: [:new, :create] do
+    resources :restaurants, only: [:new, :create, :index] do
       resources :sections, only: [:new, :create]
     end
     resources :sections, only: [:index, :show] do

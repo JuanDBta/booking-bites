@@ -46,7 +46,15 @@ function SectionNew() {
   return (
   <form onSubmit={handleSubmit} className='flex'>
     <div class="form_row">
-    
+    <input
+      type="text"
+      name="name"
+      value={sectionData.name}
+      onChange={handleChange}
+      placeholder="Name"
+      className='input'
+    />
+     <button type="submit" className='flex'>Create</button>
      </div>
   </form>
   );
