@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchReservationsApi } from '../redux/features/reservations/reservationsApiSlice';
-import { fetchSections } from '../redux/features/sections/sectionsSlice'; // Asegúrate de importar la acción para obtener las secciones
+import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservations.css';
 
 function Reservations() {
@@ -11,7 +11,7 @@ function Reservations() {
 
   useEffect(() => {
     dispatch(fetchReservationsApi());
-    dispatch(fetchSections()); // Obtén las secciones
+    dispatch(fetchSections());
   }, [dispatch]);
 
   const getSectionName = (sectionId) => {
