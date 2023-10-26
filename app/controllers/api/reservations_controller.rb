@@ -1,4 +1,5 @@
 class Api::ReservationsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def index
     @reservations = Reservation.all
     render json: @reservations
