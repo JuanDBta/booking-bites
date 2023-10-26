@@ -64,14 +64,14 @@ function ReservationNew() {
       name="user_id"
       value={reservationData.user_id}
       onChange={handleChange}
-      placeholder="Username"
+      placeholder="Username id"
     />
     <input
       type="number"
       name="number_of_person"
       value={reservationData.number_of_person}
       onChange={handleChange}
-      min={2}
+      min={1}
       placeholder="number_of_person"
     />
     <select
