@@ -82,3 +82,10 @@
 .number {
   font-size: 1.2vw;
 }
+
+@media only screen and (max-width: 767px) {
+
+.reservations-container {
+  height: 125vw;
+}
+}
