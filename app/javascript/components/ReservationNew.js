@@ -89,16 +89,14 @@ function ReservationNew() {
      id="select"
      
      >
-     <option value="">Select a section</option>
+     <option value="">Select a Section</option>
           {sections.map((section) => (
           <option key={section.id} value={section.id}>
             {section.name}
           </option>
           ))}
     </select>
-    <i className="fas fa-chevron-down"></i> 
     </>
-   
      
     <input
       type="number"
@@ -106,7 +104,7 @@ function ReservationNew() {
       value={reservationData.number_of_person}
       onChange={handleChange}
       min={1}
-      placeholder="number_of_person"
+      placeholder="# People"
       className='input'
     />
      <input
@@ -114,13 +112,13 @@ function ReservationNew() {
       name="user_id"
       value={reservationData.user_id}
       onChange={handleChange}
-      placeholder="Username id"
+      placeholder="Username ID"
       className='input'
     />
     </div>
     
     
-    <button type="submit" className='flex'>Reserve now</button>
+    <button type="submit" className='flex'>Reserve Now</button>
   </form>
   </div>
   );
