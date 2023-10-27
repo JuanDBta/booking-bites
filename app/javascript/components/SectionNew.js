@@ -79,14 +79,14 @@ function SectionNew() {
 
   return (
     <div className='form_containers flex'>
-    <form onSubmit={handleSubmit} className="flex" id="selection_form">
+    <form onSubmit={handleSubmit} className='flex' id='selection_form'>
       {restaurants.length > 0 ? (
         <>
         <select
             name="restaurant_id"
             value={sectionData.restaurant_id}
             onChange={handleChange}
-            id="selects"
+            id='selects'
           >
             <option value="">Select a Restaurant</option>
             {restaurants.map((restaurant) => (
@@ -100,7 +100,7 @@ function SectionNew() {
             name="name"
             value={sectionData.name}
             onChange={handleChange}
-            id="selects"
+            id='selects'
           >
             <option value="">Select a Section</option>
             {sections.map((section) => (
@@ -117,7 +117,7 @@ function SectionNew() {
             onChange={handleChange}
             min={1}
             placeholder="Capacity"
-            className="inputs cap"
+            className='inputs cap'
           />
 
 <input
@@ -126,7 +126,7 @@ function SectionNew() {
             value={sectionData.description}
             onChange={handleChange}
             placeholder="Description"
-            className="inputs"
+            className='inputs'
           />
     
           <div className='flex check'>
@@ -135,7 +135,7 @@ function SectionNew() {
             name="cover"
             checked={sectionData.cover}
             onChange={handleChange}
-            className="inputs"
+            className='inputs'
           />
           <label htmlFor="cover">Cover</label>
           <input
@@ -143,12 +143,12 @@ function SectionNew() {
             name="live_music"
             checked={sectionData.live_music}
             onChange={handleChange}
-            className="inputs"
+            className='inputs'
           />
           <label htmlFor="live_music">Live music</label>
           </div>
           
-      <button type="submit" className="new-section-button">
+      <button type="submit" className='new-section-button'>
         Create Section
       </button>
         </>
@@ -156,10 +156,10 @@ function SectionNew() {
         <>
           <h3 className="notice flex">Please, first create a restaurant!</h3>
           <Link to="/restaurant/new">
-            <p className="flex discover">
-              <button className="detail_reserve flex"  id="back">
+            <p className='flex discover'>
+              <button className='detail_reserve flex'  id='back'>
                 Create New Restaurant
-                <div className="circle-right">
+                <div className='circle-right'>
                   <p>&gt;</p>
                 </div>
               </button>

@@ -143,9 +143,15 @@ input:hover::placeholder {
   justify-content: center;
 }
 
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+
 .input[type="date"]::-webkit-calendar-picker-indicator {
   width: 1.5em;
   height: 1.5em;
+  filter: invert(1);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 767px) {

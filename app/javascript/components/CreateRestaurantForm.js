@@ -62,12 +62,12 @@ function CreateRestaurantForm() {
         placeholder="City"
         className="inputs"
       />
-      <button type="submit" className="flex">
+      <button type="submit" className="flex new-section-button">
         Create Restaurant
       </button>
       <NavLink to="/sections/new">
-          <button className='go-back-button '>
-           <TiMediaPlayReverseOutline className="previous-icon" />
+          <button className='go-back'>
+           <TiMediaPlayReverseOutline className="previous" />
            </button>
     </NavLink>
     </form>

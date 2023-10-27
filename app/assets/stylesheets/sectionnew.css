@@ -37,7 +37,7 @@
 }
 
 .inputs {
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background-color: rgb(20, 221, 20);
   padding: 0 0 0 1vw;
   width: 18%;
   border-radius: 9999px;
@@ -51,6 +51,10 @@
 .cap {
   width: 17%;
   padding-right: 1vw;
+}
+
+label {
+  color: rgb(1 43 1);
 }
 
 .top_icons {
@@ -80,16 +84,16 @@
 
 #search {
   color: rgb(20, 221, 20);
-  font-weight: bold ;
+  font-weight: bold;
 }
 
+select::placeholder,
 .inputs[type="text"]::placeholder,
 .inputs[type="number"]::placeholder,
 .inputs[type="textarea"]::placeholder,
 #selects::placeholder {
   align-self: center;
   font-size: 1.1vw;
-  background-color: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
   color: #fff;
 }
 
@@ -99,21 +103,40 @@
   border: 1px #fff solid;
   border-radius: 9999px;
   color: #fff;
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background: rgb(20, 221, 20);
   font-size: 1.3vw;
   padding: 0 0 0 1vw;
   font-weight: bold;
 }
 
+select::placeholder,
 .inputs[type="date"]::placeholder,
 #selects::placeholder {
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
   align-self: center;
-  color: #fff
+  color: #fff;
+}
+
+.previous {
+  color: #fff;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.go-back {
+  border: 0;
+  background-color: rgb(20, 221, 20);
+  position: absolute;
+  top: 95%;
+  left: 17%;
+  height: 3.5rem;
+  width: 3rem;
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
 }
 
 .new-section-button {
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background-color: #fff;
   padding: 1em;
   width: 20%;
   border-radius: 9999px;
@@ -124,15 +147,15 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #fff;
+  color: rgb(20, 221, 20);
   font-weight: bold;
   font-size: 1vw;
 }
 
 .inputs:hover,
-#select:hover {
-  background-color: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
-  color: #fff;
+#selects:hover {
+  color: rgb(20, 221, 20);
+  background-color: #fff;
 }
 
 button[type="submit"]:hover {
@@ -142,8 +165,8 @@ button[type="submit"]:hover {
 
 .inputs[type="text"]:hover,
 .inputs:hover::placeholder {
-  color: #fff;
-  background-color: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);;
+  background-color: #fff;
+  color: rgb(20, 221, 20);
   font-weight: bold;
 }
 
