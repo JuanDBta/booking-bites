@@ -118,7 +118,7 @@ function ReservationNew() {
     </div>
     
     
-    <button type="submit" className='flex'>Reserve Now</button>
+    <button type="submit" className='reserve-button'>Reserve Now</button>
   </form>
   </div>
   );

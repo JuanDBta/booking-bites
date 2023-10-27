@@ -82,7 +82,7 @@ select::placeholder {
   font-size: 1.3em;
 }
 
-button[type="submit"] {
+.reserve-button {
   background-color: #fff;
   color: rgb(20, 221, 20);
   padding: 0.6em;

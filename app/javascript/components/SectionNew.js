@@ -82,29 +82,34 @@ function SectionNew() {
     <form onSubmit={handleSubmit} className="flex" id="selection_form">
       {restaurants.length > 0 ? (
         <>
+        <select
+            name="restaurant_id"
+            value={sectionData.restaurant_id}
+            onChange={handleChange}
+            id="selects"
+          >
+            <option value="">Select a Restaurant</option>
+            {restaurants.map((restaurant) => (
+              <option key={restaurant.id} value={restaurant.id}>
+                {restaurant.name}
+              </option>
+            ))}
+
+          </select>
            <select
             name="name"
             value={sectionData.name}
             onChange={handleChange}
-            className="inputs"
             id="selects"
           >
-            <option value="">Select a section</option>
+            <option value="">Select a Section</option>
             {sections.map((section) => (
               <option key={section.name} value={section.name}>
                 {section.name}
               </option>
             ))}
           </select>
-          <input
-            type="textarea"
-            name="description"
-            value={sectionData.description}
-            onChange={handleChange}
-            placeholder="Description"
-            className="inputs"
-          />
-          
+                    
           <input
             type="number"
             name="capacity"
@@ -112,23 +117,18 @@ function SectionNew() {
             onChange={handleChange}
             min={1}
             placeholder="Capacity"
-            className="inputs"
+            className="inputs cap"
           />
 
-          <select
-            name="restaurant_id"
-            value={sectionData.restaurant_id}
+<input
+            type="textarea"
+            name="description"
+            value={sectionData.description}
             onChange={handleChange}
+            placeholder="Description"
             className="inputs"
-            id="selects"
-          >
-            <option value="">Select a restaurant</option>
-            {restaurants.map((restaurant) => (
-              <option key={restaurant.id} value={restaurant.id}>
-                {restaurant.name}
-              </option>
-            ))}
-          </select>
+          />
+    
           <div className='flex check'>
            <input
             type="checkbox"
@@ -148,17 +148,17 @@ function SectionNew() {
           <label htmlFor="live_music">Live music</label>
           </div>
           
-      <button type="submit" className="flex">
+      <button type="submit" className="new-section-button">
         Create Section
       </button>
         </>
       ) : (
         <>
-          <h3 className="notice flex">Please create a restaurant first!</h3>
+          <h3 className="notice flex">Please, first create a restaurant!</h3>
           <Link to="/restaurant/new">
             <p className="flex discover">
               <button className="detail_reserve flex"  id="back">
-                Create restaurant
+                Create New Restaurant
                 <div className="circle-right">
                   <p>&gt;</p>
                 </div>
