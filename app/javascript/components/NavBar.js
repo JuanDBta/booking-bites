@@ -9,6 +9,7 @@ import { BsVimeo } from 'react-icons/bs';
 import { FaPinterestP, FaBars, FaTimes } from 'react-icons/fa';
 
 function NavBar() {
+  
   const location = useLocation();
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -27,7 +28,10 @@ function NavBar() {
           <h1 className="title-header">BookingBites</h1>
         </div>
 
-        <nav className="navbar">
+        <nav className="navbar">          
+        <li className={`nav-bar-link ${location.pathname === '/login' ? 'active' : ''}`}>
+            <NavLink to="/login">LOG IN</NavLink>
+          </li>
           <li className={`nav-bar-link ${location.pathname === '/' ? 'active' : ''}`}>
             <NavLink to="/">SECTIONS</NavLink>
           </li>
@@ -42,6 +46,9 @@ function NavBar() {
           </li>
           <li className={`nav-bar-link ${location.pathname === '/delete' ? 'active' : ''}`}>
             <NavLink to="/delete">DELETE SECTION</NavLink>
+          </li>
+          <li className={`nav-bar-link ${location.pathname === '/register' ? 'active' : ''}`}>
+            <NavLink to="/register">REGISTER</NavLink>
           </li>
         </nav>
 
