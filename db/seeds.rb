@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create(name: 'Betty')
-User.create(name: 'Juan')
+User.create(name: 'Betty', username: 'betty')
+User.create(name: 'Juan', username: 'juan')
 Restaurant.create(name: 'Betty´s Grill', address: 'Address 1', city: 'Addis Ababa')
 Restaurant.create(name: 'Juan´s Grill', address: 'Address 2', city: 'Bogotá')
 Section.create(name: 'Garden', image: '/garden.jpeg', description: 'Description 1', capacity: 50, cover: true, live_music: false, restaurant: Restaurant.first)
