@@ -1,12 +1,12 @@
 
 .form_container {
   color: #fff;
-  width: 86%;
+  width: 100%;
   background-image: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  justify-content: center;
+  padding-top: 7em;
   align-items: center;
   flex-direction: column;
 }
@@ -181,4 +181,9 @@ input[type="date"]:hover::-webkit-calendar-picker-indicator {
 
 .underline {
   width: 70%;
+}
+@media only screen and (min-width: 767px) {
+  .form_container {
+    height: 70em;
+  }
 }

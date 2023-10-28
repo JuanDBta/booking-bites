@@ -1,11 +1,14 @@
 .main {
-  width: 83.5%;
+  position: absolute;
+  width: 86%;
   background-color: #fff;
-  height: 100%;
   flex-direction: column;
   display: flex;
   gap: 1em;
   margin-top: 7em;
+  left: 14%;
+  z-index: 3;
+  justify-content: center;
 }
 
 .title {
@@ -119,7 +122,7 @@ ul {
   background-color: rgb(20, 221, 20);
   position: absolute;
   top: 44%;
-  right: 0;
+  right: 2%;
   height: 3.5rem;
   width: 3rem;
   border-bottom-left-radius: 9999px;
@@ -182,5 +185,39 @@ ul {
 
   .title {
     font-size: 1em;
+  }
+  .prev-button{
+    left: -5%;
+  }
+}
+
+@media only screen and (min-width: 1387px) {
+  .prev-button{
+    left: -2em;
+  }
+}
+@media only screen and (min-width: 1087px) and (max-width: 1190px) {
+  .prev-button{
+    left: 3%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .prev-button{
+    left: 1%;
+  }
+}
+@media only screen and (min-width: 1168px) and (max-width: 1387px) {
+  .prev-button {
+    left: 2%;
+  }
+}
+@media only screen and (min-width: 1500px) and (max-width: 1700px) {
+  .prev-button {
+    left: 0em;
+  }
+}
+@media only screen and (min-width: 1700px) {
+  .prev-button {
+    left: -2em;
   }
 }

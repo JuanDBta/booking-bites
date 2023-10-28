@@ -2,6 +2,8 @@
   padding: 1% 4%;
   width: 76%;
   height: 50%;
+  position: absolute;
+  left: 16%;
 }
 
 .detail_img img {
@@ -62,7 +64,7 @@
   background-color: rgb(20, 221, 20);
   position: absolute;
   top: 95%;
-  left: 17%;
+  left: 16%;
   height: 3.5rem;
   width: 3rem;
   border-bottom-right-radius: 9999px;
@@ -135,4 +137,9 @@
 
 .flex {
   display: flex;
+}
+@media only screen and (min-width: 767px) {
+  .detail_container {
+    height: 70em;
+  }
 }

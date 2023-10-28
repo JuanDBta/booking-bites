@@ -26,12 +26,12 @@
 
 .form_containers {
   color: rgb(39, 37, 37);
-  width: 86%;
+  width: 100%;
   background-image: linear-gradient(to bottom, rgba(212, 222, 212, 0.7) 0%, rgb(188, 242, 188, 0.7) 100%), url(https://img.traveltriangle.com/blog/wp-content/uploads/2018/10/Panoramic-34.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  justify-content: center;
+  padding-top: 7em;
   align-items: center;
   flex-direction: column;
 }
@@ -185,9 +185,16 @@ button[type="submit"]:hover {
   button[type="submit"] {
     padding: 2%;
   }
-
+.inputs{
+  width: 61%;
+}
+.cap{
+  width: 62%;
+}
   #selects {
     padding: 2%;
+    width: 66%;
+    height: 6vw;
   }
 
   .top_icons {
@@ -207,4 +214,22 @@ button[type="submit"]:hover {
 
 .underline {
   width: 70%;
+}
+
+@media only screen and (min-width: 767px) {
+  .form_containers {
+    height: 70em;
+  }
+  #selects{
+    width: 60%;
+    height: 4vw;
+  }
+  .cap {
+    height: 4vw;
+    width: 58%;
+  }
+  .inputs{
+    width: 59%;
+    height: 3.5vw;
+  }
 }

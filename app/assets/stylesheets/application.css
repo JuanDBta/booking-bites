@@ -21,19 +21,9 @@ body {
 }
 
 #root {
-  display: flex;
+ display: flex;
 }
 
-.app-header {
-  width: 16%;
-  background-color: #fff;
-  border-right: 5px rgb(252, 237, 237) solid;
-  height: 60em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-}
 
 .logo-title {
   display: flex;
@@ -45,7 +35,7 @@ body {
 }
 
 .title-header {
-  color: rgb(85, 78, 78);
+  color: #fff;
   width: 16.5%;
   text-align: center;
   display: flex;
@@ -95,10 +85,6 @@ a {
 @media only screen and (max-width: 767px) {
   body {
     overflow: auto;
-  }
-
-  .app-header {
-    height: auto;
   }
 
   .title-header {

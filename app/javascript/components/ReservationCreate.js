@@ -48,10 +48,6 @@ function ReservationCreate() {
   };
   return (
     <div className='form_container flex'>
-      <div className='top_icons flex'>
-        <FaBars className='menu_icon' />
-        <div className='search_icon search_div'><FaSearch  id='search' /></div>
-      </div>
     <div className='booking_headline'>
       <h3 className='flex'>
            <span >RESERVE TABLE FROM BOOKING-BITES</span>
@@ -102,7 +98,7 @@ function ReservationCreate() {
 
     </div>
     
-    <button type="submit" className='flex'>Reserve</button>
+    <button type="submit" className='flex reserve-button'>Reserve</button>
   </form>
   </div>
   );
