@@ -40,6 +40,7 @@ export const createUser = createAsyncThunk(
   },
 );
 const initialState = {
+  id:null,
   username: null,
   name: null,
   loginError: false,
@@ -51,6 +52,7 @@ export const usersSlice = createSlice({
     logout: (state) => {
       state.username = null;
       state.name = null;
+      state.id = null;
       localStorage.setItem('username', JSON.stringify(null));
     },
   },
@@ -60,6 +62,7 @@ export const usersSlice = createSlice({
         if (payload.username) {
           state.username = payload.username;
           state.name = payload.name;
+          state.id = payload.id;
           localStorage.setItem('username', JSON.stringify(payload.username));
         }
       })

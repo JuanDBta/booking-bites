@@ -7,7 +7,6 @@ const Login = () => {
   const [userName, setUserName] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const loggedInUser = useSelector((state) => state.user);
   const handleLogin = async () => {
     try {
       await dispatch(fetchUser(userName));
@@ -18,6 +17,7 @@ const Login = () => {
 
     }
   };
+  const loggedInUser = useSelector((state) => state.users);
   console.log(loggedInUser)
   return (
 <form action="log-in" method="post">
@@ -45,7 +45,6 @@ const Login = () => {
       >
         Log in
       </button>
-      <Link to="/home">Home</Link>
       <div className="text-center">
         <p>
           Not a member?
