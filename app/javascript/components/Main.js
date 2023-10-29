@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
+import { fetchUser } from '../redux/features/users/usersSlice';
 import '../../assets/stylesheets/main.css';
 import { TiMediaPlayOutline } from "react-icons/ti";
 import { TiMediaPlayReverseOutline } from "react-icons/ti";

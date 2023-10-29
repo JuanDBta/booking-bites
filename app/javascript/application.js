@@ -3,13 +3,10 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import store from './redux/store'
-import { fetchUser } from './redux/features/users/usersSlice';
 import Main from './components/Main';
 import NavBar from './components/NavBar';
 import SectionDetail from './components/Detail';
@@ -23,21 +20,26 @@ import RegisterUser from './components/RegisterUser';
 import Login from './components/Login';
 import '../assets/stylesheets/application.css'
 
+function SplashPage() {
+  return (
+    <div>
+      <h1>BookingBites</h1>
+      <div>
+        <button><Link to="/login">Log In</Link></button>
+        <button><Link to="/register">Sign Up</Link></button>
+      </div>
+    </div>
+  );
+}
+
 function App() {
-  /*const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCars());
-    const username = JSON.parse(localStorage.getItem('username'));
-    if (username) {
-      dispatch(fetchUser(username));
-    }
-  }, [dispatch]);*/
   return (
     <>
-          <NavBar className="bar" />
+          
       
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<SplashPage />} />
+        <Route path="/home" element={<Main />} />
         <Route path="/sections/:id" element={<SectionDetail />} />
         <Route path="/sections/new" element={<SectionNew />} />
         <Route path="/reservations/new" element={<ReservationNew />} />
@@ -45,8 +47,6 @@ function App() {
         <Route path="/delete" element={<Delete />} />
         <Route path="/section/reserve/:section_id"element={<ReservationCreate />} />
         <Route path="/restaurant/new" element={<CreateRestaurantForm/>}/>
-        <Route path="/register" element={<RegisterUser/>}/>
-        <Route path="/login" element={<Login/>}/>
       </Routes>
     </>
   );
@@ -55,7 +55,20 @@ function App() {
 ReactDOM.render(
   <Provider store={store}>
   <BrowserRouter>
-       <App />
+  <Routes>
+        <Route path="/" element={<SplashPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<RegisterUser />} />
+        <Route
+          path="/*"
+          element={
+            <>
+              <NavBar />
+              <App />
+            </>
+          }
+        />
+      </Routes>
      </BrowserRouter>
   </Provider>,
   document.getElementById('root'),

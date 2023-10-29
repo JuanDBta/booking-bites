@@ -40,7 +40,6 @@ export const createUser = createAsyncThunk(
   },
 );
 const initialState = {
-  id: null,
   username: null,
   name: null,
   loginError: false,
@@ -50,7 +49,6 @@ export const usersSlice = createSlice({
   initialState,
   reducers: {
     logout: (state) => {
-      state.id = null;
       state.username = null;
       state.name = null;
       localStorage.setItem('username', JSON.stringify(null));
@@ -60,7 +58,6 @@ export const usersSlice = createSlice({
     builder
       .addCase(fetchUser.fulfilled, (state, { payload }) => {
         if (payload.username) {
-          state.id = payload.id;
           state.username = payload.username;
           state.name = payload.name;
           localStorage.setItem('username', JSON.stringify(payload.username));
@@ -71,7 +68,6 @@ export const usersSlice = createSlice({
       })
       .addCase(createUser.fulfilled, (state, { payload }) => {
         if (payload.username) {
-          state.id = payload.id;
           state.username = payload.username;
           state.name = payload.name;
           localStorage.setItem('username', JSON.stringify(payload.username));

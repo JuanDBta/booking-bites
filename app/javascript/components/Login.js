@@ -1,12 +1,26 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser } from '../redux/features/users/usersSlice';
 
 const Login = () => {
   const [userName, setUserName] = useState('');
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const loggedInUser = useSelector((state) => state.user);
+  const handleLogin = async () => {
+    try {
+      await dispatch(fetchUser(userName));
+     
+      
+      navigate('/home'); 
+    } catch (error) {
+
+    }
+  };
+  console.log(loggedInUser)
   return (
-    <form action="log-in" method="post">
+<form action="log-in" method="post">
       <div className="form-outline mb-4">
         <input
           className="form-control"
@@ -27,14 +41,15 @@ const Login = () => {
       <button
         type="button"
         className="btn btn-block mb-4"
-        onClick={() => dispatch(fetchUser(userName))}
+        onClick={handleLogin}
       >
         Log in
       </button>
+      <Link to="/home">Home</Link>
       <div className="text-center">
         <p>
           Not a member?
-          <a href="#register">Register</a>
+          <Link to="/register">Register</Link>
         </p>
       </div>
     </form>

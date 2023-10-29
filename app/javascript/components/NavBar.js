@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import Logout from './Logout';
 import '../../assets/stylesheets/navbar.css';
 import { FaTwitter } from 'react-icons/fa';
 import { ImFacebook } from 'react-icons/im';
@@ -9,7 +11,6 @@ import { BsVimeo } from 'react-icons/bs';
 import { FaPinterestP, FaBars, FaTimes } from 'react-icons/fa';
 
 function NavBar() {
-  
   const location = useLocation();
   const [isNavOpen, setIsNavOpen] = useState(false);
 
@@ -29,11 +30,8 @@ function NavBar() {
         </div>
 
         <nav className="navbar">          
-        <li className={`nav-bar-link ${location.pathname === '/login' ? 'active' : ''}`}>
-            <NavLink to="/login">LOG IN</NavLink>
-          </li>
           <li className={`nav-bar-link ${location.pathname === '/' ? 'active' : ''}`}>
-            <NavLink to="/">SECTIONS</NavLink>
+            <NavLink to="/home">SECTIONS</NavLink>
           </li>
           <li className={`nav-bar-link ${location.pathname === '/reservations/new' ? 'active' : ''}`}>
             <NavLink to="/reservations/new">RESERVE</NavLink>
@@ -47,9 +45,9 @@ function NavBar() {
           <li className={`nav-bar-link ${location.pathname === '/delete' ? 'active' : ''}`}>
             <NavLink to="/delete">DELETE SECTION</NavLink>
           </li>
-          <li className={`nav-bar-link ${location.pathname === '/register' ? 'active' : ''}`}>
-            <NavLink to="/register">REGISTER</NavLink>
-          </li>
+          {
+              <Logout />
+            }
         </nav>
 
         <div className="social-icons">
