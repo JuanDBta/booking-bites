@@ -1,15 +1,22 @@
 .form-container {
-    background-color: #fff;
+    height: 63em;
+    background-color: rgb(245, 240, 240);
     width: 100%;
-    height: 60em;
+    background-size: cover;
+    background-image: url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/classy-restaurant.jpg);
+    background-position: center center;
+    z-index: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .login-container {
-    background-color: #fff;
+    background-color: rgb(223 213 213 / 70%);
+    width: 50%;
+    height: 20em;
+    margin: 14em auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +25,8 @@
 
 .register-link {
     padding-left: 0.5em;
-    color:  #97BF0F;
+    color:  #161616;
+    font-weight: 800;
     cursor: pointer;
 }
 
@@ -29,19 +37,20 @@
 .username-field {
 background-color: #fff;
 padding: 0.5vw;
-width: 100%;
+width: 50%;
 border-radius: 9999px;
 color: #161616;
-border: 3px #97BF0F solid;
+border: 1px #97BF0F solid;
 font-size: 1.3vw;
 padding-left: 1em;
 font-weight: bold;
+margin-bottom: 1vw;
 }
 
 .login-button {
   background-color: #97BF0F;
   padding: 0.5em;
-  width: 8%;
+  width: 20%;
   border-radius: 9999px;
   border: 1px #fff solid;
   align-self: center;
@@ -55,9 +64,14 @@ font-weight: bold;
   font-size: 1vw;
 }
 
+.login-button:hover {
+  background-color: rgb(49, 63, 47);
+}
+
+
 .label-text {
     text-align: left;
-    color:#97BF0F;
+    color: #161616;
     font-weight: bold;
     font-size: 1vw;
 }

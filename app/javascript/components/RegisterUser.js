@@ -17,12 +17,7 @@ const RegisterUser = () => {
   return (
     <form action="log-in" method="post" className="form-container">
       <div className="login-container">
-      <label
-          htmlFor="registerName"
-          className="label-text"
-        >
-         Name
-        </label>
+        <label htmlFor="registerName" className="label-text">Name</label>
         <input
           className="username-field"
           type="text"
@@ -32,15 +27,7 @@ const RegisterUser = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        
-      </div>
-      <div className="login-container">
-      <label
-          htmlFor="registerUserName"
-          className="label-text"
-        >
-          Username
-        </label>
+      <label htmlFor="registerUserName" className="label-text">Username</label>
         <input
           className="username-field"
           type="text"
@@ -50,16 +37,9 @@ const RegisterUser = () => {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-        
-      </div>
-      <button
-        type="button"
-        className="login-button"
-        onClick={handleSubmit}
-      >
-        Sign In
-      </button>
-    </form>
+      <button type="button" className="login-button" onClick={handleSubmit}>Sign In</button>
+    </div>
+  </form>
   );
 };
 

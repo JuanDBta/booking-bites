@@ -30,7 +30,6 @@ const Login = () => {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-      </div>
 
       <div className="button-log-container" />
       <button
@@ -45,6 +44,7 @@ const Login = () => {
           Not a member?
           <Link to="/register" className="register-link">Register</Link>
         </p>
+      </div>
       </div>
     </form>
   );
