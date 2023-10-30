@@ -21,9 +21,8 @@ body {
 }
 
 #root {
- display: flex;
+  display: flex;
 }
-
 
 .logo-title {
   display: flex;
@@ -48,7 +47,8 @@ body {
 ul {
   text-decoration: none;
 }
-.splash_container{
+
+.splash_container {
   height: 63em;
   background-color: rgb(245, 240, 240);
   width: 100%;
@@ -58,16 +58,16 @@ ul {
   z-index: 1;
   align-items: center;
   flex-direction: column;
-  display: flex; 
-  
+  display: flex;
 }
-.splash_container{
 
+.splash_container {
   align-items: center;
   flex-direction: column;
   display: flex;
 }
-.splash_content{
+
+.splash_content {
   background-color: rgb(223 213 213 / 70%);
   width: 50%;
   height: 20em;
@@ -75,23 +75,26 @@ ul {
   flex-direction: column;
   display: flex;
 }
-.splash_title{
-  font-family:  "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+.splash_title {
+  font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 3em;
   line-height: 1em;
   color: #191919;
   align-self: center;
 }
-.splash_content p{
+
+.splash_content p {
   text-shadow: 0 0 #259465;
   font-weight: 400;
   font-size: 1em;
   align-self: center;
 }
+
 .splash-button {
   color: #fff;
-  background-color:#97BF0F;
+  background-color: #97bf0f;
   padding: 0.6em;
   width: 39%;
   border-radius: 9999px;
@@ -101,13 +104,16 @@ ul {
   margin-top: 1em;
   font-weight: bold;
 }
-.splash-button a{
+
+.splash-button a {
   color: #fff;
 }
-.splash_btn{
+
+.splash_btn {
   display: flex;
   justify-content: space-evenly;
 }
+
 .splash-button:hover {
   background-color: rgb(49, 63, 47);
   color: rgb(238, 244, 238);
@@ -154,7 +160,8 @@ a {
   .title-header {
     font-size: 0.8em;
   }
-  .splash_title{
+
+  .splash_title {
     font-size: 1em;
   }
 }

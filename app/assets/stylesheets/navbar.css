@@ -2,34 +2,40 @@ nav {
   list-style: none;
   width: 16em;
 }
-header{
+
+header {
   z-index: 999999;
 }
-.close{
- display: none;
- transition: all 0.3s ease;
+
+.close {
+  display: none;
+  transition: all 0.3s ease;
 }
-.menu-icon{
+
+.menu-icon {
   align-self: flex-end;
   font-weight: bold;
   font-size: 2em;
-  color:#97BF0F;
+  color: #97bf0f;
 }
-.close-icon{
+
+.close-icon {
   align-self: flex-end;
   font-weight: bold;
   font-size: 2em;
-  color:#97BF0F;
+  color: #97bf0f;
 }
 
 .menu_top_div {
   width: 16%;
-  background-image: linear-gradient(to bottom, rgba(151, 191, 15, 0.5) 0%, rgba(151, 191, 15, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(151, 191, 15, 0.5) 0%, rgba(151, 191, 15, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
+  background-size: cover;
   height: 3%;
   display: flex;
   transition: all 0.3s ease;
 }
-.menu{
+
+.menu {
   width: 100%;
   background-color: #fff;
   border-radius: 9999px;
@@ -37,7 +43,6 @@ header{
   display: flex;
   justify-content: center;
 }
-
 
 .app-header {
   width: 16%;
@@ -66,22 +71,25 @@ header{
 .nav-bar-link a {
   color: #161616;
 }
+
 .nav-bar-link:hover {
   transform: scale(1.1);
   transition: transform 0.3s ease;
 }
 
 .active {
-  background-color: #97BF0F;
+  background-color: #97bf0f;
 }
 
 .active a {
   color: #fff;
 }
-.nav-container{
+
+.nav-container {
   width: 100%;
   transition: all 0.3s ease;
 }
+
 @media only screen and (max-width: 767px) {
   .nav-bar-link {
     font-size: 0.7em;
@@ -89,23 +97,27 @@ header{
     padding: 4%;
     width: 95%;
   }
-  
-    .nav-container ,.app-header{
-      height: -webkit-fill-available;
-      transition: all 0.3s ease;
-    }
-    header{
-      height: 100em;
-      transition: all 0.3s ease;
-    }
+
+  .nav-container,
+  .app-header {
+    height: -webkit-fill-available;
+    transition: all 0.3s ease;
+  }
+
+  header {
+    height: 100em;
+    transition: all 0.3s ease;
+  }
 }
+
 @media only screen and (min-width: 1387px) {
-  .nav-container{
+  .nav-container {
     width: 17em;
   }
 }
+
 @media only screen and (min-width: 1557px) {
-  .nav-container{
+  .nav-container {
     width: 19em;
   }
 }

@@ -9,6 +9,7 @@ function Reservations() {
   const dispatch = useDispatch();
   const reservationsApi = useSelector((state) => state.reservationsApi);
   const sections = useSelector(state => state.sections);
+  const userID = useSelector(state => state.users.id);
 
   useEffect(() => {
     dispatch(fetchReservationsApi());
@@ -20,13 +21,15 @@ function Reservations() {
     return section ? section.name : 'Unknown Section';
   };
 
+  const userReservations = reservationsApi.filter(reservation => reservation.user_id === userID);
+
   return (
     <div className="reservations-container">
       <h1 className="title-res">MY RESERVATIONS</h1>
       <h3 className="title-description">List of your reservations</h3>
       <div className="dotted-line"></div>
       <ul className="reservations-list">
-        {reservationsApi.map((reservation, index) => (
+        {userReservations.map((reservation, index) => (
         <li key={index} className="info">
             <p className="text">RESERVATION #{index + 1}:</p>
             <p className="text desc">ID {reservation.id}</p>

@@ -49,7 +49,7 @@
   height: 3vw;
   border: 0;
   border-radius: 2em;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
   color: #fff;
   margin-bottom: 1.5em;
   display: flex;
@@ -88,6 +88,7 @@
     height: 125vw;
   }
 }
+
 @media only screen and (min-width: 767px) {
   .reservations-container {
     height: 70em;

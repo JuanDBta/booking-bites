@@ -37,7 +37,7 @@
 }
 
 .inputs {
-  background-color: #97BF0F;
+  background-color: #97bf0f;
   padding: 0 0 0 1vw;
   width: 18%;
   border-radius: 9999px;
@@ -83,7 +83,7 @@ label {
 }
 
 #search {
-  color: #97BF0F;
+  color: #97bf0f;
   font-weight: bold;
 }
 
@@ -103,7 +103,7 @@ select::placeholder,
   border: 1px #fff solid;
   border-radius: 9999px;
   color: #fff;
-  background: #97BF0F;
+  background: #97bf0f;
   font-size: 1.3vw;
   padding: 0 0 0 1vw;
   font-weight: bold;
@@ -125,7 +125,7 @@ select::placeholder,
 
 .go-back {
   border: 0;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
   position: absolute;
   top: 95%;
   left: 17%;
@@ -147,14 +147,14 @@ select::placeholder,
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: #97BF0F;
+  color: #97bf0f;
   font-weight: bold;
   font-size: 1vw;
 }
 
 .inputs:hover,
 #selects:hover {
-  color: #97BF0F;
+  color: #97bf0f;
   background-color: #fff;
 }
 
@@ -166,7 +166,7 @@ button[type="submit"]:hover {
 .inputs[type="text"]:hover,
 .inputs:hover::placeholder {
   background-color: #fff;
-  color: #97BF0F;
+  color: #97bf0f;
   font-weight: bold;
 }
 
@@ -185,12 +185,15 @@ button[type="submit"]:hover {
   button[type="submit"] {
     padding: 2%;
   }
-.inputs{
-  width: 61%;
-}
-.cap{
-  width: 62%;
-}
+
+  .inputs {
+    width: 61%;
+  }
+
+  .cap {
+    width: 62%;
+  }
+
   #selects {
     padding: 2%;
     width: 66%;
@@ -220,15 +223,18 @@ button[type="submit"]:hover {
   .form_containers {
     height: 70em;
   }
-  #selects{
+
+  #selects {
     width: 60%;
     height: 4vw;
   }
+
   .cap {
     height: 4vw;
     width: 58%;
   }
-  .inputs{
+
+  .inputs {
     width: 59%;
     height: 3.5vw;
   }

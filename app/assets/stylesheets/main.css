@@ -89,13 +89,13 @@ ul {
 
 .prev-button-container {
   border-radius: 0 50% 50% 0;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
   align-self: center;
 }
 
 .prev-button {
   border: 0;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
   position: absolute;
   top: 44%;
   left: 16%;
@@ -114,12 +114,12 @@ ul {
 
 .next-button-container {
   border-radius: 50% 0 0 50%;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
 }
 
 .next-button {
   border: 0;
-  background-color: #97BF0F;
+  background-color: #97bf0f;
   position: absolute;
   top: 44%;
   right: 2%;
@@ -186,36 +186,42 @@ ul {
   .title {
     font-size: 1em;
   }
-  .prev-button{
+
+  .prev-button {
     left: -5%;
   }
 }
 
 @media only screen and (min-width: 1387px) {
-  .prev-button{
+  .prev-button {
     left: -2em;
   }
 }
+
 @media only screen and (min-width: 1087px) and (max-width: 1190px) {
-  .prev-button{
+  .prev-button {
     left: 3%;
   }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 980px) {
-  .prev-button{
+  .prev-button {
     left: 1%;
   }
 }
+
 @media only screen and (min-width: 1168px) and (max-width: 1387px) {
   .prev-button {
     left: 2%;
   }
 }
+
 @media only screen and (min-width: 1500px) and (max-width: 1700px) {
   .prev-button {
-    left: 0em;
+    left: 0;
   }
 }
+
 @media only screen and (min-width: 1700px) {
   .prev-button {
     left: -2em;
