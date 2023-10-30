@@ -6,15 +6,16 @@ import { FaBars, FaSearch } from 'react-icons/fa';
 import { addReservation } from '../redux/features/reservations/reservationSlice'
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
+import { usersSlice } from '../redux/features/users/usersSlice';
 
 function ReservationCreate() {
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.users);
   const sections = useSelector((state) => state.sections);
   const { section_id } = useParams();
   const [reservationData, setReservationData] = useState({
     city: '',
     date: '',
-    user_id:'',
     number_of_person: '',
     section_id: section_id,
   })
@@ -35,13 +36,12 @@ function ReservationCreate() {
       date: reservationData.date,
       number_of_person: reservationData.number_of_person,
       section_id: reservationData.section_id,
-      user_id: reservationData.user_id
+      user_id: users.id
     };
     dispatch(addReservation(newReservation));
     setReservationData({
       city: '',
       date: '',
-      user_id: '',
       number_of_person: '',
       section_id: '',
     });
@@ -79,13 +79,10 @@ function ReservationCreate() {
     </div>
     <div class="form_row">
     <input
-      type="number"
-      name="user_id"
-      value={reservationData.user_id}
-      onChange={handleChange}
-      placeholder="Username id"
-      className='input'
-    />
+     type="hidden"
+     name="user_id"
+     value={users.id}
+     />
     <input
       type="number"
       name="number_of_person"
