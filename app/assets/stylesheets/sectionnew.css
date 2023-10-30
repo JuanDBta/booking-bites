@@ -37,7 +37,7 @@
 }
 
 .inputs {
-  background-color: rgb(20, 221, 20);
+  background-color: #97BF0F;
   padding: 0 0 0 1vw;
   width: 18%;
   border-radius: 9999px;
@@ -83,7 +83,7 @@ label {
 }
 
 #search {
-  color: rgb(20, 221, 20);
+  color: #97BF0F;
   font-weight: bold;
 }
 
@@ -103,7 +103,7 @@ select::placeholder,
   border: 1px #fff solid;
   border-radius: 9999px;
   color: #fff;
-  background: rgb(20, 221, 20);
+  background: #97BF0F;
   font-size: 1.3vw;
   padding: 0 0 0 1vw;
   font-weight: bold;
@@ -125,7 +125,7 @@ select::placeholder,
 
 .go-back {
   border: 0;
-  background-color: rgb(20, 221, 20);
+  background-color: #97BF0F;
   position: absolute;
   top: 95%;
   left: 17%;
@@ -147,14 +147,14 @@ select::placeholder,
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  color: rgb(20, 221, 20);
+  color: #97BF0F;
   font-weight: bold;
   font-size: 1vw;
 }
 
 .inputs:hover,
 #selects:hover {
-  color: rgb(20, 221, 20);
+  color: #97BF0F;
   background-color: #fff;
 }
 
@@ -166,7 +166,7 @@ button[type="submit"]:hover {
 .inputs[type="text"]:hover,
 .inputs:hover::placeholder {
   background-color: #fff;
-  color: rgb(20, 221, 20);
+  color: #97BF0F;
   font-weight: bold;
 }
 

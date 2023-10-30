@@ -2,7 +2,7 @@
 .form_container {
   color: #fff;
   width: 100%;
-  background-image: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
+  background-image: linear-gradient(to bottom, rgba(151, 191, 15, 0.5) 0%, rgba(151, 191, 15, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
@@ -23,7 +23,7 @@ form {
 }
 
 .input {
-  background-color: rgb(20, 221, 20);
+  background-color: #97BF0F;
   padding: 0.5em;
   width: 19%;
   border-radius: 9999px;
@@ -59,7 +59,7 @@ form {
 }
 
 #search {
-  color: rgb(20, 221, 20);
+  color: #97BF0F;
 }
 
 input[type="text"]::placeholder,
@@ -84,7 +84,7 @@ select::placeholder {
 
 .reserve-button {
   background-color: #fff;
-  color: rgb(20, 221, 20);
+  color:#97BF0F;
   padding: 0.6em;
   width: 29%;
   border-radius: 9999px;
@@ -123,7 +123,7 @@ input:hover,
 select:hover,
 input[type="date"]:hover {
   background-color: #fff;
-  color: rgb(20, 221, 20);
+  color:#97BF0F;
 }
 
 button[type="submit"]:hover {
@@ -133,7 +133,7 @@ button[type="submit"]:hover {
 
 input[type="text"]:hover,
 input:hover::placeholder {
-  color: rgb(20, 221, 20);
+  color:#97BF0F;
   background-color: #fff;
 }
 

@@ -13,19 +13,18 @@ header{
   align-self: flex-end;
   font-weight: bold;
   font-size: 2em;
-  color: rgb(20, 221, 20);
+  color:#97BF0F;
 }
 .close-icon{
   align-self: flex-end;
   font-weight: bold;
   font-size: 2em;
-  color: rgb(20, 221, 20);
+  color:#97BF0F;
 }
 
 .menu_top_div {
   width: 16%;
-  background-image: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
-  background-size: cover;
+  background-image: linear-gradient(to bottom, rgba(151, 191, 15, 0.5) 0%, rgba(151, 191, 15, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);  background-size: cover;
   height: 3%;
   display: flex;
   transition: all 0.3s ease;
@@ -41,8 +40,6 @@ header{
 
 
 .app-header {
-  background-image: linear-gradient(to bottom, rgb(180 189 180 / 50%) 0%, rgba(20, 221, 20, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96….jpg);
-  background-size: cover;
   width: 16%;
   background-color: #fff;
   border-right: 5px rgb(252, 237, 237) solid;
@@ -51,7 +48,6 @@ header{
   flex-direction: column;
   gap: 2em;
   align-items: center;
-  color: #fff;
   transition: all 0.3s ease;
 }
 
@@ -68,7 +64,7 @@ header{
 }
 
 .nav-bar-link a {
-  color:#fff;
+  color: #161616;
 }
 .nav-bar-link:hover {
   transform: scale(1.1);
@@ -76,7 +72,7 @@ header{
 }
 
 .active {
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background-color: #97BF0F;
 }
 
 .active a {

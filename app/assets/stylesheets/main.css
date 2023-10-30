@@ -89,13 +89,13 @@ ul {
 
 .prev-button-container {
   border-radius: 0 50% 50% 0;
-  background-color: rgb(20, 221, 20);
+  background-color: #97BF0F;
   align-self: center;
 }
 
 .prev-button {
   border: 0;
-  background-color: rgb(20, 221, 20);
+  background-color: #97BF0F;
   position: absolute;
   top: 44%;
   left: 16%;
@@ -114,12 +114,12 @@ ul {
 
 .next-button-container {
   border-radius: 50% 0 0 50%;
-  background-color: rgb(20, 221, 20);
+  background-color: #97BF0F;
 }
 
 .next-button {
   border: 0;
-  background-color: rgb(20, 221, 20);
+  background-color: #97BF0F;
   position: absolute;
   top: 44%;
   right: 2%;
