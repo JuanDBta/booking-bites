@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import Logout from './Logout';
 import '../../assets/stylesheets/navbar.css';
 import { FaTwitter } from 'react-icons/fa';
