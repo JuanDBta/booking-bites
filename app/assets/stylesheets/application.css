@@ -48,7 +48,23 @@ body {
 ul {
   text-decoration: none;
 }
-
+.splash_container{
+  width: 100%;
+  background-color: rgb(245, 240, 240);
+}
+.splash_div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 3em auto;
+  background-color: #9fe0a6;;
+  opacity: 0.8;
+  box-shadow: #333 1px 3px 4px;
+  -webkit-box-shadow: #333 1px 3px 4px;
+  -moz-box-shadow: #333 1px 3px 4px;
+}
 .app-logo {
   width: 100%;
   height: auto;

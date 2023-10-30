@@ -22,13 +22,14 @@ import '../assets/stylesheets/application.css'
 
 function SplashPage() {
   return (
-    <div>
+    <div className='splash_container'>
       <h1>BookingBites</h1>
-      <div>
+      <div className='splash_btn'>
         <button><Link to="/login">Log In</Link></button>
         <button><Link to="/register">Sign Up</Link></button>
       </div>
     </div>
+    
   );
 }
 

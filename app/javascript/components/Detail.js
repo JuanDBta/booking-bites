@@ -54,7 +54,7 @@ function SectionDetail() {
                 </Link>
         </ul>
         </div>
-        <NavLink to="/">
+        <NavLink to="/home">
           <button className='go-back-button'>
            <TiMediaPlayReverseOutline className="previous-icon" />
            </button>
