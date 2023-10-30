@@ -23,10 +23,13 @@ import '../assets/stylesheets/application.css'
 function SplashPage() {
   return (
     <div className='splash_container'>
-      <h1>BookingBites</h1>
+       <div className='splash_content'>
+       <h1 className="splash_title">BookingBites</h1>
+       <p>Where Ambience Meets Appetite for Extraordinary Dining Experiences!</p>
       <div className='splash_btn'>
-        <button><Link to="/login">Log In</Link></button>
-        <button><Link to="/register">Sign Up</Link></button>
+        <button className="splash-button"><Link to="/login">Log In</Link></button>
+        <button className="splash-button"><Link to="/register">Sign Up</Link></button>
+      </div>
       </div>
     </div>
     
