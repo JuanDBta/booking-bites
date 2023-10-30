@@ -17,38 +17,33 @@ const Login = () => {
 
     }
   };
-  const loggedInUser = useSelector((state) => state.users);
-  console.log(loggedInUser)
+
   return (
-<form action="log-in" method="post">
-      <div className="form-outline mb-4">
+<form action="log-in" method="post" className="form-container">
+      <div className="login-container">
         <input
-          className="form-control"
+          className="username-field"
           type="text"
           name="loginUserName"
           id="loginUserName"
+          placeholder='enter your username'
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-        <label
-          htmlFor="loginUserName"
-          className="form-label"
-        >
-          Username
-        </label>
       </div>
-      <div className="row mb-4" />
+
+      <div className="button-log-container" />
       <button
         type="button"
-        className="btn btn-block mb-4"
+        className="login-button"
         onClick={handleLogin}
       >
-        Log in
+        Log In
       </button>
-      <div className="text-center">
-        <p>
+      <div className="register-container">
+        <p className="member-text">
           Not a member?
-          <Link to="/register">Register</Link>
+          <Link to="/register" className="register-link">Register</Link>
         </p>
       </div>
     </form>

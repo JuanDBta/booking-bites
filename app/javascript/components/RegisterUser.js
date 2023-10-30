@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { createUser } from '../redux/features/users/usersSlice';
+import '../../assets/stylesheets/login.css';
 
 const RegisterUser = () => {
   const [name, setName] = useState('');
@@ -14,45 +15,49 @@ const RegisterUser = () => {
     dispatch(createUser(data));
   };
   return (
-    <form action="log-in" method="post">
-      <div className="form-outline mb-4">
+    <form action="log-in" method="post" className="form-container">
+      <div className="login-container">
+      <label
+          htmlFor="registerName"
+          className="label-text"
+        >
+         Name
+        </label>
         <input
-          className="form-control"
+          className="username-field"
           type="text"
           name="registerName"
           id="registerName"
+          placeholder='enter your name'
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
-        <label
-          htmlFor="registerName"
-          className="form-label"
-        >
-          Name
-        </label>
+        
       </div>
-      <div className="form-outline mb-4">
-        <input
-          className="form-control"
-          type="text"
-          name="registerUserName"
-          id="registerUserName"
-          value={userName}
-          onChange={(e) => setUserName(e.target.value)}
-        />
-        <label
+      <div className="login-container">
+      <label
           htmlFor="registerUserName"
-          className="form-label"
+          className="label-text"
         >
           Username
         </label>
+        <input
+          className="username-field"
+          type="text"
+          name="registerUserName"
+          id="registerUserName"
+          placeholder='enter your username'
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+        />
+        
       </div>
       <button
         type="button"
-        className="btn btn-block mb-3"
+        className="login-button"
         onClick={handleSubmit}
       >
-        Sign in
+        Sign In
       </button>
     </form>
   );
