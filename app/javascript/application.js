@@ -8,7 +8,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store'
 import Main from './components/Main';
-import NavBar from './components/NavBar';
 import SectionDetail from './components/Detail';
 import SectionNew from './components/SectionNew';
 import ReservationNew from './components/ReservationNew';
@@ -67,7 +66,6 @@ ReactDOM.render(
           path="/*"
           element={
             <>
-              <NavBar />
               <App />
             </>
           }

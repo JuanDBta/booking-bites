@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import { fetchUser } from '../redux/features/users/usersSlice';
+import NavBar from './NavBar';
 import '../../assets/stylesheets/main.css';
 import { TiMediaPlayOutline } from "react-icons/ti";
 import { TiMediaPlayReverseOutline } from "react-icons/ti";
@@ -33,6 +34,7 @@ function Main() {
 
   return (
     <div className="main">
+       <NavBar />
       <h1 className="title">LATEST SECTIONS</h1>
       <h3 className="title-description">Please select a section</h3>
       <div className="dotted-line"></div>

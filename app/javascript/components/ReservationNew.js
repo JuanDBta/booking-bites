@@ -3,6 +3,7 @@ import { useEffect,useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaBars, FaSearch } from 'react-icons/fa';
 import { addReservation } from '../redux/features/reservations/reservationSlice'
+import NavBar from './NavBar';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
 import { usersSlice } from '../redux/features/users/usersSlice';
@@ -46,6 +47,7 @@ function ReservationNew() {
   };
   return (
     <div className='form_container flex'>
+       <NavBar />
       <div className='booking_headline'>
         <h3 className='flex'>
            <span >RESERVE TABLE FROM BOOKING-BITES</span>
