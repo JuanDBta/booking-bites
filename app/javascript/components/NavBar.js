@@ -30,7 +30,7 @@ function NavBar() {
         </div>
 
         <nav className="navbar">          
-          <li className={`nav-bar-link ${location.pathname === '/' ? 'active' : ''}`}>
+          <li className={`nav-bar-link ${location.pathname === '/home' ? 'active' : ''}`}>
             <NavLink to="/home">SECTIONS</NavLink>
           </li>
           <li className={`nav-bar-link ${location.pathname === '/reservations/new' ? 'active' : ''}`}>

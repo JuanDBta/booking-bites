@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUser } from '../redux/features/users/usersSlice';
+import '../../assets/stylesheets/navbar.css';
 
 const Login = () => {
   const [userName, setUserName] = useState('');

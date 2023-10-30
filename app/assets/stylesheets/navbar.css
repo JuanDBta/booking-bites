@@ -62,7 +62,7 @@ header {
   margin-bottom: 0.5vw;
   padding: 1vw;
   padding-top: 1.3vw;
-  width: 91%;
+  width: 90%;
   display: flex;
   align-items: center;
   transition: transform 0.3s ease;
@@ -88,7 +88,32 @@ header {
 .nav-container {
   width: 100%;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.logout-button {
+  font-weight: 800;
+  color:#161616;
+  border: none;
+  background-color: #fff;
+  font-size: 1em;
+  padding: 1vw;
+  padding-top: 1.3vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #97bf0f;
+  color: #fff;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
 
 @media only screen and (max-width: 767px) {
   .nav-bar-link {
