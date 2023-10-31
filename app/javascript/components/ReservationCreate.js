@@ -12,6 +12,7 @@ import NavBar from './NavBar';
 function ReservationCreate() {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
+  const [error, setError] = useState('');
   const sections = useSelector((state) => state.sections);
   const { section_id } = useParams();
   const [reservationData, setReservationData] = useState({
@@ -32,6 +33,14 @@ function ReservationCreate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); 
+    const selectedDate = new Date(reservationData.date);
+    selectedDate.setHours(0, 0, 0, 0);// Set the time to midnight
+    if (selectedDate.getTime() < currentDate.getTime()) {
+      setError('Please select a future or current date for reservation.');
+      return;
+    }
     const newReservation = {
       city: reservationData.city,
       date: reservationData.date,
@@ -46,6 +55,7 @@ function ReservationCreate() {
       number_of_person: '',
       section_id: '',
     });
+    setError('');
   };
   return (
     <div className='form_container flex'>
@@ -100,7 +110,7 @@ function ReservationCreate() {
     />
 
     </div>
-    
+    {error && <p>{error}</p>}
     <button type="submit" className='flex reserve-button'>Reserve</button>
   </form>
   </div>

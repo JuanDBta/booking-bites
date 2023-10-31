@@ -12,6 +12,7 @@ function ReservationNew() {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
   const sections = useSelector((state) => state.sections);
+  const [error, setError] = useState('');
   const [reservationData, setReservationData] = useState({
     city: '',
     date: '',
@@ -30,6 +31,15 @@ function ReservationNew() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); 
+    const selectedDate = new Date(reservationData.date);
+    selectedDate.setHours(0, 0, 0, 0);// Set the time to midnight
+    if (selectedDate.getTime() < currentDate.getTime()) {
+      setError('Please select a future or current date for reservation.');
+      return;
+    }
+
     const newReservation = {
       city: reservationData.city,
       date: reservationData.date,
@@ -44,6 +54,7 @@ function ReservationNew() {
       number_of_person: '',
       section_id: '',
     });
+    setError('');
   };
   return (
     <div className='form_container flex'>
@@ -117,7 +128,7 @@ function ReservationNew() {
      />
     </div>
     
-    
+    {error && <p>{error}</p>}
     <button type="submit" className='reserve-button'>Reserve Now</button>
   </form>
        </div>
