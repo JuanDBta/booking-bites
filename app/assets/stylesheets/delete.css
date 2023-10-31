@@ -1,7 +1,6 @@
 .title-del {
   color: #161616;
-  margin-top: -6em;
-  margin-left: -7em;
+  font-size: 3vw;
 }
 
 .delete-container {
@@ -17,16 +16,21 @@
 
 .delet_Content {
   width: 76%;
-  position: absolute;
-  padding-left: 22%;
   align-items: center;
   flex-direction: column;
-  align-self: center;
   display: flex;
+  justify-content: flex-start;
+  margin-top: 30vw;
 }
 
 @media only screen and (min-width: 767px) {
   .delete-container {
     height: 70em;
   }
+
+  .delet_Content {
+    margin-top: 15vw;
+    padding-left: 6%;
+  }
 }
+

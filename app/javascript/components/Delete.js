@@ -10,7 +10,7 @@ const Delete = () => {
       <NavBar />
       </div>
       <div className='delet_Content'>
-      <h1 className="title-del">UNDER CONSTRUCTION ...</h1>
+        <h1 className="title-del">UNDER CONSTRUCTION ...</h1>
       </div>
       
     </div>
