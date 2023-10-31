@@ -4,7 +4,7 @@
 
 <h1><b>BookingBites App</b></h1>
  
-  <img src="reservations.png" alt="logo" width="400"  height="auto">
+  <img src="bookingbites.png" alt="logo" width="400"  height="auto">
   <br/>
 
 </div>
