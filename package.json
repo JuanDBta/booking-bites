@@ -21,7 +21,7 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "test": "jest"
+    "test": "jest --coverage=false"
   },
   "devDependencies": {
     "@babel/core": "^7.23.2",

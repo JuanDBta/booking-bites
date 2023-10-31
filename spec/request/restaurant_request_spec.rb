@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Api::RestaurantsController, type: :controller do
-  
   describe 'POST #create' do
     context 'with valid attributes' do
       it 'creates a new restaurant' do
@@ -13,12 +12,11 @@ RSpec.describe Api::RestaurantsController, type: :controller do
     end
 
     context 'with invalid attributes' do
-        it 'returns the errors' do
-            restaurant_params = { address: '123 Main St', city: 'City' }
-            post :create, params: { restaurant: restaurant_params }, format: :json
-            expect(JSON.parse(response.body)).to eq({ 'name' => ["can't be blank"] })
-        end
-          
+      it 'returns the errors' do
+        restaurant_params = { address: '123 Main St', city: 'City' }
+        post :create, params: { restaurant: restaurant_params }, format: :json
+        expect(JSON.parse(response.body)).to eq({ 'name' => ["can't be blank"] })
+      end
     end
   end
 

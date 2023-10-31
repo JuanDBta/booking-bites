@@ -36,7 +36,7 @@ RSpec.describe User, type: :model do
         username: 'jo'
       )
       expect(user).to_not be_valid
-      expect(user.errors[:username]).to include("has already been taken")
+      expect(user.errors[:username]).to include('has already been taken')
     end
   end
 

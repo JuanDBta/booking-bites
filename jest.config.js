@@ -9,6 +9,16 @@ const config = {
   moduleNameMapper: {
     "\\.(css|less|scss|sass)$": "identity-obj-proxy",
   },
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/coverage/',
+    'coverage/lcov-report/',
+    'coverage/prettify-report/',
+    'coverage/report/',
+    'coverage/style-reports/',
+  ],
+  collectCoverage: false,
+  
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 

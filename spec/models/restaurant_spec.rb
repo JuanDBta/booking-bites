@@ -3,34 +3,34 @@ require 'rails_helper'
 RSpec.describe Restaurant, type: :model do
   describe 'validations' do
     it 'is valid with valid attributes' do
-      restaurant =Restaurant.new(
+      restaurant = Restaurant.new(
         name: 'John`s Gril',
         address: 'address1',
-        city:'Addis'
+        city: 'Addis'
       )
       expect(restaurant).to be_valid
     end
 
     it 'is not valid without a name' do
-        restaurant = Restaurant.new(
+      restaurant = Restaurant.new(
         address: 'address1',
-        city:'Addis'
+        city: 'Addis'
       )
       expect(restaurant).to_not be_valid
       expect(restaurant.errors[:name]).to include("can't be blank")
     end
     it 'is not valid without a address' do
-        restaurant = Restaurant.new(
-            name: 'John`s Gril',
-           city:'Addis'
+      restaurant = Restaurant.new(
+        name: 'John`s Gril',
+        city: 'Addis'
       )
       expect(restaurant).to_not be_valid
       expect(restaurant.errors[:address]).to include("can't be blank")
     end
     it 'is not valid without a city' do
-        restaurant = Restaurant.new(
-            name: 'John`s Gril',
-            address: 'address1',
+      restaurant = Restaurant.new(
+        name: 'John`s Gril',
+        address: 'address1'
       )
       expect(restaurant).to_not be_valid
       expect(restaurant.errors[:city]).to include("can't be blank")

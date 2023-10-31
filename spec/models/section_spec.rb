@@ -13,17 +13,16 @@ RSpec.describe Section, type: :model do
 
   describe 'validations' do
     it 'is valid with valid attributes' do
-        restaurant = Restaurant.create(name: 'Restaurant')
-        section = Section.new(
-          name: 'Main Dining',
-          image: 'section.jpg',
-          description: 'A spacious dining area',
-          capacity: 50,
-          restaurant: restaurant
-        )
-        expect(section).to be_valid
+      restaurant = Restaurant.create(name: 'Restaurant')
+      section = Section.new(
+        name: 'Main Dining',
+        image: 'section.jpg',
+        description: 'A spacious dining area',
+        capacity: 50,
+        restaurant:
+      )
+      expect(section).to be_valid
     end
-      
 
     it 'is not valid without a name' do
       section = Section.new(
@@ -56,15 +55,14 @@ RSpec.describe Section, type: :model do
     end
 
     it 'is not valid without a capacity' do
-        section = Section.new(
-          name: 'Main Dining',
-          image: 'section.jpg',
-          description: 'A spacious dining area'
-        )
-        section.valid?
-        expect(section.errors[:capacity]).to include("is not a number")
-      end      
-      
+      section = Section.new(
+        name: 'Main Dining',
+        image: 'section.jpg',
+        description: 'A spacious dining area'
+      )
+      section.valid?
+      expect(section.errors[:capacity]).to include('is not a number')
+    end
 
     it 'is not valid with a non-integer capacity' do
       section = Section.new(
@@ -74,7 +72,7 @@ RSpec.describe Section, type: :model do
         capacity: 'abc'
       )
       expect(section).to_not be_valid
-      expect(section.errors[:capacity]).to include("is not a number")
+      expect(section.errors[:capacity]).to include('is not a number')
     end
 
     it 'is not valid with a capacity less than or equal to 0' do
@@ -85,7 +83,7 @@ RSpec.describe Section, type: :model do
         capacity: 0
       )
       expect(section).to_not be_valid
-      expect(section.errors[:capacity]).to include("must be greater than 0")
+      expect(section.errors[:capacity]).to include('must be greater than 0')
     end
   end
 end
