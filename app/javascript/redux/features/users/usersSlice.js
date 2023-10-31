@@ -19,31 +19,34 @@ export const fetchUser = createAsyncThunk(
     },
   )
 
-export const createUser = createAsyncThunk(
-  'users/createUser',
-  async (data) => {
-    try {
-      const response = await fetch(`${url}${users}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-      if (!response.ok) {
-        throw new Error('User not created !!!');
+  export const createUser = createAsyncThunk(
+    'users/createUser',
+    async (data, thunkAPI) => {
+      try {
+        const response = await fetch(`${url}${users}`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+        if (!response.ok) {
+          const errorResponse = await response.json();
+          throw new Error(errorResponse.errors[0]);
+        }
+        return await response.json();
+      } catch (error) {
+        return thunkAPI.rejectWithValue(error.message);
       }
-      return await response.json();
-    } catch (error) {
-      return error;
     }
-  },
-);
+  );
+  
 const initialState = {
   id:null,
   username: null,
   name: null,
   loginError: false,
+  error: null,
 };
 export const usersSlice = createSlice({
   name: 'user',
@@ -63,6 +66,8 @@ export const usersSlice = createSlice({
           state.username = payload.username;
           state.name = payload.name;
           state.id = payload.id;
+          state.loginError = false;
+          state.error = null;
           localStorage.setItem('username', JSON.stringify(payload.username));
         }
       })
@@ -73,12 +78,17 @@ export const usersSlice = createSlice({
         if (payload.username) {
           state.username = payload.username;
           state.name = payload.name;
+          state.loginError = false;
+          state.error = null;
           localStorage.setItem('username', JSON.stringify(payload.username));
         }
       })
-      .addCase(createUser.rejected, (state) => {
+      .addCase(createUser.rejected, (state, action) => {
         state.loginError = true;
+        state.error = action.payload;
       });
+      
+      
   },
 });
 export const { logout } = usersSlice.actions;
