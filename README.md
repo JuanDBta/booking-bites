@@ -143,6 +143,25 @@ Go to your /booking-bites folder:
 ```
 ### Usage
 
+
+1. Once the setup is complete, ensure you are still in the directory containing the Ultimate Booking bites file files.
+
+2. To set up the database and seed initial data, run the following commands:
+
+```
+rails db:create
+rails db:migrate
+```
+
+This will create the database and apply migrations.
+
+If you want to populate the database you can run (this step is not required):
+
+```
+rails db:seed
+```
+To run the app in development mode, execute the following command:
+
 ```sh
   npm run build
   rails server
