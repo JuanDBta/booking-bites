@@ -33,7 +33,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [BookingBites App APP] <a name="about-project"></a>
+# 📖 [BookingBites APP] <a name="about-project"></a>
 
 **[BookingBites App APP]** Built with Ruby on Rails on the backend and React & Redux on the frontend, our responsive web application offers a seamless dining reservation experience. Users can conveniently choose their preferred dining ambience, whether it's the cozy bar, the chic lounge, the scenic rooftop, the tranquil garden, or the vibrant live music area. This project represents the final capstone of our Microverse journey.
 
