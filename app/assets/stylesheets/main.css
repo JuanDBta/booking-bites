@@ -172,6 +172,10 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
+  .main_content {
+    margin-top: 1em;
+  }
+  
   .sections-list {
     flex-direction: column;
     justify-content: center;
