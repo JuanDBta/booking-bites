@@ -31,10 +31,9 @@
   background-size: cover;
   background-position: center center;
   z-index: 1;
- 
-  
 }
-.section_new_content{
+
+.section_new_content {
   position: absolute;
   padding-left: 22%;
   align-items: center;
@@ -42,6 +41,7 @@
   align-self: center;
   width: 76%;
 }
+
 .inputs {
   background-color: #97bf0f;
   padding: 0 0 0 1vw;

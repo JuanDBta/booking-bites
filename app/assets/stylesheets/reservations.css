@@ -8,7 +8,8 @@
   z-index: 1;
   display: flex;
 }
-.my_reservation_content{
+
+.my_reservation_content {
   display: flex;
   gap: 1em;
   flex-direction: column;

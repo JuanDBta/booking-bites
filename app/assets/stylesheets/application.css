@@ -61,12 +61,6 @@ ul {
   display: flex;
 }
 
-.splash_container {
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-}
-
 .splash_content {
   background-color: rgb(223 213 213 / 70%);
   width: 50%;
@@ -105,6 +99,10 @@ ul {
   font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
+
 .splash-button a {
   color: #fff;
 }
@@ -122,10 +120,6 @@ ul {
 .app-logo {
   width: 100%;
   height: auto;
-}
-
-a {
-  text-decoration: none;
 }
 
 .social-icons {

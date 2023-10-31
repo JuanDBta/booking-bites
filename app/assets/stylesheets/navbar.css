@@ -93,7 +93,7 @@ header {
 .logout-button {
   font-family: 'Acumin Pro', sans-serif;
   font-weight: 800;
-  color:#161616;
+  color: #161616;
   border: none;
   background-color: #fff;
   font-size: 1em;
@@ -113,7 +113,6 @@ header {
   transition: transform 0.3s ease;
 }
 
-
 @media only screen and (max-width: 767px) {
   .nav-bar-link,
   .logout-button {
@@ -125,7 +124,6 @@ header {
 
   .nav-container,
   .app-header {
-    height: -webkit-fill-available;
     transition: all 0.3s ease;
   }
 
