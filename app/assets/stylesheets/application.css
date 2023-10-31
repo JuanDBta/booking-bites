@@ -158,4 +158,10 @@ a {
   .splash_title {
     font-size: 1em;
   }
+  .splash_btn{
+    flex-direction: column;
+  }
+  .splash-button{
+    width: 94%;
+  }
 }
