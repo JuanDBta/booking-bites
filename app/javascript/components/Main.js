@@ -34,7 +34,12 @@ function Main() {
 
   return (
     <div className="main">
-       <NavBar />
+      <div className='the_nav'>
+        <NavBar />
+      </div>
+      <div className='main_content'>
+
+      
       <h1 className="title">LATEST SECTIONS</h1>
       <h3 className="title-description">Please select a section</h3>
       <div className="dotted-line"></div>
@@ -73,6 +78,7 @@ function Main() {
             <TiMediaPlayOutline className="next-icon" />
           </button>
         </div>
+    </div>
     </div>
   );
 }

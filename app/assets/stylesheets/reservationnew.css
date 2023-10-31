@@ -6,11 +6,21 @@
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  padding-top: 7em;
+ 
+}
+.reserve_content{
+  position: absolute;
+  padding-left: 22%;
+  /* padding-top: 4em; */
   align-items: center;
   flex-direction: column;
+  align-self: center;
 }
-
+.the_nav{
+  align-self: flex-start;
+  height: auto;
+  z-index: 999999;
+}
 .flex {
   display: flex;
 }

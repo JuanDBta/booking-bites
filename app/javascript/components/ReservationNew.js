@@ -47,7 +47,12 @@ function ReservationNew() {
   };
   return (
     <div className='form_container flex'>
-       <NavBar />
+      <div className='the_nav'>
+      <NavBar />
+      </div>
+      
+       <div className='reserve_content  flex'>
+    
       <div className='booking_headline'>
         <h3 className='flex'>
            <span >RESERVE TABLE FROM BOOKING-BITES</span>
@@ -115,6 +120,7 @@ function ReservationNew() {
     
     <button type="submit" className='reserve-button'>Reserve Now</button>
   </form>
+       </div>
   </div>
   );
 }
