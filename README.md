@@ -174,7 +174,7 @@ To run the app in development mode, execute the following command:
 To run the test, execute the following command:
 
 ```sh
-npm run test
+npx jest
 rspec spec
 ```
 
