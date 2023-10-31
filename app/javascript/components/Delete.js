@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/stylesheets/delete.css';
 import NavBar from './NavBar';
 
-const Delete () => {
+const Delete = () => {
 
   return (
     <div className="delete-container">
