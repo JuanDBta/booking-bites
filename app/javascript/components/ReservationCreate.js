@@ -53,7 +53,7 @@ function ReservationCreate() {
       city: '',
       date: '',
       number_of_person: '',
-      section_id: '',
+      section_id: section_id,
     });
     setError('');
   };
