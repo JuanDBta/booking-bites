@@ -6,7 +6,7 @@ import '../../assets/stylesheets/reservations.css';
 import { CiUser } from "react-icons/ci";
 import NavBar from './NavBar';
 
-function Reservations() {
+const Reservations = () => {
   const dispatch = useDispatch();
   const reservationsApi = useSelector((state) => state.reservationsApi);
   const sections = useSelector(state => state.sections);

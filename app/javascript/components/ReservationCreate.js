@@ -9,7 +9,7 @@ import '../../assets/stylesheets/reservationnew.css';
 import { usersSlice } from '../redux/features/users/usersSlice';
 import NavBar from './NavBar';
 
-function ReservationCreate() {
+const ReservationCreate = () => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
   const [error, setError] = useState('');

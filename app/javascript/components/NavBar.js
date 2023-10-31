@@ -9,7 +9,7 @@ import { TiSocialGooglePlus } from 'react-icons/ti';
 import { BsVimeo } from 'react-icons/bs';
 import { FaPinterestP, FaBars, FaTimes } from 'react-icons/fa';
 
-function NavBar() {
+const NavBar = () => {
   const location = useLocation();
   const [isNavOpen, setIsNavOpen] = useState(false);
 

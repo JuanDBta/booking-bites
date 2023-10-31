@@ -7,7 +7,7 @@ import { TiMediaPlayReverseOutline } from "react-icons/ti";
 import '../../assets/stylesheets/section_detail.css';
 import NavBar from './NavBar';
  
-function SectionDetail() {
+const SectionDetail = () => {
     const sections = useSelector((state) => state.sections);
     const { id } = useParams();
     const navigate = useNavigate ();

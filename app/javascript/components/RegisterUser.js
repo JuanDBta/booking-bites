@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { createUser } from '../redux/features/users/usersSlice';
 import '../../assets/stylesheets/login.css';
 
@@ -9,15 +11,15 @@ const RegisterUser = () => {
   const dispatch = useDispatch();
   const loginError = useSelector((state) => state.users.loginError);
   const error = useSelector((state) => state.users.error);
-
+  const navigate = useNavigate();
   const handleSubmit = () => {
     const data = {
       name,
       username: userName,
     };
     dispatch(createUser(data));
+    navigate('/login');
   };
-
   return (
     <form action="log-in" method="post" className="form-container">
       <div className="login-container">

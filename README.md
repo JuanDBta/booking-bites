@@ -23,6 +23,7 @@
   - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
+  - [Run Tests](#runtests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -167,9 +168,18 @@ To run the app in development mode, execute the following command:
   rails server
 ```
 
+### Run Tests
+
+To run the test, execute the following command:
+
+```sh
+npm run test
+```
+
 ### Deployment
 
 You can deploy this project using:<br>- [BookingBites App Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>

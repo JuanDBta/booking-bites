@@ -19,7 +19,7 @@ import RegisterUser from './components/RegisterUser';
 import Login from './components/Login';
 import '../assets/stylesheets/application.css'
 
-function SplashPage() {
+const SplashPage = () => {
   return (
     <div className='splash_container'>
        <div className='splash_content'>
@@ -35,7 +35,7 @@ function SplashPage() {
   );
 }
 
-function App() {
+const App = () => {
   return (
     <>
           
