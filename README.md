@@ -45,6 +45,7 @@
 4- React & Redux<br>
 5- Gitflow<br>
 6- Rubocop<br>
+7- Rspec
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -174,6 +175,7 @@ To run the test, execute the following command:
 
 ```sh
 npm run test
+rspec spec
 ```
 
 ### Deployment
