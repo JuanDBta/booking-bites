@@ -6,7 +6,7 @@ import { TiMediaPlayReverseOutline } from "react-icons/ti";
 import '../../assets/stylesheets/sectionnew.css';
 import NavBar from './NavBar';
 
-function CreateRestaurantForm() {
+const CreateRestaurantForm = () => {
   const dispatch = useDispatch();
   const [restaurantData, setRestaurantData] = useState({
     name: '',

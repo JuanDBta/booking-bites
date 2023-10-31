@@ -1,7 +1,9 @@
 import React from 'react';
 import '../../assets/stylesheets/delete.css';
 import NavBar from './NavBar';
-function Delete() {
+
+const Delete () => {
+
   return (
     <div className="delete-container">
        <div className='the_nav'>

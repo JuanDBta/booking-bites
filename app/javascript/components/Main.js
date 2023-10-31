@@ -8,7 +8,7 @@ import '../../assets/stylesheets/main.css';
 import { TiMediaPlayOutline } from "react-icons/ti";
 import { TiMediaPlayReverseOutline } from "react-icons/ti";
 
-function Main() {
+const Main = () => {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.sections);
   const [currentIndex, setCurrentIndex] = useState(0);

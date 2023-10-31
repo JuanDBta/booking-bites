@@ -8,7 +8,7 @@ import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
 import { usersSlice } from '../redux/features/users/usersSlice';
 
-function ReservationNew() {
+const ReservationNew = () => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users);
   const sections = useSelector((state) => state.sections);

@@ -15,7 +15,7 @@ const sections = [
   { name: 'Cosy fireplace area', image: '/fire.jpg' }
 ];
 
-function SectionNew() {
+const SectionNew = () => {
   const dispatch = useDispatch();
   const restaurants = useSelector((state) => state.restaurants);
   const [sectionData, setSectionData] = useState({
