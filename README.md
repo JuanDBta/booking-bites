@@ -46,6 +46,7 @@
 5- Gitflow<br>
 6- Rubocop<br>
 7- Rspec
+8- Jest
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -94,12 +95,13 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Set up the repository and tools]**
-- **[Implemented the authentication and authorization using Devise]**
-- **[Created the page to add a category]**
+- **[Created the home page to display Sections]**
+- **[Created the Add Section page to add a Section]**
 - **[Created the splash page]**
 - **[Created registration and login page]**
 - **[Created the page to add a reservation]**
 - **[Created the reservations page]**
+- **[Added tests]**
 
 
 ### Kanban Board <a name="kanban-board"></a>
