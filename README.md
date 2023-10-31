@@ -45,7 +45,7 @@
 4- React & Redux<br>
 5- Gitflow<br>
 6- Rubocop<br>
-7- Rspec
+7- Rspec<br>
 8- Jest
 
 ### Tech Stack <a name="tech-stack"></a>
