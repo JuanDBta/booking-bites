@@ -1,14 +1,20 @@
 .reservations-container {
   width: 100%;
   background-color: #fff;
-  flex-direction: column;
-  display: flex;
-  gap: 1em;
   margin-top: 0;
   background-image: linear-gradient(to bottom, rgba(212, 222, 212, 0.7) 0%, rgb(188, 242, 188, 0.7) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
+  display: flex;
+}
+.my_reservation_content{
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  position: absolute;
+  left: 20%;
+  width: 76%;
 }
 
 .title-res {

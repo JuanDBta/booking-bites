@@ -4,6 +4,7 @@ import { addSection } from '../redux/features/sections/sectionsSlice';
 import { fetchrestaurants} from '../redux/features/restaurants/restaurantSlicer';
 import '../../assets/stylesheets/sectionnew.css';
 import { Link } from 'react-router-dom';
+import NavBar from './NavBar';
 const sections = [
   { name: 'Cozy bar', image: '/cozy-bar.jpg' },
   { name: 'The chic lounge', image: '/lounge.jpg' },
@@ -79,6 +80,12 @@ function SectionNew() {
 
   return (
     <div className='form_containers flex'>
+       <div className='the_nav'>
+      <NavBar />
+      </div>
+      <div className='section_new_content flex'>
+
+     
     <form onSubmit={handleSubmit} className='flex' id='selection_form'>
       {restaurants.length > 0 ? (
         <>
@@ -168,6 +175,7 @@ function SectionNew() {
         </>
       )}
     </form>
+    </div>
     </div>
   );
 }

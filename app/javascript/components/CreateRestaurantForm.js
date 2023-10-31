@@ -4,6 +4,7 @@ import {  addrestaurant } from '../redux/features/restaurants/restaurantSlicer';
 import { NavLink } from 'react-router-dom';
 import { TiMediaPlayReverseOutline } from "react-icons/ti";
 import '../../assets/stylesheets/sectionnew.css';
+import NavBar from './NavBar';
 
 function CreateRestaurantForm() {
   const dispatch = useDispatch();
@@ -37,6 +38,12 @@ function CreateRestaurantForm() {
 
   return (
   <div className='form_containers flex'>
+    <div className='the_nav'>
+      <NavBar />
+      </div>
+      <div className='section_new_content flex'>
+
+    
     <form onSubmit={handleSubmit} className="flex" id="selection_form">
       <input
         type="text"
@@ -71,6 +78,7 @@ function CreateRestaurantForm() {
            </button>
     </NavLink>
     </form>
+  </div>
   </div>
   );
 }

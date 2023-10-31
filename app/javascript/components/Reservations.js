@@ -4,6 +4,7 @@ import { fetchReservationsApi } from '../redux/features/reservations/reservation
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservations.css';
 import { CiUser } from "react-icons/ci";
+import NavBar from './NavBar';
 
 function Reservations() {
   const dispatch = useDispatch();
@@ -25,6 +26,10 @@ function Reservations() {
 
   return (
     <div className="reservations-container">
+       <div className='the_nav'>
+      <NavBar />
+      </div>
+      <div className='my_reservation_content'>
       <h1 className="title-res">MY RESERVATIONS</h1>
       <h3 className="title-description">List of your reservations</h3>
       <div className="dotted-line"></div>
@@ -41,6 +46,7 @@ function Reservations() {
         </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 }

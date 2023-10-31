@@ -31,11 +31,17 @@
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  padding-top: 7em;
+ 
+  
+}
+.section_new_content{
+  position: absolute;
+  padding-left: 22%;
   align-items: center;
   flex-direction: column;
+  align-self: center;
+  width: 76%;
 }
-
 .inputs {
   background-color: #97bf0f;
   padding: 0 0 0 1vw;
@@ -127,8 +133,8 @@ select::placeholder,
   border: 0;
   background-color: #97bf0f;
   position: absolute;
-  top: 95%;
-  left: 17%;
+  top: 57em;
+  left: 0%;
   height: 3.5rem;
   width: 3rem;
   border-bottom-right-radius: 9999px;

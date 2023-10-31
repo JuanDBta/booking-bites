@@ -11,7 +11,6 @@
 .reserve_content{
   position: absolute;
   padding-left: 22%;
-  /* padding-top: 4em; */
   align-items: center;
   flex-direction: column;
   align-self: center;
@@ -35,7 +34,7 @@ form {
 .input {
   background-color: #97bf0f;
   padding: 0.5em;
-  width: 19%;
+  width: 27%;
   border-radius: 9999px;
   color: #fff;
   border: 1px #fff solid;
@@ -81,7 +80,7 @@ select::placeholder {
 }
 
 #select {
-  width: 28%;
+  width: 33%;
   padding-bottom: 0.6em;
 }
 
@@ -96,7 +95,7 @@ select::placeholder {
   background-color: #fff;
   color: #97bf0f;
   padding: 0.6em;
-  width: 29%;
+  width: 32%;
   border-radius: 9999px;
   border: 1px #fff solid;
   align-self: center;

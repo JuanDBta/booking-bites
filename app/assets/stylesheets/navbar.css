@@ -36,12 +36,11 @@ header {
 }
 
 .menu {
-  width: 100%;
+  width: 99%;
   background-color: #fff;
-  border-radius: 9999px;
   padding: 1.5%;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 .app-header {

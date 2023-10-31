@@ -7,6 +7,7 @@ import { addReservation } from '../redux/features/reservations/reservationSlice'
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
 import { usersSlice } from '../redux/features/users/usersSlice';
+import NavBar from './NavBar';
 
 function ReservationCreate() {
   const dispatch = useDispatch();
@@ -48,6 +49,11 @@ function ReservationCreate() {
   };
   return (
     <div className='form_container flex'>
+      <div className='the_nav'>
+      <NavBar />
+      </div>
+      
+       <div className='reserve_content  flex'>
     <div className='booking_headline'>
       <h3 className='flex'>
            <span >RESERVE TABLE FROM BOOKING-BITES</span>
@@ -89,7 +95,7 @@ function ReservationCreate() {
       value={reservationData.number_of_person}
       onChange={handleChange}
       min={1}
-      placeholder="number_of_person"
+      placeholder="#Person"
       className='input'
     />
 
@@ -97,6 +103,7 @@ function ReservationCreate() {
     
     <button type="submit" className='flex reserve-button'>Reserve</button>
   </form>
+  </div>
   </div>
   );
 }
