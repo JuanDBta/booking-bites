@@ -18,7 +18,6 @@
     - [Key Features](#key-features)
     - [Kanban Board](#kanban-board)
   - [🚀 Live Demo](#live-demo)
-  - [📽️ Video Intro](#video)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
@@ -45,7 +44,6 @@
 4- React & Redux<br>
 5- Gitflow<br>
 6- Rubocop<br>
-7- RSpec
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -100,8 +98,7 @@
 - **[Created registration and login page]**
 - **[Created the page to add a reservation]**
 - **[Created the reservations page]**
-- **[Deployed the project]**
-- **[Recorded a video describing project]**
+
 
 ### Kanban Board <a name="kanban-board"></a>
 
@@ -112,12 +109,6 @@ Check our [Kanban Board](https://github.com/users/JuanDBta/projects/2)
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [BookingBites App Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📽️ Video Intro <a name="video"></a>
-
-- [Loom Introduction Video Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,6 +173,7 @@ You can deploy this project using:<br>- [BookingBites App Coming Soon !!!](https
 
 - [ ] **[Add animations and transitions]**
 - [ ] **[Add more functionalities to navigation bar]**
+- [ ] **[Add functionality to the delete section page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
