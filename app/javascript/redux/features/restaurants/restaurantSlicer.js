@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'http://localhost:3000/api/restaurants';
+const url = 'https://bookingbites.onrender.com/api/restaurants';
 
 
 export const fetchrestaurants = createAsyncThunk('data/fetchrestaurants', async () => {
