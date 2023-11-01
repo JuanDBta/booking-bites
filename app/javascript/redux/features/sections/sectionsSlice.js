@@ -2,12 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'http://localhost:3000/api/restaurants';
+const url = 'https://bookingbites.onrender.com/api/restaurants';
 const sections= 'sections'
 
 export const fetchSections = createAsyncThunk('data/fetchSections', async () => {
     try {
-      const response = await fetch('http://localhost:3000/api/sections');
+      const response = await fetch('https://bookingbites.onrender.com/api/sections');
       if (!response.ok) {
         throw new Error('Error fetching data from the API');
       }
