@@ -3,16 +3,19 @@ import { useEffect,useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FaBars, FaSearch } from 'react-icons/fa';
 import { addReservation } from '../redux/features/reservations/reservationSlice'
+import NavBar from './NavBar';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
 import '../../assets/stylesheets/reservationnew.css';
+import { usersSlice } from '../redux/features/users/usersSlice';
 
-function ReservationNew() {
+const ReservationNew = () => {
   const dispatch = useDispatch();
+  const users = useSelector((state) => state.users);
   const sections = useSelector((state) => state.sections);
+  const [error, setError] = useState('');
   const [reservationData, setReservationData] = useState({
     city: '',
     date: '',
-    user_id:'',
     number_of_person: '',
     section_id: '',
   })
@@ -28,28 +31,39 @@ function ReservationNew() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); 
+    const selectedDate = new Date(reservationData.date);
+    selectedDate.setHours(0, 0, 0, 0);// Set the time to midnight
+    if (selectedDate.getTime() < currentDate.getTime()) {
+      setError('Please select a future or current date for reservation.');
+      return;
+    }
+
     const newReservation = {
       city: reservationData.city,
       date: reservationData.date,
       number_of_person: reservationData.number_of_person,
       section_id: reservationData.section_id,
-      user_id: reservationData.user_id
+      user_id: users.id
     };
     dispatch(addReservation(newReservation)).unwrap();
     setReservationData({
       city: '',
       date: '',
-      user_id: '',
       number_of_person: '',
       section_id: '',
     });
+    setError('');
   };
   return (
     <div className='form_container flex'>
-      <div className='top_icons flex'>
-        <FaBars className='menu_icon' />
-        <div className='search_icon search_div'><FaSearch  id='search'  /></div>
+      <div className='the_nav'>
+      <NavBar />
       </div>
+      
+       <div className='reserve_content  flex'>
+    
       <div className='booking_headline'>
         <h3 className='flex'>
            <span >RESERVE TABLE FROM BOOKING-BITES</span>
@@ -89,16 +103,14 @@ function ReservationNew() {
      id="select"
      
      >
-     <option value="">Select a section</option>
+     <option value="">Select a Section</option>
           {sections.map((section) => (
           <option key={section.id} value={section.id}>
             {section.name}
           </option>
           ))}
     </select>
-    <i className="fas fa-chevron-down"></i> 
     </>
-   
      
     <input
       type="number"
@@ -106,22 +118,20 @@ function ReservationNew() {
       value={reservationData.number_of_person}
       onChange={handleChange}
       min={1}
-      placeholder="number_of_person"
+      placeholder="# People"
       className='input'
     />
      <input
-      type="number"
-      name="user_id"
-      value={reservationData.user_id}
-      onChange={handleChange}
-      placeholder="Username id"
-      className='input'
-    />
+     type="hidden"
+     name="user_id"
+     value={users.id}
+     />
     </div>
     
-    
-    <button type="submit" className='flex'>Reserve now</button>
+    {error && <p>{error}</p>}
+    <button type="submit" className='reserve-button'>Reserve Now</button>
   </form>
+       </div>
   </div>
   );
 }

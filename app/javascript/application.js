@@ -3,12 +3,11 @@ import "@hotwired/turbo-rails"
 import "./controllers"
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store'
 import Main from './components/Main';
-import NavBar from './components/NavBar';
 import SectionDetail from './components/Detail';
 import SectionNew from './components/SectionNew';
 import ReservationNew from './components/ReservationNew';
@@ -16,43 +15,34 @@ import ReservationCreate from './components/ReservationCreate';
 import Reservations from './components/Reservations';
 import CreateRestaurantForm from './components/CreateRestaurantForm';
 import Delete from './components/Delete';
-import { FaTwitter } from 'react-icons/fa';
-import { ImFacebook } from 'react-icons/im';
-import { TiSocialGooglePlus } from 'react-icons/ti';
-import { BsVimeo } from 'react-icons/bs';
-import { FaPinterestP } from 'react-icons/fa';
+import RegisterUser from './components/RegisterUser';
+import Login from './components/Login';
 import '../assets/stylesheets/application.css'
 
-function App() {
+const SplashPage = () => {
+  return (
+    <div className='splash_container'>
+       <div className='splash_content'>
+       <h1 className="splash_title">BookingBites</h1>
+       <p>Where Ambience Meets Appetite for Extraordinary Dining Experiences!</p>
+      <div className='splash_btn'>
+        <button className="splash-button"><Link to="/login">Log In</Link></button>
+        <button className="splash-button"><Link to="/register">Sign Up</Link></button>
+      </div>
+      </div>
+    </div>
+    
+  );
+}
+
+const App = () => {
   return (
     <>
-      <header className="app-header">
-        <div className="logo-title">
-          <h1 className="title-header">BookingBites</h1>
-          <NavBar className="bar" />
-        </div>
-        
-        <div className="social-icons">
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <FaTwitter className="twitter-icon" />
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <ImFacebook className="facebook-icon" />
-          </a>
-          <a href="https://plus.google.com" target="_blank" rel="noopener noreferrer">
-            <TiSocialGooglePlus className="google-icon" />
-          </a>
-          <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer">
-            <BsVimeo className="v-icon" />
-          </a>
-          <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
-            <FaPinterestP className="pinterest-icon" />
-          </a>
-        </div>
-
-      </header>
+          
+      
       <Routes>
-        <Route path="/" element={<Main />} />
+        <Route path="/" element={<SplashPage />} />
+        <Route path="/home" element={<Main />} />
         <Route path="/sections/:id" element={<SectionDetail />} />
         <Route path="/sections/new" element={<SectionNew />} />
         <Route path="/reservations/new" element={<ReservationNew />} />
@@ -68,7 +58,19 @@ function App() {
 ReactDOM.render(
   <Provider store={store}>
   <BrowserRouter>
-       <App />
+  <Routes>
+        <Route path="/" element={<SplashPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<RegisterUser />} />
+        <Route
+          path="/*"
+          element={
+            <>
+              <App />
+            </>
+          }
+        />
+      </Routes>
      </BrowserRouter>
   </Provider>,
   document.getElementById('root'),

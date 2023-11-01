@@ -4,7 +4,7 @@
 
 <h1><b>BookingBites App</b></h1>
  
-  <img src="reservations.png" alt="logo" width="400"  height="auto">
+  <img src="bookingbites.png" alt="logo" width="400"  height="auto">
   <br/>
 
 </div>
@@ -18,12 +18,12 @@
     - [Key Features](#key-features)
     - [Kanban Board](#kanban-board)
   - [🚀 Live Demo](#live-demo)
-  - [📽️ Video Intro](#video)
 - [💻 Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Setup](#setup)
   - [Install](#install)
   - [Usage](#usage)
+  - [Run Tests](#runtests)
   - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -33,7 +33,7 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 [BookingBites App APP] <a name="about-project"></a>
+# 📖 [BookingBites APP] <a name="about-project"></a>
 
 **[BookingBites App APP]** Built with Ruby on Rails on the backend and React & Redux on the frontend, our responsive web application offers a seamless dining reservation experience. Users can conveniently choose their preferred dining ambience, whether it's the cozy bar, the chic lounge, the scenic rooftop, the tranquil garden, or the vibrant live music area. This project represents the final capstone of our Microverse journey.
 
@@ -45,7 +45,8 @@
 4- React & Redux<br>
 5- Gitflow<br>
 6- Rubocop<br>
-7- RSpec
+7- Rspec<br>
+8- Jest
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -94,14 +95,14 @@
 ### Key Features <a name="key-features"></a>
 
 - **[Set up the repository and tools]**
-- **[Implemented the authentication and authorization using Devise]**
-- **[Created the page to add a category]**
+- **[Created the home page to display Sections]**
+- **[Created the Add Section page to add a Section]**
 - **[Created the splash page]**
 - **[Created registration and login page]**
 - **[Created the page to add a reservation]**
 - **[Created the reservations page]**
-- **[Deployed the project]**
-- **[Recorded a video describing project]**
+- **[Added tests]**
+
 
 ### Kanban Board <a name="kanban-board"></a>
 
@@ -112,12 +113,6 @@ Check our [Kanban Board](https://github.com/users/JuanDBta/projects/2)
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [BookingBites App Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 📽️ Video Intro <a name="video"></a>
-
-- [Loom Introduction Video Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -152,14 +147,43 @@ Go to your /booking-bites folder:
 ```
 ### Usage
 
+
+1. Once the setup is complete, ensure you are still in the directory containing the Ultimate Booking bites file files.
+
+2. To set up the database and seed initial data, run the following commands:
+
+```
+rails db:create
+rails db:migrate
+```
+
+This will create the database and apply migrations.
+
+If you want to populate the database you can run (this step is not required):
+
+```
+rails db:seed
+```
+To run the app in development mode, execute the following command:
+
 ```sh
   npm run build
   rails server
 ```
 
+### Run Tests
+
+To run the test, execute the following command:
+
+```sh
+npx jest
+rspec spec
+```
+
 ### Deployment
 
 You can deploy this project using:<br>- [BookingBites App Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 👥 Authors <a name="authors"></a>
@@ -182,6 +206,7 @@ You can deploy this project using:<br>- [BookingBites App Coming Soon !!!](https
 
 - [ ] **[Add animations and transitions]**
 - [ ] **[Add more functionalities to navigation bar]**
+- [ ] **[Add functionality to the delete section page]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

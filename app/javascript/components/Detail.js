@@ -5,8 +5,9 @@ import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { TiMediaPlayReverseOutline } from "react-icons/ti";
 import '../../assets/stylesheets/section_detail.css';
+import NavBar from './NavBar';
  
-function SectionDetail() {
+const SectionDetail = () => {
     const sections = useSelector((state) => state.sections);
     const { id } = useParams();
     const navigate = useNavigate ();
@@ -15,8 +16,11 @@ function SectionDetail() {
         return <div>Loading...</div>; 
       }
       return (
-        <>
         <div className='detail_container flex'>
+          <div className='the_nav'>
+            <NavBar />
+         </div>
+         <div className='detail_content flex'>
           <div className='detail_img'><img src={detailsection.image} alt="Section Image" /></div>
           <ul className='detail_list'>
             <h2 className='discover flex'>{detailsection.name}</h2>
@@ -53,13 +57,15 @@ function SectionDetail() {
                     </p>
                 </Link>
         </ul>
-        </div>
-        <NavLink to="/">
+       
+        <NavLink to="/home">
           <button className='go-back-button'>
            <TiMediaPlayReverseOutline className="previous-icon" />
            </button>
         </NavLink>
-        </>
+        </div>
+        </div>
+        
       );
     }
     

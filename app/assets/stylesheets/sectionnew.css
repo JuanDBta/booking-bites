@@ -4,10 +4,11 @@
 }
 
 .notice {
-  color: red;
-  font-size: large;
+  color: #161616;
+  font-size: 2vw;
   font-weight: bold;
   justify-content: center;
+  margin-top: -5vw;
 }
 
 #back {
@@ -25,23 +26,42 @@
 
 .form_containers {
   color: rgb(39, 37, 37);
-  width: 86%;
+  width: 100%;
   background-image: linear-gradient(to bottom, rgba(212, 222, 212, 0.7) 0%, rgb(188, 242, 188, 0.7) 100%), url(https://img.traveltriangle.com/blog/wp-content/uploads/2018/10/Panoramic-34.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  justify-content: center;
+}
+
+.section_new_content {
+  position: absolute;
+  padding-left: 22%;
   align-items: center;
   flex-direction: column;
+  align-self: center;
+  width: 76%;
+  top: 10%;
 }
 
 .inputs {
-  background-color: rgb(20, 221, 20);
-  padding: 1em;
-  width: 41%;
+  background-color: #97bf0f;
+  padding: 0 0 0 1vw;
+  width: 18%;
   border-radius: 9999px;
-  color: white;
-  border: 1px white solid;
+  color: #fff;
+  border: 1px #fff solid;
+  height: 2.5vw;
+  font-size: 1.3vw;
+  font-weight: bold;
+}
+
+.cap {
+  width: 17%;
+  padding-right: 1vw;
+}
+
+label {
+  color: rgb(1 43 1);
 }
 
 .top_icons {
@@ -58,7 +78,7 @@
 }
 
 .search_div {
-  background-color: white;
+  background-color: #fff;
   border-radius: 9999px;
   padding: 1.5%;
   display: flex;
@@ -70,46 +90,79 @@
 }
 
 #search {
-  color: rgb(20, 221, 20);
+  color: #97bf0f;
+  font-weight: bold;
 }
 
+select::placeholder,
 .inputs[type="text"]::placeholder,
-.input[type="number"]::placeholder,
+.inputs[type="number"]::placeholder,
 .inputs[type="textarea"]::placeholder,
 #selects::placeholder {
-  color: white;
   align-self: center;
+  font-size: 1.1vw;
+  color: #fff;
 }
 
 #selects {
-  width: 43%;
+  width: 20%;
+  height: 3vw;
+  border: 1px #fff solid;
+  border-radius: 9999px;
+  color: #fff;
+  background: #97bf0f;
+  font-size: 1.3vw;
+  padding: 0 0 0 1vw;
+  font-weight: bold;
 }
 
+select::placeholder,
 .inputs[type="date"]::placeholder,
 #selects::placeholder {
-  color: white;
   align-self: center;
+  color: #fff;
 }
 
-button[type="submit"] {
-  background-color: white;
-  color: rgb(20, 221, 20);
+.previous {
+  color: #fff;
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.go-back {
+  border: 0;
+  background-color: #97bf0f;
+  position: absolute;
+  top: 57em;
+  left: 0%;
+  height: 3.5rem;
+  width: 3rem;
+  border-bottom-right-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.new-section-button {
+  background-color: #fff;
   padding: 1em;
-  width: 41%;
+  width: 20%;
   border-radius: 9999px;
-  border: 1px white solid;
+  border: 1px #fff solid;
   align-self: center;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  color: #97bf0f;
+  font-weight: bold;
+  font-size: 1vw;
 }
 
 .inputs:hover,
-#select:hover {
-  background-color: white;
-  color: rgb(20, 221, 20);
+#selects:hover {
+  color: #97bf0f;
+  background-color: #fff;
 }
 
 button[type="submit"]:hover {
@@ -119,8 +172,9 @@ button[type="submit"]:hover {
 
 .inputs[type="text"]:hover,
 .inputs:hover::placeholder {
-  color: rgb(20, 221, 20);
-  background-color: white;
+  background-color: #fff;
+  color: #97bf0f;
+  font-weight: bold;
 }
 
 .form_row {
@@ -139,8 +193,18 @@ button[type="submit"]:hover {
     padding: 2%;
   }
 
+  .inputs {
+    width: 61%;
+  }
+
+  .cap {
+    width: 62%;
+  }
+
   #selects {
     padding: 2%;
+    width: 66%;
+    height: 6vw;
   }
 
   .top_icons {
@@ -160,4 +224,25 @@ button[type="submit"]:hover {
 
 .underline {
   width: 70%;
+}
+
+@media only screen and (min-width: 767px) {
+  .form_containers {
+    height: 70em;
+  }
+
+  #selects {
+    width: 60%;
+    height: 4vw;
+  }
+
+  .cap {
+    height: 4vw;
+    width: 58%;
+  }
+
+  .inputs {
+    width: 59%;
+    height: 3.5vw;
+  }
 }

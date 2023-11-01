@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchSections } from '../redux/features/sections/sectionsSlice';
+import { fetchUser } from '../redux/features/users/usersSlice';
+import NavBar from './NavBar';
 import '../../assets/stylesheets/main.css';
 import { TiMediaPlayOutline } from "react-icons/ti";
 import { TiMediaPlayReverseOutline } from "react-icons/ti";
 
-function Main() {
+const Main = () => {
   const dispatch = useDispatch();
   const sections = useSelector((state) => state.sections);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -32,6 +34,12 @@ function Main() {
 
   return (
     <div className="main">
+      <div className='the_nav'>
+        <NavBar />
+      </div>
+      <div className='main_content'>
+
+      
       <h1 className="title">LATEST SECTIONS</h1>
       <h3 className="title-description">Please select a section</h3>
       <div className="dotted-line"></div>
@@ -70,6 +78,7 @@ function Main() {
             <TiMediaPlayOutline className="next-icon" />
           </button>
         </div>
+    </div>
     </div>
   );
 }

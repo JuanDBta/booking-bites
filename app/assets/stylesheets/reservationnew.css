@@ -1,14 +1,26 @@
 
 .form_container {
-  color: white;
-  width: 86%;
-  background-image: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
+  color: #fff;
+  width: 100%;
+  background-image: linear-gradient(to bottom, rgba(151, 191, 15, 0.5) 0%, rgba(151, 191, 15, 1) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
   background-size: cover;
   background-position: center center;
   z-index: 1;
-  justify-content: center;
+}
+
+.reserve_content {
+  top: 17%;
+  position: absolute;
+  padding-left: 22%;
   align-items: center;
   flex-direction: column;
+  align-self: center;
+}
+
+.the_nav {
+  align-self: flex-start;
+  height: auto;
+  z-index: 999999;
 }
 
 .flex {
@@ -23,12 +35,14 @@ form {
 }
 
 .input {
-  background-color: rgb(20, 221, 20);
-  padding: 1em;
-  width: 41%;
+  background-color: #97bf0f;
+  padding: 0.5em;
+  width: 27%;
   border-radius: 9999px;
-  color: white;
-  border: 1px white solid;
+  color: #fff;
+  border: 1px #fff solid;
+  font-size: 1.3em;
+  padding-left: 1em;
 }
 
 .top_icons {
@@ -45,7 +59,7 @@ form {
 }
 
 .search_div {
-  background-color: white;
+  background-color: #fff;
   border-radius: 9999px;
   padding: 1.5%;
   display: flex;
@@ -57,7 +71,7 @@ form {
 }
 
 #search {
-  color: rgb(20, 221, 20);
+  color: #97bf0f;
 }
 
 input[type="text"]::placeholder,
@@ -69,32 +83,37 @@ select::placeholder {
 }
 
 #select {
-  width: 47%;
+  width: 33%;
+  padding-bottom: 0.6em;
 }
 
 input[type="date"]::placeholder,
 select::placeholder {
-  color: white;
+  color: #fff;
   align-self: center;
+  font-size: 1.3em;
 }
 
-button[type="submit"] {
-  background-color: white;
-  color: rgb(20, 221, 20);
-  padding: 1em;
-  width: 41%;
+.reserve-button {
+  background-color: #fff;
+  color: #97bf0f;
+  padding: 0.6em;
+  width: 32%;
   border-radius: 9999px;
-  border: 1px white solid;
+  border: 1px #fff solid;
   align-self: center;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  font-size: 1.3em;
+  margin-top: 1em;
+  font-weight: bold;
 }
 
 .booking_headline {
-  color: white;
+  color: #fff;
 }
 
 .booking_headline h3 {
@@ -115,8 +134,8 @@ button[type="submit"] {
 input:hover,
 select:hover,
 input[type="date"]:hover {
-  background-color: white;
-  color: rgb(20, 221, 20);
+  background-color: #fff;
+  color: #97bf0f;
 }
 
 button[type="submit"]:hover {
@@ -126,13 +145,25 @@ button[type="submit"]:hover {
 
 input[type="text"]:hover,
 input:hover::placeholder {
-  color: rgb(20, 221, 20);
-  background-color: white;
+  color: #97bf0f;
+  background-color: #fff;
 }
 
 .form_row {
   display: flex;
   gap: 1em;
+  justify-content: center;
+}
+
+input[type="date"]:hover::-webkit-calendar-picker-indicator {
+  filter: invert(0);
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator {
+  width: 1.5em;
+  height: 1.5em;
+  filter: invert(1);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 767px) {
@@ -162,4 +193,10 @@ input:hover::placeholder {
 
 .underline {
   width: 70%;
+}
+
+@media only screen and (min-width: 767px) {
+  .form_container {
+    height: 70em;
+  }
 }

@@ -18,7 +18,7 @@ class Api::ReservationsController < ApplicationController
     if @reservation.save
       render json: { reservation: @reservation, success: true }
     else
-      render 'new'
+      render json: { errors: @reservation.errors.full_messages }
     end
   end
 

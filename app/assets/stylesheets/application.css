@@ -17,22 +17,11 @@ body {
   font-family: 'Acumin Pro', sans-serif;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #root {
   display: flex;
-}
-
-.app-header {
-  width: 16%;
-  background-color: #fff;
-  border-right: 5px rgb(252, 237, 237) solid;
-  height: 60em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo-title {
@@ -40,12 +29,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 14vw;
+  height: 5vw;
   gap: 5vw;
 }
 
 .title-header {
-  color: rgb(85, 78, 78);
+  color: #161616;
   width: 16.5%;
   text-align: center;
   display: flex;
@@ -59,13 +48,78 @@ ul {
   text-decoration: none;
 }
 
-.app-logo {
+.splash_container {
+  height: 63em;
+  background-color: rgb(245, 240, 240);
   width: 100%;
-  height: auto;
+  background-size: cover;
+  background-image: url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/classy-restaurant.jpg);
+  background-position: center center;
+  z-index: 1;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.splash_content {
+  background-color: rgb(223 213 213 / 70%);
+  width: 50%;
+  height: 20em;
+  margin: 14em auto;
+  flex-direction: column;
+  display: flex;
+}
+
+.splash_title {
+  font-family: "Acumin Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+  line-height: 1em;
+  color: #191919;
+  align-self: center;
+}
+
+.splash_content p {
+  text-shadow: 0 0 #259465;
+  font-weight: 400;
+  font-size: 1em;
+  align-self: center;
+}
+
+.splash-button {
+  color: #fff;
+  background-color: #97bf0f;
+  padding: 0.6em;
+  width: 39%;
+  border-radius: 9999px;
+  border: 1px #fff solid;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-top: 1em;
+  font-weight: bold;
 }
 
 a {
   text-decoration: none;
+}
+
+.splash-button a {
+  color: #fff;
+}
+
+.splash_btn {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.splash-button:hover {
+  background-color: rgb(49, 63, 47);
+  color: rgb(238, 244, 238);
+}
+
+.app-logo {
+  width: 100%;
+  height: auto;
 }
 
 .social-icons {
@@ -97,11 +151,19 @@ a {
     overflow: auto;
   }
 
-  .app-header {
-    height: auto;
-  }
-
   .title-header {
     font-size: 0.8em;
+  }
+
+  .splash_title {
+    font-size: 1em;
+  }
+
+  .splash_btn {
+    flex-direction: column;
+  }
+
+  .splash-button {
+    width: 94%;
   }
 }

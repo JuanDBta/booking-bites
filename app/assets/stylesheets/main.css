@@ -1,11 +1,19 @@
 .main {
-  width: 83.5%;
+  width: 100%;
   background-color: #fff;
-  height: 100%;
-  flex-direction: column;
   display: flex;
-  gap: 1em;
+  z-index: 3;
+}
+
+.main_content {
+  left: 20%;
   margin-top: 7em;
+  gap: 1em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  width: 86%;
 }
 
 .title {
@@ -31,7 +39,7 @@ ul {
   display: flex;
   flex-direction: row;
   gap: 1em;
-  width: 100%;
+  width: 91%;
   justify-content: center;
 }
 
@@ -86,16 +94,16 @@ ul {
 
 .prev-button-container {
   border-radius: 0 50% 50% 0;
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background-color: #97bf0f;
   align-self: center;
 }
 
 .prev-button {
   border: 0;
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background-color: #97bf0f;
   position: absolute;
   top: 44%;
-  left: 16%;
+  left: 20%;
   height: 3.5rem;
   width: 3rem;
   border-bottom-right-radius: 9999px;
@@ -111,15 +119,15 @@ ul {
 
 .next-button-container {
   border-radius: 50% 0 0 50%;
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background-color: #97bf0f;
 }
 
 .next-button {
   border: 0;
-  background: linear-gradient(to bottom, rgba(20, 221, 20, 0.5) 0%, rgba(20, 221, 20, 1) 100%);
+  background-color: #97bf0f;
   position: absolute;
   top: 44%;
-  right: 0;
+  right: 8%;
   height: 3.5rem;
   width: 3rem;
   border-bottom-left-radius: 9999px;
@@ -164,6 +172,10 @@ ul {
 }
 
 @media only screen and (max-width: 767px) {
+  .main_content {
+    margin-top: 1em;
+  }
+
   .sections-list {
     flex-direction: column;
     justify-content: center;
@@ -182,5 +194,45 @@ ul {
 
   .title {
     font-size: 1em;
+  }
+
+  .prev-button {
+    left: -5%;
+  }
+}
+
+@media only screen and (min-width: 1387px) {
+  .prev-button {
+    left: -2em;
+  }
+}
+
+@media only screen and (min-width: 1087px) and (max-width: 1190px) {
+  .prev-button {
+    left: 3%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .prev-button {
+    left: 1%;
+  }
+}
+
+@media only screen and (min-width: 1168px) and (max-width: 1387px) {
+  .prev-button {
+    left: 2%;
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1700px) {
+  .prev-button {
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 1700px) {
+  .prev-button {
+    left: -2em;
   }
 }
