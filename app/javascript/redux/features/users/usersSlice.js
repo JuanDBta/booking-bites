@@ -14,7 +14,7 @@ export const fetchUser = createAsyncThunk(
         const res = await response.json();
         return res;
       } catch (error) {
-        return error.message;
+        return console.error(error.message);
       }
     },
   )
@@ -46,7 +46,7 @@ const initialState = {
   username: null,
   name: null,
   loginError: false,
-  error: null,
+  error: '',
 };
 export const usersSlice = createSlice({
   name: 'user',

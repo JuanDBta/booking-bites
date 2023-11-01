@@ -8,14 +8,16 @@ const Login = () => {
   const [userName, setUserName] = useState('');
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [error, setError] = useState('');
+
   const handleLogin = async () => {
     try {
       await dispatch(fetchUser(userName));
      
-      
+    
       navigate('/home'); 
     } catch (error) {
-
+      setError('Please, enter a valid username');
     }
   };
 
@@ -31,7 +33,7 @@ const Login = () => {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-
+      {error && <p className="login-error">{error}</p>}
       <div className="button-log-container" />
       <button
         type="button"
