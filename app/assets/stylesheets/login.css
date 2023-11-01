@@ -24,10 +24,16 @@
 }
 
 .register-link {
-  padding-left: 0.5em;
+  padding-left: 0.5vw;
   color: #161616;
   font-weight: 800;
   cursor: pointer;
+  font-size: 1vw;
+}
+
+.member-text {
+  color: #161616;
+  font-size: 1vw;
 }
 
 .username-label {
@@ -83,6 +89,6 @@
 
 .login-error {
   font-weight: bold;
-  color:red;
+  color: red;
   font-size: 1vw;
 }
