@@ -1,0 +1,18 @@
+databases:
+  - name: bpkswbjv
+    databaseName: bpkswbjv
+    user: bpkswbjv
+
+services:
+  - type: web
+    name: bpkswbjv
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: postgres://bpkswbjv:4aq-LLqwBd20vfA1spRThMrQFUmVJFAY@isabelle.db.elephantsql.com/bpkswbjv
+        fromDatabase:
+          name: bpkswbjv
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
