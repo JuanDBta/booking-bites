@@ -105,13 +105,15 @@
 
 
 ### Kanban Board <a name="kanban-board"></a>
+We are two people working on this project: @beteland123 and @JuanDBta.
 
 Check our [Kanban Board](https://github.com/users/JuanDBta/projects/2)
 
-You can see a screenshoots of the initial state of the board below:
-
+This is our empty Kanban Board:
 ![Empty Kanban Board](./public/kanban_bored_empty.png)
 
+This our Kanban after creating the cards:
+![Empty Kanban Board](./public/kanban_task.png)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
