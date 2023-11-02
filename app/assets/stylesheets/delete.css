@@ -1,0 +1,35 @@
+.title-del {
+  color: #161616;
+  font-size: 3vw;
+}
+
+.delete-container {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 0;
+  background-image: linear-gradient(to bottom, rgba(212, 222, 212, 0.7) 0%, rgb(188, 242, 188, 0.7) 100%), url(https://i.pinimg.com/1200x/6e/46/e9/6e46e96b88c1e0e4357cdf8ec88b27bd.jpg);
+  background-size: cover;
+  background-position: center center;
+  z-index: 1;
+  display: flex;
+}
+
+.delet_Content {
+  width: 76%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30vw;
+}
+
+@media only screen and (min-width: 767px) {
+  .delete-container {
+    height: 70em;
+  }
+
+  .delet_Content {
+    margin-top: 15vw;
+    padding-left: 6%;
+  }
+}
