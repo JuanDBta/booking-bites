@@ -110,10 +110,14 @@ We are two people working on this project: @beteland123 and @JuanDBta.
 Check our [Kanban Board](https://github.com/users/JuanDBta/projects/2)
 
 This is our empty Kanban Board:
-![Empty Kanban Board](./public/kanban_bored_empty.png)
+
+<img src="kanban_bored_empty.png" alt="kanban_bored_empty" width="400"  height="auto">
+
 
 This our Kanban after creating the cards:
-![Empty Kanban Board](./public/kanban_task.png)
+
+<img src="kanban_task.png" alt="kanban_with_the_task" width="400"  height="auto">
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
