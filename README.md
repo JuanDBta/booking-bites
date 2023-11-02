@@ -111,12 +111,12 @@ Check our [Kanban Board](https://github.com/users/JuanDBta/projects/2)
 
 This is our empty Kanban Board:
 
-<img src="kanban_bored_empty.png" alt="kanban_bored_empty" width="400"  height="auto">
+<img src="kanban_bored_empty.PNG" alt="kanban_bored_empty" width="600"  height="auto">
 
 
-This our Kanban after creating the cards:
+This is our Kanban after creating the cards:
 
-<img src="kanban_task.png" alt="kanban_with_the_task" width="400"  height="auto">
+<img src="kanban_task.PNG" alt="kanban_with_the_task" width="600"  height="auto">
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
