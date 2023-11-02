@@ -108,6 +108,11 @@
 
 Check our [Kanban Board](https://github.com/users/JuanDBta/projects/2)
 
+You can see a screenshoots of the initial state of the board below:
+
+![Empty Kanban Board](./public/kanban_bored_empty.png)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
