@@ -11,14 +11,22 @@ const RegisterUser = () => {
   const loginError = useSelector((state) => state.users.loginError);
   const error = useSelector((state) => state.users.error);
   const navigate = useNavigate();
-  const handleSubmit = () => {
+
+  const handleSubmit = async () => {
     const data = {
       name,
       username: userName,
     };
-    dispatch(createUser(data));
-    navigate('/login');
+
+    try {
+      await dispatch(createUser(data)).unwrap(); // Wait for the createUser action to complete successfully
+      navigate('/login'); // Navigate to the login page if successful
+    } catch (error) {
+      // Handle the error
+      console.error(error.message);
+    }
   };
+
   return (
     <form action="log-in" method="post" className="form-container">
       <div className="login-container">
@@ -42,7 +50,7 @@ const RegisterUser = () => {
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />
-         {loginError && error && <p className="error-message">{error}</p>}
+        {loginError && error && <p className="error-message">{error}</p>}
         <button type="button" className="login-button" onClick={handleSubmit}>Sign In</button>
       </div>
     </form>
