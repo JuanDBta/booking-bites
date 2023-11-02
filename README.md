@@ -35,7 +35,7 @@
 
 # 📖 [BookingBites APP] <a name="about-project"></a>
 
-**[BookingBites App APP]** Built with Ruby on Rails on the backend and React & Redux on the frontend, our responsive web application offers a seamless dining reservation experience. Users can conveniently choose their preferred dining ambience, whether it's the cozy bar, the chic lounge, the scenic rooftop, the tranquil garden, or the vibrant live music area. This project represents the final capstone of our Microverse journey.
+**[BookingBites App APP]** Built with Ruby on Rails on the backend and React & Redux on the frontend, our responsive web application offers a seamless dining reservation experience. Users can conveniently choose their preferred dining ambience, whether it's the cozy bar, the chic lounge, the scenic rooftop, the tranquil garden, or the vibrant live music area. This project represents the final capstone of our Microverse journey. And this is the link of the repo that contains both the frontend and the backend [Booking bites repo](https://github.com/JuanDBta/booking-bites)
 
 ## 🛠 Built With <a name="built-with"></a>
 
