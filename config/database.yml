@@ -84,4 +84,4 @@ production:
   database: bookingbites_database
   username: bookingbites_database_user
   password: wyxo9o8XChb9F0CQvz1KHF4dxtxaIHXi
-   url: postgres://bookingbites_database_user:wyxo9o8XChb9F0CQvz1KHF4dxtxaIHXi@dpg-cl37ia2uuipc7388hfk0-a/bookingbites_database
+  url: postgres://bookingbites_database_user:wyxo9o8XChb9F0CQvz1KHF4dxtxaIHXi@dpg-cl37ia2uuipc7388hfk0-a/bookingbites_database
