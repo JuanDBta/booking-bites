@@ -123,7 +123,7 @@ This is our Kanban after creating the cards:
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [BookingBites App Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
+- [BookingBites App](https://bookingbites-ve9h.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,7 +193,7 @@ rspec spec
 
 ### Deployment
 
-You can deploy this project using:<br>- [BookingBites App Coming Soon !!!](https://github.com/JuanDBta/booking-bites)
+You can deploy this project using:<br>- [BookingBites App](https://bookingbites-ve9h.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
