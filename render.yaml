@@ -1,0 +1,18 @@
+databases:
+  - name: booking_bites
+    databaseName: booking_bites
+    user: booking_bites
+
+services:
+  - type: web
+    name: booking_bites
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: booking_bites
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
