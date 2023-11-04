@@ -84,4 +84,4 @@ production:
   database: booking_bites_production
   username: booking_bites
   password: <%= ENV["BOOKING_BITES_DATABASE_PASSWORD"] %>
-   url: <%= ENV['DATABASE_URL'] %>
+   url: <%= ENV['BOOKING_BITES_DATABASE_URL'] %>
