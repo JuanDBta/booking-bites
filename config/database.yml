@@ -81,7 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: bookingbites_database_mcgk
-  username: bookingbites_database_mcgk_user
+  database: booking_database_gve0
+  username: booking_database_gve0_user
   password: 2qkRQLQ0VoWiNS64sXv2E3JLndbzuT3E
   url: postgres://bookingbites_database_mcgk_user:2qkRQLQ0VoWiNS64sXv2E3JLndbzuT3E@dpg-cl7be7b0p3is738919a0-a/bookingbites_database_mcgk
