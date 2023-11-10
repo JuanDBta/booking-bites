@@ -81,7 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: bookingbites_database
-  username: bookingbites_database_user
-  password: wyxo9o8XChb9F0CQvz1KHF4dxtxaIHXi
-  url: postgres://bookingbites_database_user:wyxo9o8XChb9F0CQvz1KHF4dxtxaIHXi@dpg-cl37ia2uuipc7388hfk0-a/bookingbites_database
+  database: bookingbites_database_mzfq
+  username: bookingbites_database_mzfq_user
+  password: aoFuOPYs2RNkSLuP6T6qdbmIxOnqAQGN
+  url: postgres://bookingbites_database_mzfq_user:aoFuOPYs2RNkSLuP6T6qdbmIxOnqAQGN@dpg-cl7b7p76e7vc739r920g-a/bookingbites_database_mzfq
